@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frame0.png-c399b13fa1ecd91a87cdff5606291df9.stex"
+path="res://.import/frame0.png-847daa596244103952d86e06231d90f0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Part Marc/FINAL GAME/CHARACTER ERA1/PNG/frame0.png"
-dest_files=[ "res://.import/frame0.png-c399b13fa1ecd91a87cdff5606291df9.stex" ]
+source_file="res://FINAL GAME/CHARACTER ERA1/PNG/frame0.png"
+dest_files=[ "res://.import/frame0.png-847daa596244103952d86e06231d90f0.stex" ]
 
 [params]
 
