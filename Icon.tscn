@@ -2,6 +2,8 @@
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 
-[node name="Icon" type="Sprite"]
-position = Vector2( 315, 334 )
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( 357, 157 )
 texture = ExtResource( 1 )
