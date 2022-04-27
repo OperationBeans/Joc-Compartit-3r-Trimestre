@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Korred Sprite Sheet.png-29dd3187ee5db0e998b034017217a705.stex"
+path="res://.import/Korred Sprite Sheet.png-53117408499829829627a36e3c263a2e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Korred Sprite Sheet.png"
-dest_files=[ "res://.import/Korred Sprite Sheet.png-29dd3187ee5db0e998b034017217a705.stex" ]
+source_file="res://Part Marc/Korred Sprite Sheet.png"
+dest_files=[ "res://.import/Korred Sprite Sheet.png-53117408499829829627a36e3c263a2e.stex" ]
 
 [params]
 

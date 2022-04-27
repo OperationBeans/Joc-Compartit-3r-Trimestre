@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Gladiator-Sprite Sheet-Left.png-034e069b78b5fa901553ab2781177098.stex"
+path="res://.import/Gladiator-Sprite Sheet-Left.png-25a9497cceaaaf814e8ec0dbaa085b15.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Gladiator-Sprite Sheet-Left.png"
-dest_files=[ "res://.import/Gladiator-Sprite Sheet-Left.png-034e069b78b5fa901553ab2781177098.stex" ]
+source_file="res://Part Marc/Gladiator-Sprite Sheet-Left.png"
+dest_files=[ "res://.import/Gladiator-Sprite Sheet-Left.png-25a9497cceaaaf814e8ec0dbaa085b15.stex" ]
 
 [params]
 
