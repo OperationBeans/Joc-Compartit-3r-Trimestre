@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-0c558a2c870f2397c2b76e07e1c1b6c5.stex"
+path="res://.import/Rock Blast.png-9afa1d06631545ace4b38ba142328301.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Part Marc/icon.png"
-dest_files=[ "res://.import/icon.png-0c558a2c870f2397c2b76e07e1c1b6c5.stex" ]
+source_file="res://Part Marc/Rock Blast.png"
+dest_files=[ "res://.import/Rock Blast.png-9afa1d06631545ace4b38ba142328301.stex" ]
 
 [params]
 
