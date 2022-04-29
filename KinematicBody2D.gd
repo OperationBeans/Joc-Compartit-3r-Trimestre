@@ -3,7 +3,7 @@ extends KinematicBody2D
 var velocitat_base = 200
 var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
-var salt = Vector2.UP * 500
+var salt = Vector2.UP * 400
 
 func _physics_process(delta):
 	velocitat.x = 0
@@ -23,18 +23,22 @@ func _physics_process(delta):
 
 func anima(velocitat: Vector2):
 	var animacio : AnimatedSprite = $AnimatedSprite
+	if Input.is_action_just_pressed('click_esq') and is_on_floor():
+		animacio.play('pegar')
+		$Collision_Paco.scale = Vector2(2,1)
+		
 	if velocitat.x > 0:
 		animacio.flip_h = false
 		animacio.play('camina')
+		$Collision_Paco.scale = Vector2(1,1)
 
 	elif velocitat.x < 0:
 		animacio.flip_h = true
 		animacio.play('camina')
+		$Collision_Paco.scale = Vector2(1,1)
 
 	if velocitat.y < -1:
 		animacio.play('salta')
-
-	if abs(velocitat.x) == 0:
-		animacio.play('quiet')
-
-
+		$Collision_Paco.scale = Vector2(1,1)
+	
+		
