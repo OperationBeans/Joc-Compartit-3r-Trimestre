@@ -16,7 +16,10 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("W") and is_on_floor():
 		velocitat += salt  
-
+	if Input.is_action_pressed("golpe"):
+		$AnimatedSprite.play("pegale")
+		colpeja()
+	
 	velocitat += gravetat * delta
 	velocitat = move_and_slide(velocitat, Vector2.UP)
 	anima(velocitat)
@@ -37,4 +40,8 @@ func anima(velocitat: Vector2):
 	if abs(velocitat.x) == 0:
 		animacio.play('quiet')
 
-
+func colpeja():
+	var escena_cop = load("res://cop.tscn")
+	var cop_inst = escena_cop.instance()
+	add_child(cop_inst)
+	
