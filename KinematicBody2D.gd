@@ -5,6 +5,7 @@ var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
 var salt = Vector2.UP * 500
 
+
 func _physics_process(delta):
 	velocitat.x = 0
 
@@ -23,6 +24,8 @@ func _physics_process(delta):
 
 func anima(velocitat: Vector2):
 	var animacio : AnimatedSprite = $AnimatedSprite
+	if Input.is_action_just_pressed("click_esq")and is_on_floor():
+		animacio.play("pegar")
 	if velocitat.x > 0:
 		animacio.flip_h = false
 		animacio.play('camina')
@@ -33,8 +36,6 @@ func anima(velocitat: Vector2):
 
 	if velocitat.y < -1:
 		animacio.play('salta')
-
-	if abs(velocitat.x) == 0:
-		animacio.play('quiet')
+	
 
 

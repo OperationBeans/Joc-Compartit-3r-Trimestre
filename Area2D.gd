@@ -9,3 +9,6 @@ extends Area2D
 
 func _on_Area2D_body_entered(body):
 	if body.name=="Paco":
+		var escena_pantera = load("res://escena_pamtera.tscn")
+		var escena = escena_pantera.instance()
+		add_child(escena)
