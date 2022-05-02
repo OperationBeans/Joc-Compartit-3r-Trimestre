@@ -16,7 +16,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("W") and is_on_floor():
 		velocitat += salt  
-	if Input.is_action_pressed("golpe"):
+	if Input.is_action_just_pressed("golpe"):
 		$AnimatedSprite.play("pegale")
 		colpeja()
 	
@@ -38,10 +38,12 @@ func anima(velocitat: Vector2):
 		animacio.play('salta')
 
 	if abs(velocitat.x) == 0:
-		animacio.play('quiet')
+		animacio.play('parat')
 
 func colpeja():
-	var escena_cop = load("res://cop.tscn")
-	var cop_inst = escena_cop.instance()
-	add_child(cop_inst)
-	
+	$AnimatedSprite.play("pegale")
+	$AreaAtac/CollisionShape2D.set_deferred("disabled", false)
+	if $AnimatedSprite.frame == 7:
+		$AreaAtac/CollisionShape2D.set_deferred("disabled", true)
+
+

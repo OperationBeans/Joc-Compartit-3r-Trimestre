@@ -7,7 +7,7 @@
 extents = Vector2( 512.25, 11.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 50.75, 12.75 )
+extents = Vector2( 48.875, 11.375 )
 
 [node name="Nivell2" type="Node2D"]
 position = Vector2( -2, -5 )
@@ -25,7 +25,7 @@ position = Vector2( 48, 508 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 330, 548 )
+position = Vector2( 331.875, 549.375 )
 shape = SubResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="Area2D"]
@@ -35,4 +35,5 @@ margin_right = 382.0
 margin_bottom = 561.0
 
 [connection signal="input_event" from="KinematicBody2D" to="KinematicBody2D" method="_on_KinematicBody2D_input_event"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
