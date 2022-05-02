@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Part Arroyo/FONDO EGIPTE.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="FONDO EGIPTE" type="Sprite" parent="."]
+position = Vector2( 510.75, 300 )
+scale = Vector2( 1.59764, 2.17647 )
+texture = ExtResource( 1 )
