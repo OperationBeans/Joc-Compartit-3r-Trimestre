@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Projecte Compartit 3r Trimestre"
-run/main_scene="res://Nivell1.tscn"
+run/main_scene="res://Menú.tscn"
 config/icon="res://icon.png"
 
 [input]
