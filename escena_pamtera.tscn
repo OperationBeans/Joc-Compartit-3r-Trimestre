@@ -1,92 +1,118 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://sprite llop.png" type="Texture" id=1]
+[ext_resource path="res://wolfspritesheet.png" type="Texture" id=1]
 [ext_resource path="res://fondo.jpg" type="Texture" id=2]
 [ext_resource path="res://llop.gd" type="Script" id=3]
+[ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://area atac llop.gd" type="Script" id=5]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 128, 64, 64 )
+region = Rect2( 320, 128, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 64, 128, 64, 64 )
+region = Rect2( 384, 128, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 128, 128, 64, 64 )
+region = Rect2( 448, 128, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 192, 128, 64, 64 )
+region = Rect2( 512, 128, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 384, 320, 64, 64 )
+region = Rect2( 576, 128, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 448, 320, 64, 64 )
+region = Rect2( 320, 192, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=20]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 512, 320, 64, 64 )
+region = Rect2( 384, 192, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=21]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 256, 128, 64, 64 )
+region = Rect2( 448, 192, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=22]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 320, 128, 64, 64 )
+region = Rect2( 512, 192, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 384, 128, 64, 64 )
+region = Rect2( 512, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 448, 128, 64, 64 )
+region = Rect2( 512, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 512, 128, 64, 64 )
+region = Rect2( 448, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 384, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
 "loop": true,
-"name": "quiet",
+"name": "corre",
 "speed": 7.0
 }, {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": true,
 "name": "mort",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"frames": [ SubResource( 31 ) ],
 "loop": true,
-"name": "corre",
+"name": "quiet",
 "speed": 7.0
+}, {
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"loop": true,
+"name": "aixecarse",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=14]
-radius = 20.0
-height = 0.0
+[sub_resource type="CapsuleShape2D" id=28]
+radius = 23.0
+height = 34.0
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 513.5, 18 )
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 267.5, 111.5 )
 
 [node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 276.0 ]
+}
 
 [node name="Fondo" type="Sprite" parent="."]
 position = Vector2( 513.5, 300 )
@@ -97,12 +123,30 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="llop" type="AnimatedSprite" parent="llop"]
-position = Vector2( 997, 533 )
+position = Vector2( 46.6243, 536.859 )
+rotation = -6.28319
+scale = Vector2( 1.39451, 1.50881 )
 frames = SubResource( 13 )
-animation = "quiet"
-frame = 2
+animation = "aixecarse"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="llop"]
-position = Vector2( 1001, 542 )
-shape = SubResource( 14 )
+position = Vector2( 50, 537 )
+rotation = 1.5708
+shape = SubResource( 28 )
+
+[node name="Terra" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra"]
+position = Vector2( 513.5, 582 )
+shape = SubResource( 29 )
+
+[node name="area atac llop" type="Area2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area atac llop"]
+position = Vector2( 266.5, 488.5 )
+shape = SubResource( 30 )
+
+[node name="Paco" parent="." instance=ExtResource( 4 )]

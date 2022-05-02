@@ -37,5 +37,8 @@ func anima(velocitat: Vector2):
 	if velocitat.y < -1:
 		animacio.play('salta')
 	
+	if Input.is_action_just_pressed("click_esq"):
+		animacio.play("pegar")
+	
 
 
