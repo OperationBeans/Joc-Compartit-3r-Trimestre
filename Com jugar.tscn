@@ -1,0 +1,175 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://lletres xules.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Born2bSportyV2.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Com jugar.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 39
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 612.0
+color = Color( 0.203922, 0.560784, 0.843137, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 612.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 289.0
+margin_right = 735.0
+margin_bottom = 612.0
+custom_constants/separation = 20
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 446.0
+margin_bottom = 100.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 25.0
+margin_right = 420.0
+margin_bottom = 100.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Com Jugar"
+align = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 120.0
+margin_right = 446.0
+margin_bottom = 612.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
+margin_right = 446.0
+margin_bottom = 492.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_right = 446.0
+margin_bottom = 83.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer"]
+margin_left = 56.0
+margin_right = 390.0
+margin_bottom = 83.0
+
+[node name="Dreta" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_right = 334.0
+margin_bottom = 83.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 0
+custom_fonts/font = SubResource( 1 )
+text = "Dreta: D - Fletxa Dreta
+"
+align = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 87.0
+margin_right = 446.0
+margin_bottom = 170.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2"]
+margin_right = 446.0
+margin_bottom = 83.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_right = 446.0
+margin_bottom = 83.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 0
+custom_fonts/font = SubResource( 1 )
+text = "Esquerra: A - Fletxa Esquerra
+"
+align = 1
+
+[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 174.0
+margin_right = 446.0
+margin_bottom = 257.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3"]
+margin_left = 37.0
+margin_right = 409.0
+margin_bottom = 83.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_right = 372.0
+margin_bottom = 83.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 0
+custom_fonts/font = SubResource( 1 )
+text = "Salta: Espai - Fletxa Adalt
+"
+align = 1
+
+[node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 261.0
+margin_right = 446.0
+margin_bottom = 344.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4"]
+margin_left = 33.0
+margin_right = 413.0
+margin_bottom = 83.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4/HBoxContainer"]
+margin_right = 380.0
+margin_bottom = 83.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 0
+custom_fonts/font = SubResource( 1 )
+text = "Ajupir-se: S - Fletxa abaix
+"
+align = 1
+
+[node name="CenterContainer5" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 348.0
+margin_right = 446.0
+margin_bottom = 431.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer5"]
+margin_left = 49.0
+margin_right = 397.0
+margin_bottom = 83.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer5/HBoxContainer"]
+margin_right = 348.0
+margin_bottom = 83.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 0
+custom_fonts/font = SubResource( 1 )
+text = "Golpejar: Click Esquerra
+"
+align = 1
+
+[node name="CenterContainer6" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 420.0
+margin_right = 446.0
+margin_bottom = 477.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer6"]
+margin_left = 162.0
+margin_right = 284.0
+margin_bottom = 57.0
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer6/HBoxContainer"]
+margin_right = 122.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 2 )
+text = "Torna"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer6/HBoxContainer/Button" to="." method="_on_Button_pressed"]
