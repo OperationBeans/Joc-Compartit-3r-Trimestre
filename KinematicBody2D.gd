@@ -4,6 +4,7 @@ var velocitat_base = 200
 var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
 var salt = Vector2.UP * 500
+var atac = false
 
 func _physics_process(delta):
 	velocitat.x = 0
@@ -17,8 +18,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("W") and is_on_floor():
 		velocitat += salt  
 	if Input.is_action_just_pressed("golpe"):
-		$AnimatedSprite.play("pegale")
 		colpeja()
+		atac = true
 	
 	velocitat += gravetat * delta
 	velocitat = move_and_slide(velocitat, Vector2.UP)
@@ -26,24 +27,31 @@ func _physics_process(delta):
 
 func anima(velocitat: Vector2):
 	var animacio : AnimatedSprite = $AnimatedSprite
-	if velocitat.x > 0:
-		animacio.flip_h = false
-		animacio.play('camina')
+	if atac:
+		$AnimatedSprite.play("pegale")
+	else:
+		if velocitat.x > 0:
+			animacio.flip_h = false
+			animacio.play('camina')
 
-	elif velocitat.x < 0:
-		animacio.flip_h = true
-		animacio.play('camina')
+		elif velocitat.x < 0:
+			animacio.flip_h = true
+			animacio.play('camina')
+		elif abs(velocitat.x) == 0:
+			animacio.play('parat')
+		if velocitat.y < -1:
+			animacio.play('salta')
 
-	if velocitat.y < -1:
-		animacio.play('salta')
-
-	if abs(velocitat.x) == 0:
-		animacio.play('parat')
-
+		
+	
 func colpeja():
-	$AnimatedSprite.play("pegale")
 	$AreaAtac/CollisionShape2D.set_deferred("disabled", false)
 	if $AnimatedSprite.frame == 7:
 		$AreaAtac/CollisionShape2D.set_deferred("disabled", true)
 
 
+
+
+func _on_AnimatedSprite_animation_finished():
+	if $AnimatedSprite.animation == 'pegale':
+		atac = false
