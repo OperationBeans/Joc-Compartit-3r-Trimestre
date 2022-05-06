@@ -40,3 +40,22 @@ func anima(velocitat: Vector2):
 	if Input.is_action_just_pressed("click_esq"):
 		animacio.play("pegar")
 
+
+func _on_Area2D2_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/PRIMERA PART PARKOUR EGIPTE.tscn")
+
+
+func _on_Area2D3_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/SEGONA PART EGIPTE.tscn")
+
+
+func _on_Area2D4_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/TERCERA PART EGIPTE.tscn")
+
+
+func _on_Area2D5_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/escena final egipte.tscn")
