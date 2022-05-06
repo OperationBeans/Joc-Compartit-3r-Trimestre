@@ -6,9 +6,10 @@ func _ready():
 
 func _input(event):
 	
-	if event.is_action_pressed("ui_cancel"): # escape button by default
-		set_visible(!get_tree().paused) # if not pause then hide
-		get_tree().paused = !get_tree().paused # toggle pause status
+	if event.is_action_pressed("ui_cancel"): 
+		set_visible(!get_tree().paused) 
+		get_tree().paused = !get_tree().paused 
+
 
 func _on_Button_pressed():
 	get_tree().paused = false
@@ -17,6 +18,7 @@ func _on_Button_pressed():
 func set_visible(is_visible):
 	for node in get_children():
 		node.visible = is_visible
-		
-func _on_Button2_pressed():
+
+
+func _on_Fullscreen_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
