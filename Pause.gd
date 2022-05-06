@@ -22,3 +22,7 @@ func set_visible(is_visible):
 
 func _on_Fullscreen_pressed():
 	OS.window_fullscreen = !OS.window_fullscreen
+
+
+func _on_Sortir_pressed():
+	get_tree().quit()

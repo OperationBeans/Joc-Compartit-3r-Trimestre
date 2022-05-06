@@ -28,6 +28,19 @@ custom_fonts/font = ExtResource( 1 )
 text = "PANTALLA SENCERA"
 flat = true
 
+[node name="Sortir" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -185.0
+margin_top = -106.0
+margin_right = 185.0
+custom_colors/font_color = Color( 0.901961, 0.145098, 0.0901961, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "SORTIR"
+flat = true
+
 [node name="Button" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -41,5 +54,27 @@ custom_fonts/font = ExtResource( 1 )
 text = "CONTINUAR"
 flat = true
 
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -7.0
+margin_top = -166.0
+margin_right = -7.0
+margin_bottom = -166.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 380.0
+margin_top = 268.0
+margin_right = 644.0
+margin_bottom = 332.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 264.0
+margin_bottom = 64.0
+custom_colors/font_color = Color( 0.168627, 0.8, 0.0588235, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Joc Pausat"
+
 [connection signal="pressed" from="Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="pressed" from="Sortir" to="." method="_on_Sortir_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
