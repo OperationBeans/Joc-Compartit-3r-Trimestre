@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var vida = 100
+var mort = false
 var velocitat_base = 200
 var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
@@ -7,7 +9,7 @@ var salt = Vector2.UP * 500
 
 func _physics_process(delta):
 	velocitat.x = 0
-
+	
 	if Input.is_action_pressed("D"):
 		velocitat += Vector2.RIGHT * velocitat_base
 
@@ -39,4 +41,9 @@ func anima(velocitat: Vector2):
 	
 	if Input.is_action_just_pressed("click_esq"):
 		animacio.play("pegar")
-
+	if mort == true:
+		animacio.play("mort")
+func _on_Area2D_body_entered(body):
+	if body.name=="Paco":
+		vida -= 100
+		mort = true
