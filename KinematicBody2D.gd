@@ -41,7 +41,12 @@ func anima(velocitat: Vector2):
 	
 	if Input.is_action_just_pressed("click_esq"):
 		animacio.play("pegar")
-	if mort == true:
+	
+	if mort == true and velocitat.x > 0:
+		animacio.flip_h = false
+		animacio.play("mort")
+	if mort == true and velocitat.x < 0:
+		animacio.flip_h = true
 		animacio.play("mort")
 func _on_Area2D_body_entered(body):
 	if body.name=="Paco":

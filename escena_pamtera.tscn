@@ -81,11 +81,11 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=28]
-radius = 22.9999
+radius = 18.9999
 height = 48.0
 
 [sub_resource type="RectangleShape2D" id=33]
-extents = Vector2( 51, 23 )
+extents = Vector2( 47, 19.5 )
 
 [node name="Node2D" type="Node2D"]
 __meta__ = {
@@ -124,12 +124,14 @@ animation = "aixecarse"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="llop"]
+position = Vector2( 0, 11 )
 rotation = 1.5708
 shape = SubResource( 28 )
 
 [node name="Area2D" type="Area2D" parent="llop"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="llop/Area2D"]
+position = Vector2( 0, 10.5 )
 shape = SubResource( 33 )
 
 [connection signal="body_entered" from="area atac llop" to="llop" method="_on_area_atac_llop_body_entered"]
