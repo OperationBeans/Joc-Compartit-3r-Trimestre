@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://lletres xules.tres" type="DynamicFont" id=1]
+[ext_resource path="res://foto negre.png" type="Texture" id=2]
+[ext_resource path="res://Pause.gd" type="Script" id=3]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -185.0
+margin_top = 4.0
+margin_right = 185.0
+margin_bottom = 110.0
+custom_fonts/font = ExtResource( 1 )
+text = "Continuar"
+
+[node name="Button2" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -322.0
+margin_top = -134.0
+margin_right = 318.0
+margin_bottom = -28.0
+custom_fonts/font = ExtResource( 1 )
+text = "Pantalla sencera"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
