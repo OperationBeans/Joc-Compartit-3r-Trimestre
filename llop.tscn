@@ -72,11 +72,11 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=28]
-radius = 22.9999
+radius = 18.9999
 height = 48.0
 
 [sub_resource type="RectangleShape2D" id=33]
-extents = Vector2( 51, 23 )
+extents = Vector2( 47, 19.5 )
 
 [node name="llop" type="KinematicBody2D"]
 script = ExtResource( 2 )
