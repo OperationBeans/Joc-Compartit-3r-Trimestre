@@ -21,27 +21,28 @@ script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1024.0
-margin_bottom = 612.0
+margin_bottom = 600.0
 color = Color( 0.203922, 0.560784, 0.843137, 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1024.0
-margin_bottom = 612.0
+margin_bottom = 600.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 289.0
+margin_top = 12.0
 margin_right = 735.0
-margin_bottom = 612.0
+margin_bottom = 588.0
 custom_constants/separation = 20
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_right = 446.0
-margin_bottom = 100.0
+margin_bottom = 64.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_left = 25.0
-margin_right = 420.0
-margin_bottom = 100.0
+margin_left = 97.0
+margin_right = 349.0
+margin_bottom = 64.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -50,9 +51,9 @@ text = "Com Jugar"
 align = 1
 
 [node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_top = 120.0
+margin_top = 84.0
 margin_right = 446.0
-margin_bottom = 612.0
+margin_bottom = 576.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
 margin_right = 446.0
@@ -152,7 +153,7 @@ margin_bottom = 83.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 0
 custom_fonts/font = SubResource( 1 )
-text = "Golpejar: Click Esquerra
+text = "Colpejar: Click Esquerra
 "
 align = 1
 
