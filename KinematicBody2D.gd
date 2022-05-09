@@ -18,18 +18,19 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("W") and is_on_floor():
 		velocitat += salt  
-
-	velocitat += gravetat * delta
-	velocitat = move_and_slide(velocitat, Vector2.UP)
-	anima(velocitat)
-#	Global.pos = global_position
+	
+	if mort == false:
+		velocitat += gravetat * delta
+		velocitat = move_and_slide(velocitat, Vector2.UP)
+		anima(velocitat)
+		Global.pos = global_position
+	if mort == true:
+		anima_mort(velocitat)
 
 func anima(velocitat: Vector2):
 	var animacio : AnimatedSprite = $AnimatedSprite
 	if Input.is_action_just_pressed("click_esq")and is_on_floor() and mort==false:
-		animacio.play("pegale")
-		$AreaAtac.set_deferred("disabled", false)
-		print("Desabeled")
+		animacio.play("pegar")
 		
 	if velocitat.x > 0 and mort==false:
 		animacio.flip_h = false
@@ -41,24 +42,16 @@ func anima(velocitat: Vector2):
 
 	if velocitat.y < -1  and mort==false:
 		animacio.play('salta')
-	
-<<<<<<< HEAD
+		
+func anima_mort(velocitat: Vector2):
+	var animacio : AnimatedSprite = $AnimatedSprite
 	if mort == true and velocitat.x>=0:
-		animacio.flip_h = false
-		animacio.play("mort")
-	elif mort == true and velocitat.x<=0:
 		animacio.flip_h = true
-		animacio.play('mort')
-=======
-	
-	if mort == true:
 		animacio.play("mort")
-		mort = true
-	
-	if animacio.frame==7:
-		print("hi")
-		$AreaAtac.set_deferred("disabled", true)
->>>>>>> dbd28f517309b32a9c575d6f9e4f5392abb9d698
+		
+	elif mort == true and velocitat.x<=0:
+		animacio.flip_h = false
+		animacio.play('mort')
 
 func _on_Area2D2_body_entered(body):
 	if body.name == "Paco":
@@ -83,8 +76,5 @@ func _on_Area2D5_body_entered(body):
 func _on_Area2D_body_entered(body):
 	if body.name == "Paco" and bucle == false:
 		mort = true
-		bucle = true
 	else:
 		pass
-
-
