@@ -81,10 +81,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=34]
-extents = Vector2( 18.0001, 47 )
+extents = Vector2( 16.5001, 40 )
 
 [sub_resource type="RectangleShape2D" id=33]
-extents = Vector2( 47, 19.5 )
+extents = Vector2( 67.5, 29 )
 
 [node name="Node2D" type="Node2D"]
 __meta__ = {
@@ -123,14 +123,14 @@ animation = "aixecarse"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="llop"]
-position = Vector2( 3.43323e-05, 12.0001 )
+position = Vector2( -3.8147e-06, 13.5001 )
 rotation = 1.5708
 shape = SubResource( 34 )
 
 [node name="Area2D" type="Area2D" parent="llop"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="llop/Area2D"]
-position = Vector2( 0, 10.5 )
+position = Vector2( 8.5, 1 )
 shape = SubResource( 33 )
 
 [connection signal="body_entered" from="area atac llop" to="llop" method="_on_area_atac_llop_body_entered"]

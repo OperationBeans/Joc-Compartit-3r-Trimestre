@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var mort = false
+var bucle = false
 var velocitat_base = 200
 var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
@@ -38,12 +39,12 @@ func anima(velocitat: Vector2):
 	if velocitat.y < -1  and mort==false:
 		animacio.play('salta')
 	
-	if Input.is_action_just_pressed("click_esq") and mort==false:
-		animacio.play("pegar")
-	
-	if mort == true:
+	if mort == true and velocitat.x>=0:
+		animacio.flip_h = false
 		animacio.play("mort")
-		mort = true
+	elif mort == true and velocitat.x<=0:
+		animacio.flip_h = true
+		animacio.play('mort')
 
 func _on_Area2D2_body_entered(body):
 	if body.name == "Paco":
@@ -66,7 +67,8 @@ func _on_Area2D5_body_entered(body):
 
 
 func _on_Area2D_body_entered(body):
-	if body.name == "Paco":
+	if body.name == "Paco" and bucle == false:
 		mort = true
+		bucle = true
 	else:
 		pass
