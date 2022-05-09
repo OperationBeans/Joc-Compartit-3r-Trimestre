@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondet.jpg-d56af47463a4ebc7f4a33d68567676e9.stex"
+path="res://.import/peldaño.png-b747f94eb65fcafe8a6919dff2814ec7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Part Arroyo/fondet.jpg"
-dest_files=[ "res://.import/fondet.jpg-d56af47463a4ebc7f4a33d68567676e9.stex" ]
+source_file="res://peldaño.png"
+dest_files=[ "res://.import/peldaño.png-b747f94eb65fcafe8a6919dff2814ec7.stex" ]
 
 [params]
 

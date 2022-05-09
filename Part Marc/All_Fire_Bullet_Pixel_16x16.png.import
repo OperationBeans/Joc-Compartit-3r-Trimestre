@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondet.jpg-d56af47463a4ebc7f4a33d68567676e9.stex"
+path="res://.import/All_Fire_Bullet_Pixel_16x16.png-621a3e113852816d5b15a4f865ddd9f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Part Arroyo/fondet.jpg"
-dest_files=[ "res://.import/fondet.jpg-d56af47463a4ebc7f4a33d68567676e9.stex" ]
+source_file="res://Part Marc/All_Fire_Bullet_Pixel_16x16.png"
+dest_files=[ "res://.import/All_Fire_Bullet_Pixel_16x16.png-621a3e113852816d5b15a4f865ddd9f2.stex" ]
 
 [params]
 
