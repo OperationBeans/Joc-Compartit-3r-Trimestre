@@ -80,9 +80,8 @@ animations = [ {
 "speed": 7.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=28]
-radius = 18.9999
-height = 48.0
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 18.0001, 47 )
 
 [sub_resource type="RectangleShape2D" id=33]
 extents = Vector2( 47, 19.5 )
@@ -124,9 +123,9 @@ animation = "aixecarse"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="llop"]
-position = Vector2( 0, 11 )
+position = Vector2( 3.43323e-05, 12.0001 )
 rotation = 1.5708
-shape = SubResource( 28 )
+shape = SubResource( 34 )
 
 [node name="Area2D" type="Area2D" parent="llop"]
 
