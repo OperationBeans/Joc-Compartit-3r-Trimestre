@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/fondo.jpg-99e4b1e651dd40ece2325cddf1b5858c.stex"
