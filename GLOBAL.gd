@@ -1,3 +1,6 @@
 extends Node
 
-var Bales:Node2D
+var pos = Vector2.ZERO
+
+func _ready():
+	pass 

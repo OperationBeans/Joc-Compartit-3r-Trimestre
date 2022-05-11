@@ -8,7 +8,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	if ataca:
+	if ataca==true:
 		if (Global.pos.x-70)>position.x:
 			velocitat.x = 0
 			velocitat += Vector2.RIGHT * velocitat_base 
@@ -34,4 +34,5 @@ func anima(velocitat: Vector2):
 		animacio.play("quiet")
 	
 func _on_area_atac_llop_body_entered(body):
-	ataca = true
+	if body.name == "Paco":
+		ataca = true
