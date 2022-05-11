@@ -27,7 +27,7 @@ func anima(velocitat: Vector2):
 	var animacio : AnimatedSprite = $AnimatedSprite
 	if Input.is_action_just_pressed("click_esq")and is_on_floor() and mort==false:
 		animacio.play("pegale")
-		$AreaAtac.set_deferred("disabled", false)
+		$AreaAtac/CollisionShape2D.set_deferred("disabled", false)
 		print("Desabeled")
 		
 	if velocitat.x > 0 and mort==false:
@@ -46,9 +46,8 @@ func anima(velocitat: Vector2):
 		animacio.play("mort")
 		mort = true
 	
-	if animacio.frame==7:
-		print("hi")
-		$AreaAtac.set_deferred("disabled", true)
+
+		
 
 func _on_Area2D2_body_entered(body):
 	if body.name == "Paco":
@@ -77,3 +76,9 @@ func _on_Area2D_body_entered(body):
 		pass
 
 
+
+
+func _on_AnimatedSprite_animation_finished():
+	print("hi")
+	if $AnimatedSprite.animation == 'pegale':
+		$AreaAtac/CollisionShape2D.set_deferred("disabled", true)

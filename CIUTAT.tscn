@@ -203,6 +203,7 @@ position = Vector2( 219, 234 )
 shape = SubResource( 10 )
 
 [node name="personatge ciutat" parent="." instance=ExtResource( 2 )]
+position = Vector2( 37, 517 )
 
 [node name="zonamort" type="Area2D" parent="."]
 script = ExtResource( 4 )
