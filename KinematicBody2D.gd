@@ -70,3 +70,6 @@ func _on_Area2D_body_entered(body):
 		mort = true
 	else:
 		pass
+func _on_HOLA_body_entered(body) :
+	if body.name == "Paco":
+		get_tree().change_scene("res")
