@@ -36,3 +36,5 @@ func anima(velocitat: Vector2):
 func _on_area_atac_llop_body_entered(body):
 	if body.name == "Paco":
 		ataca = true
+		
+
