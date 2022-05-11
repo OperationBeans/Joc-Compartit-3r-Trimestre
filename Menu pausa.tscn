@@ -16,14 +16,14 @@ texture = ExtResource( 2 )
 expand = true
 
 [node name="Fullscreen" type="Button" parent="."]
-anchor_left = 0.5
+anchor_left = 0.454
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.454
 anchor_bottom = 0.5
-margin_left = -318.0
-margin_top = -98.0
-margin_right = 322.0
-margin_bottom = 8.0
+margin_left = -327.896
+margin_top = -125.0
+margin_right = 470.104
+margin_bottom = -3.0
 custom_fonts/font = ExtResource( 1 )
 text = "PANTALLA SENCERA"
 flat = true
@@ -33,9 +33,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -185.0
-margin_top = -106.0
-margin_right = 185.0
+margin_left = -187.0
+margin_top = -161.0
+margin_right = 183.0
+margin_bottom = -39.0
 custom_colors/font_color = Color( 0.901961, 0.145098, 0.0901961, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "SORTIR"
@@ -46,27 +47,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -192.0
+margin_left = -204.0
 margin_top = 4.0
-margin_right = 178.0
-margin_bottom = 110.0
+margin_right = 230.0
+margin_bottom = 126.0
 custom_fonts/font = ExtResource( 1 )
 text = "CONTINUAR"
 flat = true
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -7.0
-margin_top = -166.0
-margin_right = -7.0
-margin_bottom = -166.0
+margin_bottom = 116.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 276.0
-margin_top = 242.0
 margin_right = 748.0
-margin_bottom = 358.0
+margin_bottom = 116.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 margin_right = 472.0
