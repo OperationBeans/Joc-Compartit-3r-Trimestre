@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Part Arroyo/ESCENA FINAL.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512.93, 299.5 )
+scale = Vector2( 0.94087, 0.8375 )
+texture = ExtResource( 1 )
