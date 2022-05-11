@@ -25,7 +25,7 @@ func _physics_process(delta):
 		anima(velocitat)
 		Global.pos = global_position
 	if mort == true:
-		anima_mort(velocitat)
+		anima_mort()
 
 func anima(velocitat: Vector2):
 	var animacio : AnimatedSprite = $AnimatedSprite
@@ -43,7 +43,7 @@ func anima(velocitat: Vector2):
 	if velocitat.y < -1  and mort==false:
 		animacio.play('salta')
 		
-func anima_mort(velocitat: Vector2):
+func anima_mort():
 	var animacio : AnimatedSprite = $AnimatedSprite
 	if mort == true and velocitat.x>=0:
 		animacio.flip_h = true
@@ -76,5 +76,3 @@ func _on_Area2D5_body_entered(body):
 func _on_Area2D_body_entered(body):
 	if body.name == "Paco" and bucle == false:
 		mort = true
-	else:
-		pass
