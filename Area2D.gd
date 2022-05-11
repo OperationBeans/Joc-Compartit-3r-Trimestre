@@ -8,7 +8,7 @@ func _on_Area2D_body_entered(body):
 	if body.name=="Paco" and evitar_repeticio==false:
 		var timer = Timer.new()
 		timer.set_one_shot(true)
-		timer.set_wait_time(7)
+		timer.set_wait_time(5)
 		timer.connect("timeout", self, "on_timeout")
 		add_child(timer)
 		timer.start()
