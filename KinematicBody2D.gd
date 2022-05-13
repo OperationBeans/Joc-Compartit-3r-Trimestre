@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 var mort = false
-var bucle = false
 var velocitat_base = 200
 var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
@@ -18,19 +17,18 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("W") and is_on_floor():
 		velocitat += salt  
-	
-	if mort == false:
-		velocitat += gravetat * delta
-		velocitat = move_and_slide(velocitat, Vector2.UP)
-		anima(velocitat)
-		Global.pos = global_position
-	if mort == true:
-		anima_mort()
+
+	velocitat += gravetat * delta
+	velocitat = move_and_slide(velocitat, Vector2.UP)
+	anima(velocitat)
+	Global.pos = global_position
 
 func anima(velocitat: Vector2):
 	var animacio : AnimatedSprite = $AnimatedSprite
 	if Input.is_action_just_pressed("click_esq")and is_on_floor() and mort==false:
-		animacio.play("pegar")
+		animacio.play("pegale")
+		$AreaAtac/CollisionShape2D.set_deferred("disabled", false)
+		print("Desabeled")
 		
 	if velocitat.x > 0 and mort==false:
 		animacio.flip_h = false
@@ -42,16 +40,14 @@ func anima(velocitat: Vector2):
 
 	if velocitat.y < -1  and mort==false:
 		animacio.play('salta')
-		
-func anima_mort():
-	var animacio : AnimatedSprite = $AnimatedSprite
-	if mort == true and velocitat.x>=0:
-		animacio.flip_h = true
-		animacio.play("mort")
-		
-	elif mort == true and velocitat.x<=0:
-		animacio.flip_h = false
-		animacio.play('mort')
+
+	if mort == true:
+		if velocitat.x>=0:
+			animacio.flip_h = false
+			animacio.play("mort")
+		elif velocitat.x<=0:
+			animacio.flip_h = false
+			animacio.play("mort")
 
 func _on_Area2D2_body_entered(body):
 	if body.name == "Paco":
@@ -74,5 +70,12 @@ func _on_Area2D5_body_entered(body):
 
 
 func _on_Area2D_body_entered(body):
-	if body.name == "Paco" and bucle == false:
+	if body.name == "Paco":
 		mort = true
+	else:
+		pass
+
+func _on_AnimatedSprite_animation_finished():
+	print("hi")
+	if $AnimatedSprite.animation == 'pegale':
+		$AreaAtac/CollisionShape2D.set_deferred("disabled", true)
