@@ -17,7 +17,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("W") and is_on_floor():
 		velocitat += salt  
-	if Input.is_action_just_pressed("golpe"):
+	if Input.is_action_just_pressed("click_esq"):
 		colpeja()
 	
 	velocitat += gravetat * delta
