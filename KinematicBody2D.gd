@@ -42,12 +42,7 @@ func anima(velocitat: Vector2):
 		animacio.play('salta')
 
 	if mort == true:
-		if velocitat.x>=0:
-			animacio.flip_h = false
-			animacio.play("mort")
-		elif velocitat.x<=0:
-			animacio.flip_h = false
-			animacio.play("mort")
+		animacio.play("mort")
 
 func _on_Area2D2_body_entered(body):
 	if body.name == "Paco":

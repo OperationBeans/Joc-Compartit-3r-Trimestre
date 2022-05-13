@@ -10,32 +10,7 @@
 extents = Vector2( 513.5, 18 )
 
 [sub_resource type="RectangleShape2D" id=30]
-extents = Vector2( 28.25, 278.25 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 320, 192, 64, 32 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 384, 192, 64, 32 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 448, 192, 64, 32 )
-
-[sub_resource type="AtlasTexture" id=22]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 512, 192, 64, 32 )
-
-[sub_resource type="AtlasTexture" id=32]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 512, 0, 64, 32 )
+extents = Vector2( 0.375, 278.25 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
@@ -87,18 +62,33 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 576, 160, 64, 32 )
 
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 512, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 320, 192, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 384, 192, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 448, 192, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 512, 192, 64, 32 )
+
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
-"loop": true,
-"name": "mort",
-"speed": 10.0
-}, {
-"frames": [ SubResource( 32 ) ],
-"loop": true,
-"name": "aixecarse",
-"speed": 7.0
-}, {
 "frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
 "loop": true,
 "name": "corre",
@@ -107,6 +97,16 @@ animations = [ {
 "frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
 "loop": false,
 "name": "ulti",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 32 ) ],
+"loop": true,
+"name": "aixecarse",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": true,
+"name": "mort",
 "speed": 10.0
 } ]
 
@@ -136,7 +136,7 @@ shape = SubResource( 29 )
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area atac llop"]
-position = Vector2( 671, 282.25 )
+position = Vector2( 699.625, 282.25 )
 shape = SubResource( 30 )
 
 [node name="Paco" parent="." instance=ExtResource( 4 )]
