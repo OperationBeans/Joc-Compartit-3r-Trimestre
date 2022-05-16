@@ -4,16 +4,16 @@
 [ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 88.75, 86.25 )
+extents = Vector2( 88.75, 140.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 169.5, 10 )
+extents = Vector2( 169.5, 81.5 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 63, 8 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 167.5, 50 )
+extents = Vector2( 167.5, 20 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 29.5, 104.5 )
@@ -34,19 +34,19 @@ position = Vector2( 34, 393 )
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 259.75, 401.25 )
+position = Vector2( 260, 468 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2( 172, 445 )
+position = Vector2( 176, 521 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2( 851.5, 447 )
+position = Vector2( 851.5, 518.5 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
@@ -55,10 +55,10 @@ shape = SubResource( 2 )
 position = Vector2( 402, 314 )
 shape = SubResource( 3 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="MORT TERCERA PART" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 508.5, 544 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MORT TERCERA PART"]
+position = Vector2( 508.5, 574 )
 shape = SubResource( 4 )
 
 [node name="Area2D4" type="Area2D" parent="."]
@@ -73,4 +73,5 @@ shape = SubResource( 5 )
 position = Vector2( 4.5, 221 )
 shape = SubResource( 6 )
 
+[connection signal="body_entered" from="MORT TERCERA PART" to="Paco" method="_on_MORT_TERCERA_PART_body_entered"]
 [connection signal="body_entered" from="Area2D4" to="Paco" method="_on_Area2D4_body_entered"]
