@@ -1,10 +1,11 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://Prova_pegar.gd" type="Script" id=2]
 [ext_resource path="res://wolfspritesheet.png" type="Texture" id=3]
 [ext_resource path="res://Part Marc/Korred Sprite Sheet.png" type="Texture" id=4]
 [ext_resource path="res://fondo.jpg" type="Texture" id=5]
+[ext_resource path="res://GROUND LEVEL 1.png" type="Texture" id=6]
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 4 )
@@ -215,6 +216,20 @@ extents = Vector2( 50, 22 )
 [sub_resource type="RectangleShape2D" id=37]
 extents = Vector2( 514, 18.5 )
 
+[sub_resource type="RectangleShape2D" id=43]
+extents = Vector2( 5.5, 284.5 )
+
+[sub_resource type="RectangleShape2D" id=44]
+extents = Vector2( 51.75, 15.5 )
+
+[sub_resource type="SpriteFrames" id=45]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
 [node name="Test Scene" type="Node"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 291.0 ]
@@ -278,6 +293,35 @@ shape = SubResource( 36 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 513, 581.5 )
 shape = SubResource( 37 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="LIMITS" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( -4.5, 274.5 )
+shape = SubResource( 43 )
+
+[node name="LIMITS2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1029, 275 )
+shape = SubResource( 43 )
+
+[node name="TERRA" type="StaticBody2D" parent="."]
+
+[node name="GroundLevel1" type="Sprite" parent="TERRA"]
+position = Vector2( 319.75, 393.5 )
+scale = Vector2( 0.0763021, 0.050926 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA"]
+position = Vector2( 323.25, 396.5 )
+shape = SubResource( 44 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 446, 315 )
+frames = SubResource( 45 )
+playing = true
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite"]
 
 [connection signal="animation_finished" from="MainCharacter/AnimatedSprite" to="MainCharacter" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="MainCharacter/AttackArea" to="Enemy" method="_on_AttackArea_body_entered"]
