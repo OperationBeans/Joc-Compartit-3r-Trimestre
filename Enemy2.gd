@@ -27,3 +27,14 @@ func _physics_process(delta):
 func _on_AttackArea_body_entered(body):
 	dead = true
 	$AreaEnemy/AnimatedSprite.play("dead")
+	var timer = Timer.new()
+	timer.set_one_shot(true)
+	timer.set_wait_time(2)
+	timer.connect("timeout", self, "on_timeout")
+	add_child(timer)
+	timer.start()
+		
+func on_timeout():
+	get_tree().change_scene("res://FONDOS/PARKOUR.tscn")
+
+		
