@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Funky-Chiptune.mp3-2f8de9748f41a36820e8813dfcee2577.mp3str"
+
+[deps]
+
+source_file="res://Funky-Chiptune.mp3"
+dest_files=[ "res://.import/Funky-Chiptune.mp3-2f8de9748f41a36820e8813dfcee2577.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
