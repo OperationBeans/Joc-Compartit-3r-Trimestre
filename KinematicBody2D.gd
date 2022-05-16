@@ -38,3 +38,57 @@ func _on_AnimatedSprite_animation_finished():
 		$AttackArea/CollisionShape2D.disabled = true
 		$AttackArea2/CollisionShape2D.disabled = true
 		is_attacking = false
+
+
+func _on_Area2D5_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/QUARTA PART EGIPTE.tscn") 
+
+
+func _on_Area2D2_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/PRIMERA PART PARKOUR EGIPTE.tscn")
+
+
+func _on_Area2D3_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/SEGONA PART EGIPTE.tscn")
+
+func _on_Area2D4_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/TERCERA PART EGIPTE.tscn")
+
+
+func _on_Area2D6_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/escena final egipte.tscn")
+
+
+func _on_PRIMERA_MORT_1_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://Escena Mort.tscn")
+
+
+func _on_MORT_PART_2_1_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://Escena Mort.tscn")
+
+
+func _on_MORT_PART_22_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://Escena Mort.tscn")
+
+
+func _on_MORT_TERCERA_PART_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://Escena Mort.tscn")
+
+
+func _on_MORT_QUARTA_PART_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://Escena Mort.tscn")
+
+
+func _on_MORT_CINQUENA_PART_EGIPTE_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://Escena Mort.tscn")
