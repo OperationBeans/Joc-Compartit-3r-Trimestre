@@ -33,7 +33,7 @@ margin_bottom = 600.0
 color = Color( 0.203922, 0.560784, 0.843137, 1 )
 
 [node name="Paco" parent="." instance=ExtResource( 4 )]
-position = Vector2( 826, 484 )
+position = Vector2( 889, 417 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1024.0
