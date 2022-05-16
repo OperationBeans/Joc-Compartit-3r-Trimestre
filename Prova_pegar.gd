@@ -3,8 +3,9 @@ extends KinematicBody2D
 var velocitat_base = 300
 var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
-var salt = Vector2.UP * 500
-
+var salt = Vector2.UP * 600
+var already_ate = false
+var vida = 100
 var dead = false
 var is_attacking = false
 
@@ -43,3 +44,16 @@ func _on_AreaEnemy_body_entered(body):
 	if body.name == "MainCharacter":
 		dead = true
 		$AnimatedSprite.play("dead")
+
+
+func _on_Area2D_body_entered(body):
+	vida -= 20
+	print(vida)
+
+func _on_AreaMeat_body_entered(body):
+	if body.name == "MainCharacter" and already_ate == false:
+		already_ate = true
+		vida += 20
+		print(vida)
+	else:
+		pass

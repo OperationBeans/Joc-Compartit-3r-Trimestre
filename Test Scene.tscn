@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://Prova_pegar.gd" type="Script" id=2]
@@ -6,6 +6,15 @@
 [ext_resource path="res://Part Marc/Korred Sprite Sheet.png" type="Texture" id=4]
 [ext_resource path="res://fondo.jpg" type="Texture" id=5]
 [ext_resource path="res://GROUND LEVEL 1.png" type="Texture" id=6]
+[ext_resource path="res://campfire-6.png" type="Texture" id=7]
+[ext_resource path="res://campfire-4.png" type="Texture" id=8]
+[ext_resource path="res://campfire-2.png" type="Texture" id=9]
+[ext_resource path="res://campfire-3.png" type="Texture" id=10]
+[ext_resource path="res://campfire-5.png" type="Texture" id=11]
+[ext_resource path="res://campfire-7.png" type="Texture" id=12]
+[ext_resource path="res://campfire-0.png" type="Texture" id=13]
+[ext_resource path="res://campfire-1.png" type="Texture" id=14]
+[ext_resource path="res://meat.png" type="Texture" id=15]
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 4 )
@@ -43,26 +52,6 @@ region = Rect2( 96, 160, 32, 32 )
 atlas = ExtResource( 4 )
 region = Rect2( 128, 160, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 4 )
-region = Rect2( 32, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 4 )
-region = Rect2( 64, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 4 )
-region = Rect2( 128, 64, 32, 32 )
-
 [sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 32, 32, 32 )
@@ -95,6 +84,26 @@ region = Rect2( 192, 32, 32, 32 )
 atlas = ExtResource( 4 )
 region = Rect2( 224, 32, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 64, 32, 32 )
+
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
@@ -107,14 +116,14 @@ animations = [ {
 "name": "dead",
 "speed": 12.0
 }, {
-"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
-"loop": false,
-"name": "attack",
-"speed": 12.0
-}, {
 "frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": true,
 "name": "move",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": false,
+"name": "attack",
 "speed": 12.0
 } ]
 
@@ -222,13 +231,19 @@ extents = Vector2( 5.5, 284.5 )
 [sub_resource type="RectangleShape2D" id=44]
 extents = Vector2( 51.75, 15.5 )
 
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 27.7711, 33.8532 )
+
 [sub_resource type="SpriteFrames" id=45]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "default",
 "speed": 12.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 16.0625, 7.8125 )
 
 [node name="Test Scene" type="Node"]
 __meta__ = {
@@ -245,19 +260,19 @@ position = Vector2( 128, 490 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="MainCharacter"]
-scale = Vector2( 4.92969, 4.35156 )
+position = Vector2( -10.4375, 10.3125 )
+scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 9 )
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter"]
-position = Vector2( -8, 35 )
+position = Vector2( -12, 35 )
 shape = SubResource( 10 )
 
 [node name="AttackArea" type="Area2D" parent="MainCharacter"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter/AttackArea"]
-position = Vector2( 52, 44 )
+position = Vector2( 48, 39 )
 shape = SubResource( 28 )
 disabled = true
 
@@ -307,23 +322,54 @@ shape = SubResource( 43 )
 [node name="TERRA" type="StaticBody2D" parent="."]
 
 [node name="GroundLevel1" type="Sprite" parent="TERRA"]
-position = Vector2( 319.75, 393.5 )
+position = Vector2( 316.25, 428.5 )
 scale = Vector2( 0.0763021, 0.050926 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA"]
-position = Vector2( 323.25, 396.5 )
+position = Vector2( 319.75, 431.5 )
 shape = SubResource( 44 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 446, 315 )
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 357.194, 392.5 )
+scale = Vector2( 0.461111, 0.605556 )
+shape = SubResource( 46 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
+position = Vector2( 316, 313 )
+scale = Vector2( 0.461111, 0.605556 )
 frames = SubResource( 45 )
+frame = 1
 playing = true
 centered = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite"]
+[node name="TERRA2" type="StaticBody2D" parent="."]
+
+[node name="GroundLevel1" type="Sprite" parent="TERRA2"]
+position = Vector2( 498.25, 302.5 )
+scale = Vector2( 0.0763021, 0.050926 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA2"]
+position = Vector2( 501.75, 306.5 )
+shape = SubResource( 44 )
+
+[node name="AreaMeat" type="Area2D" parent="."]
+
+[node name="Meat" type="Sprite" parent="AreaMeat"]
+position = Vector2( 523, 291 )
+scale = Vector2( 0.125, 0.0840278 )
+texture = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMeat"]
+position = Vector2( 524, 291 )
+shape = SubResource( 47 )
 
 [connection signal="animation_finished" from="MainCharacter/AnimatedSprite" to="MainCharacter" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="MainCharacter/AttackArea" to="Enemy" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="MainCharacter/AttackArea2" to="Enemy" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="Enemy/AreaEnemy" to="MainCharacter" method="_on_AreaEnemy_body_entered"]
+[connection signal="body_entered" from="Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="AreaMeat" to="MainCharacter" method="_on_AreaMeat_body_entered"]
