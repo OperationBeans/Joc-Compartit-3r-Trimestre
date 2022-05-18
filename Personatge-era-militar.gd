@@ -46,7 +46,7 @@ func _physics_process(delta):
 func colpeja():
 	var escena = load("res://bala militar.tscn")
 	var bala = escena.instance()
-	bala.global_position = global_position
+	bala.global_position = $Position2D.global_position
 	bala.velocitat = 15 * Vector2.RIGHT
 	Global.Bales.add_child(bala)
 

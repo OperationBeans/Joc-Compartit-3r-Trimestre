@@ -7,6 +7,7 @@
 extents = Vector2( 44.5, 47 )
 
 [node name="Area2D" type="Area2D"]
+collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,5 +19,8 @@ texture = ExtResource( 1 )
 flip_h = true
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -40, -28 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
