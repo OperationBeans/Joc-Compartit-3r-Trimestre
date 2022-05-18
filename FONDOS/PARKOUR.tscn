@@ -26,7 +26,7 @@ scale = Vector2( 0.951852, 0.813332 )
 texture = ExtResource( 1 )
 
 [node name="Paco" parent="." instance=ExtResource( 2 )]
-position = Vector2( 34, 393 )
+position = Vector2( 36, 387 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
