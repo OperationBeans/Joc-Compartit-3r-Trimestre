@@ -15,8 +15,9 @@ func colpeja():
 	$Timer.start()
 	var escena = load("res://bala militar.tscn")
 	var bala = escena.instance()
+	bala.bala_malvada()
 	bala.velocitat = 15 * Vector2.LEFT
-	bala.global_position = global_position
+	bala.global_position = $Position2D.global_position
 	Global.Bales.add_child(bala)
 
 
