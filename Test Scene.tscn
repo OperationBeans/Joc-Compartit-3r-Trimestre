@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://Prova_pegar.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://campfire-0.png" type="Texture" id=13]
 [ext_resource path="res://campfire-1.png" type="Texture" id=14]
 [ext_resource path="res://meat.png" type="Texture" id=15]
+[ext_resource path="res://stalactites.png" type="Texture" id=16]
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 4 )
@@ -245,6 +246,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=47]
 extents = Vector2( 16.0625, 7.8125 )
 
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 40, 19.75 )
+
 [node name="Test Scene" type="Node"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 291.0 ]
@@ -263,7 +267,7 @@ script = ExtResource( 2 )
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 9 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter"]
@@ -342,6 +346,7 @@ shape = SubResource( 46 )
 position = Vector2( 316, 313 )
 scale = Vector2( 0.461111, 0.605556 )
 frames = SubResource( 45 )
+frame = 2
 playing = true
 centered = false
 
@@ -367,9 +372,26 @@ texture = ExtResource( 15 )
 position = Vector2( 524, 291 )
 shape = SubResource( 47 )
 
+[node name="Stalactites" type="Area2D" parent="."]
+
+[node name="Stalactites2" type="Sprite" parent="Stalactites"]
+position = Vector2( 520, 341.125 )
+scale = Vector2( 0.477099, 0.51 )
+texture = ExtResource( 16 )
+
+[node name="Stalactites" type="Sprite" parent="Stalactites"]
+position = Vector2( 479.25, 342.125 )
+scale = Vector2( 0.483778, 0.540769 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stalactites"]
+position = Vector2( 500, 342.25 )
+shape = SubResource( 48 )
+
 [connection signal="animation_finished" from="MainCharacter/AnimatedSprite" to="MainCharacter" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="MainCharacter/AttackArea" to="Enemy" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="MainCharacter/AttackArea2" to="Enemy" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="Enemy/AreaEnemy" to="MainCharacter" method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="AreaMeat" to="MainCharacter" method="_on_AreaMeat_body_entered"]
+[connection signal="body_entered" from="Stalactites" to="MainCharacter" method="_on_Stalactites_body_entered"]

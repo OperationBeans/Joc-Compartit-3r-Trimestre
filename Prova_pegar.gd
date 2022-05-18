@@ -57,3 +57,8 @@ func _on_AreaMeat_body_entered(body):
 		print(vida)
 	else:
 		pass
+
+
+func _on_Stalactites_body_entered(body):
+	if body.name=="MainCharacter":
+		vida -= 50
