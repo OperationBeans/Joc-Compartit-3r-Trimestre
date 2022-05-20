@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://Prova_pegar.gd" type="Script" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://campfire-1.png" type="Texture" id=14]
 [ext_resource path="res://meat.png" type="Texture" id=15]
 [ext_resource path="res://stalactites.png" type="Texture" id=16]
+[ext_resource path="res://CAVEMAN.png" type="Texture" id=17]
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 4 )
@@ -249,6 +250,150 @@ extents = Vector2( 16.0625, 7.8125 )
 [sub_resource type="RectangleShape2D" id=48]
 extents = Vector2( 40, 19.75 )
 
+[sub_resource type="AtlasTexture" id=49]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 0, 1024, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 128, 1024, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 256, 1024, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 384, 1024, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 512, 1024, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=54]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 640, 1024, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 768, 1024, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=56]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 0, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 128, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=58]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 256, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=59]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 384, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=60]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 512, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=61]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 640, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=62]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 768, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=63]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 896, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=64]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1024, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=65]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1152, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=66]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1280, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=67]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1408, 1152, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=68]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 768, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=69]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 896, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=70]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1024, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=71]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1152, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=72]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1280, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=73]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1408, 768, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=74]
+animations = [ {
+"frames": [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ) ],
+"loop": true,
+"name": "move",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=75]
+extents = Vector2( 27.5, 48.625 )
+
+[sub_resource type="RectangleShape2D" id=76]
+extents = Vector2( 25, 46.5 )
+
 [node name="Test Scene" type="Node"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 291.0 ]
@@ -267,6 +412,7 @@ script = ExtResource( 2 )
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 9 )
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter"]
@@ -345,7 +491,7 @@ shape = SubResource( 46 )
 position = Vector2( 316, 313 )
 scale = Vector2( 0.461111, 0.605556 )
 frames = SubResource( 45 )
-frame = 1
+frame = 7
 playing = true
 centered = false
 
@@ -386,6 +532,37 @@ texture = ExtResource( 16 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stalactites"]
 position = Vector2( 500, 342.25 )
 shape = SubResource( 48 )
+
+[node name="TERRA3" type="StaticBody2D" parent="."]
+position = Vector2( -310, -86 )
+
+[node name="GroundLevel1" type="Sprite" parent="TERRA3"]
+position = Vector2( 498.25, 302.5 )
+scale = Vector2( 0.0763021, 0.050926 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA3"]
+position = Vector2( 501.75, 306.5 )
+shape = SubResource( 44 )
+
+[node name="Congo" type="KinematicBody2D" parent="."]
+
+[node name="AreaCongo" type="Area2D" parent="Congo"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Congo/AreaCongo"]
+position = Vector2( 164, 149 )
+scale = Vector2( 0.84375, 0.898438 )
+frames = SubResource( 74 )
+frame = 15
+playing = true
+
+[node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
+position = Vector2( 163.5, 157.625 )
+shape = SubResource( 75 )
+
+[node name="CollisionCOngo" type="CollisionShape2D" parent="Congo"]
+position = Vector2( 163, 157.5 )
+shape = SubResource( 76 )
 
 [connection signal="animation_finished" from="MainCharacter/AnimatedSprite" to="MainCharacter" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="MainCharacter/AttackArea" to="Enemy" method="_on_AttackArea_body_entered"]
