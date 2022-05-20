@@ -63,3 +63,9 @@ func _on_Stalactites_body_entered(body):
 	if body.name=="MainCharacter":
 		vida -= 50
 		print(vida)
+
+
+func _on_AreaCongo_body_entered(body):
+	if body.name == "MainCharacter":
+		dead = true
+		$AnimatedSprite.play("dead")
