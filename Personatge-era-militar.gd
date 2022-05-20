@@ -55,3 +55,8 @@ func colpeja():
 #func _on_AnimatedSprite_animation_finished():
 #	if $AnimatedSprite.animation == 'pegale':
 #		atac = false
+
+
+func _on_portal_body_entered(body):
+	if body.name == "Personatge-era-militar":
+		print("Entered")
