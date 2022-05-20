@@ -34,6 +34,7 @@ func _on_AttackArea_body_entered(body):
 	timer.start()
 		
 func on_timeout():
+	print('Va!')
 	get_tree().change_scene("res://FONDOS/PARKOUR.tscn")
 
 		

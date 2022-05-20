@@ -20,17 +20,21 @@ animations = [ {
 } ]
 
 [node name="bala militar" type="Area2D"]
+collision_mask = 6
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -27 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 5, -31 )
 scale = Vector2( 4.75, 4.21875 )
 frames = SubResource( 6 )
 playing = true
+offset = Vector2( 1.26316, -0.474074 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 2, 0.8 )
 
 [connection signal="area_entered" from="." to="." method="_on_bala_militar_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_bala_militar_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
