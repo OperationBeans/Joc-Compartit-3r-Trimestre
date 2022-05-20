@@ -132,7 +132,7 @@ animations = [ {
 extents = Vector2( 31.875, 33.25 )
 
 [sub_resource type="RectangleShape2D" id=28]
-extents = Vector2( 27, 22 )
+extents = Vector2( 21.25, 22 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 52.5, 23.5 )
@@ -267,6 +267,7 @@ script = ExtResource( 2 )
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 9 )
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter"]
@@ -276,14 +277,14 @@ shape = SubResource( 10 )
 [node name="AttackArea" type="Area2D" parent="MainCharacter"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter/AttackArea"]
-position = Vector2( 48, 39 )
+position = Vector2( 45.5, 39 )
 shape = SubResource( 28 )
 disabled = true
 
 [node name="AttackArea2" type="Area2D" parent="MainCharacter"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter/AttackArea2"]
-position = Vector2( -72, 42 )
+position = Vector2( -68.75, 42 )
 shape = SubResource( 28 )
 disabled = true
 
@@ -345,7 +346,7 @@ shape = SubResource( 46 )
 position = Vector2( 316, 313 )
 scale = Vector2( 0.461111, 0.605556 )
 frames = SubResource( 45 )
-frame = 5
+frame = 4
 playing = true
 centered = false
 
