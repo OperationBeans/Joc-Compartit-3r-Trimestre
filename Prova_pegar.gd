@@ -45,7 +45,6 @@ func _on_AreaEnemy_body_entered(body):
 		dead = true
 		$AnimatedSprite.play("dead")
 
-
 func _on_Area2D_body_entered(body):
 	vida -= 20
 	print(vida)
@@ -58,14 +57,16 @@ func _on_AreaMeat_body_entered(body):
 	else:
 		pass
 
-
 func _on_Stalactites_body_entered(body):
 	if body.name=="MainCharacter":
 		vida -= 50
 		print(vida)
 
-
 func _on_AreaCongo_body_entered(body):
 	if body.name == "MainCharacter":
 		dead = true
 		$AnimatedSprite.play("dead")
+
+
+func _on_Portal_body_entered(body):
+	get_tree().change_scene("res://FONDOS/PARKOUR.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=2]
+[gd_scene load_steps=106 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://Prova_pegar.gd" type="Script" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://CAVEMAN.png" type="Texture" id=17]
 [ext_resource path="res://Congo.gd" type="Script" id=18]
 [ext_resource path="res://portal.png" type="Texture" id=19]
+[ext_resource path="res://AreaMeat.gd" type="Script" id=20]
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 4 )
@@ -247,10 +248,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=47]
-extents = Vector2( 16.0625, 7.8125 )
+extents = Vector2( 24.5313, 9.5 )
 
 [sub_resource type="RectangleShape2D" id=48]
-extents = Vector2( 40, 19.75 )
+extents = Vector2( 38.5, 19.75 )
 
 [sub_resource type="AtlasTexture" id=49]
 flags = 4
@@ -396,11 +397,8 @@ extents = Vector2( 26.5, 47.125 )
 [sub_resource type="RectangleShape2D" id=76]
 extents = Vector2( 23.5, 45.5 )
 
-[sub_resource type="RectangleShape2D" id=78]
-extents = Vector2( 0.5, 4.25 )
-
 [sub_resource type="RectangleShape2D" id=77]
-extents = Vector2( 0.75, 2.5 )
+extents = Vector2( 57.625, 0.375 )
 
 [sub_resource type="AtlasTexture" id=79]
 flags = 4
@@ -429,6 +427,15 @@ animations = [ {
 "name": "default",
 "speed": 7.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=84]
+extents = Vector2( 11.5, 35 )
+
+[sub_resource type="RectangleShape2D" id=85]
+extents = Vector2( 6.125, 29.625 )
+
+[sub_resource type="RectangleShape2D" id=86]
+extents = Vector2( 6, 32.75 )
 
 [node name="Test Scene" type="Node"]
 __meta__ = {
@@ -508,25 +515,26 @@ shape = SubResource( 43 )
 [node name="TERRA" type="StaticBody2D" parent="."]
 
 [node name="GroundLevel1" type="Sprite" parent="TERRA"]
-position = Vector2( 354.25, 429 )
+position = Vector2( 338.25, 412 )
 scale = Vector2( 0.0763021, 0.050926 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA"]
-position = Vector2( 357.75, 432 )
+position = Vector2( 341.75, 415 )
 shape = SubResource( 44 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 395.194, 393 )
+position = Vector2( 379.194, 376 )
 scale = Vector2( 0.461111, 0.605556 )
 shape = SubResource( 46 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
-position = Vector2( 356, 313 )
+position = Vector2( 339, 292 )
 scale = Vector2( 0.461111, 0.605556 )
 frames = SubResource( 45 )
+frame = 3
 playing = true
 centered = false
 
@@ -534,51 +542,52 @@ centered = false
 position = Vector2( 46, 0 )
 
 [node name="GroundLevel1" type="Sprite" parent="TERRA2"]
-position = Vector2( 498.25, 302.5 )
+position = Vector2( 119.25, 268.5 )
 scale = Vector2( 0.0763021, 0.050926 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA2"]
-position = Vector2( 500, 306.5 )
+position = Vector2( 121, 272.5 )
 shape = SubResource( 44 )
 
 [node name="AreaMeat" type="Area2D" parent="."]
+script = ExtResource( 20 )
 
 [node name="Meat" type="Sprite" parent="AreaMeat"]
-position = Vector2( 523, 291 )
-scale = Vector2( 0.125, 0.0840278 )
+position = Vector2( 136.25, 249.563 )
+scale = Vector2( 0.168056, 0.125347 )
 texture = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMeat"]
-position = Vector2( 524, 291 )
+position = Vector2( 136.531, 246.5 )
 shape = SubResource( 47 )
 
 [node name="Stalactites" type="Area2D" parent="."]
 
 [node name="Stalactites2" type="Sprite" parent="Stalactites"]
-position = Vector2( 524, 340 )
+position = Vector2( 188, 305 )
 scale = Vector2( 0.477099, 0.51 )
 texture = ExtResource( 16 )
 
 [node name="Stalactites" type="Sprite" parent="Stalactites"]
-position = Vector2( 565, 342 )
+position = Vector2( 150, 306 )
 scale = Vector2( 0.483778, 0.540769 )
 texture = ExtResource( 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stalactites"]
-position = Vector2( 545, 341 )
+position = Vector2( 169.5, 306 )
 shape = SubResource( 48 )
 
 [node name="TERRA3" type="StaticBody2D" parent="."]
 position = Vector2( -310, -86 )
 
 [node name="GroundLevel1" type="Sprite" parent="TERRA3"]
-position = Vector2( 498.25, 302.5 )
+position = Vector2( 867.25, 250.5 )
 scale = Vector2( 0.0763021, 0.050926 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA3"]
-position = Vector2( 503.875, 306.5 )
+position = Vector2( 872.875, 254.5 )
 shape = SubResource( 44 )
 
 [node name="Congo" type="KinematicBody2D" parent="."]
@@ -588,52 +597,48 @@ script = ExtResource( 18 )
 [node name="AreaCongo" type="Area2D" parent="Congo"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Congo/AreaCongo"]
-position = Vector2( 167.5, 151.75 )
+position = Vector2( 536.5, 99.75 )
 scale = Vector2( 0.789063, 0.855469 )
 frames = SubResource( 74 )
-frame = 12
+frame = 4
 playing = true
 
 [node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
-position = Vector2( 164.5, 159.125 )
+position = Vector2( 533.5, 107.125 )
 shape = SubResource( 75 )
 
 [node name="CollisionCOngo" type="CollisionShape2D" parent="Congo"]
-position = Vector2( 164.5, 158.5 )
+position = Vector2( 533.5, 106.5 )
 shape = SubResource( 76 )
 
 [node name="TERRA4" type="StaticBody2D" parent="."]
 position = Vector2( -193, -86 )
 
 [node name="GroundLevel1" type="Sprite" parent="TERRA4"]
-position = Vector2( 498.25, 302.5 )
+position = Vector2( 867.25, 250.5 )
 scale = Vector2( 0.0763021, 0.050926 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA4"]
-position = Vector2( 500.125, 306.5 )
+position = Vector2( 869.125, 254.5 )
 shape = SubResource( 44 )
 
 [node name="TERRA5" type="StaticBody2D" parent="."]
 position = Vector2( -427, -86 )
 
 [node name="GroundLevel1" type="Sprite" parent="TERRA5"]
-position = Vector2( 498.25, 304.5 )
+position = Vector2( 867.25, 252.5 )
 scale = Vector2( 0.0763021, 0.050926 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA5"]
-position = Vector2( 506.688, 306.5 )
+position = Vector2( 875.688, 254.5 )
 shape = SubResource( 44 )
 
-[node name="AreaLimitsCongo" type="Area2D" parent="."]
+[node name="AreaAlertaCongo" type="Area2D" parent="."]
 
-[node name="LimitsCongo" type="CollisionShape2D" parent="AreaLimitsCongo"]
-position = Vector2( 23.5, 199.75 )
-shape = SubResource( 78 )
-
-[node name="LimitsCongo2" type="CollisionShape2D" parent="AreaLimitsCongo"]
-position = Vector2( 363.75, 203 )
+[node name="LimitsCongo2" type="CollisionShape2D" parent="AreaAlertaCongo"]
+position = Vector2( 167.375, 257.375 )
 shape = SubResource( 77 )
 
 [node name="Portal" type="Area2D" parent="."]
@@ -641,8 +646,36 @@ shape = SubResource( 77 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal"]
 position = Vector2( 915, 99 )
 frames = SubResource( 83 )
-frame = 2
+frame = 1
 playing = true
+
+[node name="CollisionPortal" type="CollisionShape2D" parent="Portal"]
+position = Vector2( 915.5, 85 )
+shape = SubResource( 84 )
+
+[node name="LimitsCongoDreta" type="Area2D" parent="."]
+
+[node name="CollisionLimitsDreta" type="CollisionShape2D" parent="LimitsCongoDreta"]
+position = Vector2( 842.125, 123.625 )
+shape = SubResource( 85 )
+
+[node name="LimitsCongoEsquerra" type="Area2D" parent="."]
+
+[node name="CollisionLimitsEsquerra" type="CollisionShape2D" parent="LimitsCongoEsquerra"]
+position = Vector2( 398, 120.75 )
+shape = SubResource( 86 )
+
+[node name="TERRA6" type="StaticBody2D" parent="."]
+position = Vector2( -79, -86 )
+
+[node name="GroundLevel1" type="Sprite" parent="TERRA6"]
+position = Vector2( 867.25, 250.5 )
+scale = Vector2( 0.0763021, 0.050926 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA6"]
+position = Vector2( 869.125, 254.5 )
+shape = SubResource( 44 )
 
 [connection signal="animation_finished" from="MainCharacter/AnimatedSprite" to="MainCharacter" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="MainCharacter/AttackArea" to="Enemy" method="_on_AttackArea_body_entered"]
@@ -651,6 +684,10 @@ playing = true
 [connection signal="body_entered" from="Enemy/AreaEnemy" to="MainCharacter" method="_on_AreaEnemy_body_entered"]
 [connection signal="body_entered" from="Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="AreaMeat" to="MainCharacter" method="_on_AreaMeat_body_entered"]
+[connection signal="body_entered" from="AreaMeat" to="AreaMeat" method="_on_AreaMeat_body_entered"]
 [connection signal="body_entered" from="Stalactites" to="MainCharacter" method="_on_Stalactites_body_entered"]
 [connection signal="body_entered" from="Congo/AreaCongo" to="MainCharacter" method="_on_AreaCongo_body_entered"]
-[connection signal="body_entered" from="AreaLimitsCongo" to="Congo" method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="AreaAlertaCongo" to="Congo" method="_on_AreaAlertaCongo_body_entered"]
+[connection signal="body_entered" from="Portal" to="MainCharacter" method="_on_Portal_body_entered"]
+[connection signal="body_entered" from="LimitsCongoDreta" to="Congo" method="_on_LimitsCongoDreta_body_entered"]
+[connection signal="body_entered" from="LimitsCongoEsquerra" to="Congo" method="_on_LimitsCongoEsquerra_body_entered"]
