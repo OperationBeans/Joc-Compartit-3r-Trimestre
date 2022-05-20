@@ -9,6 +9,7 @@ onready var selector_three = $CenterContainer/VBoxContainer/CenterContainer2/VBo
 
 var current_selection = 0
 
+var fons1 = preload('res://fondo.jpg')
 func _ready():
 	set_current_selection(0)
 
@@ -42,5 +43,8 @@ func set_current_selection(_current_selection):
 		selector_two.text = ">"
 	elif _current_selection == 2:
 		selector_three.text = ">"
+
+
+
 
 
