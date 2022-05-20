@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://lletres xules.tres" type="DynamicFont" id=1]
-[ext_resource path="res://foto negre.png" type="Texture" id=2]
 [ext_resource path="res://Pause.gd" type="Script" id=3]
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -9,71 +8,59 @@ pause_mode = 2
 layer = 10
 script = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 2 )
-expand = true
+color = Color( 0.0784314, 0.0627451, 0.0627451, 0.333333 )
 
-[node name="Fullscreen" type="Button" parent="."]
-anchor_left = 0.454
-anchor_top = 0.5
-anchor_right = 0.454
-anchor_bottom = 0.5
-margin_left = -153.896
-margin_top = -124.0
-margin_right = 267.104
-margin_bottom = -2.0
-custom_fonts/font = ExtResource( 1 )
-text = "PANTALLA SENCERA"
-flat = true
-
-[node name="Sortir" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -209.0
-margin_top = -178.0
-margin_right = 212.0
-margin_bottom = -56.0
-rect_min_size = Vector2( 421, 0 )
-custom_colors/font_color = Color( 0.901961, 0.145098, 0.0901961, 1 )
-custom_fonts/font = ExtResource( 1 )
-text = "SORTIR"
-flat = true
 
-[node name="Button" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -209.0
-margin_top = 4.0
-margin_right = 225.0
-margin_bottom = 126.0
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 301.0
+margin_top = 66.0
+margin_right = 722.0
+margin_bottom = 533.0
+custom_constants/separation = 41
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 421.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 70 )
+custom_colors/font_color = Color( 0.0627451, 0.913725, 0.196078, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Joc Pausat"
+align = 1
+uppercase = true
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 111.0
+margin_right = 421.0
+margin_bottom = 173.0
 rect_min_size = Vector2( 421, 0 )
 custom_fonts/font = ExtResource( 1 )
 text = "CONTINUAR"
 flat = true
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-anchor_right = 1.0
-margin_bottom = 116.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 389.0
-margin_top = 28.0
-margin_right = 635.0
-margin_bottom = 88.0
-
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 246.0
-margin_bottom = 60.0
-custom_colors/font_color = Color( 0.0313726, 1, 0, 1 )
+[node name="Fullscreen" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 214.0
+margin_right = 421.0
+margin_bottom = 276.0
 custom_fonts/font = ExtResource( 1 )
-text = "Joc Pausat"
+text = "PANTALLA SENCERA"
+flat = true
 
-[connection signal="pressed" from="Fullscreen" to="." method="_on_Fullscreen_pressed"]
-[connection signal="pressed" from="Sortir" to="." method="_on_Sortir_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="Sortir" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 317.0
+margin_right = 421.0
+margin_bottom = 467.0
+rect_min_size = Vector2( 421, 150 )
+custom_colors/font_color = Color( 0.901961, 0.145098, 0.0901961, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "SORTIR"
+flat = true
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Fullscreen" to="." method="_on_Fullscreen_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Sortir" to="." method="_on_Sortir_pressed"]
