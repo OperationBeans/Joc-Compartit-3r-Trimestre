@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wolf1.png-3365ceaad95869a9431542134aa93b4a.stex"
+path="res://.import/CAVEMAN.png-f835e14bb7aec58c80b2f9b11c8b054e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DISSENYS/ENEMICS/PREHISTÒRIA/LLOP/ANIMATED SPRITE LLOP CAMINANT/wolf1.png"
-dest_files=[ "res://.import/wolf1.png-3365ceaad95869a9431542134aa93b4a.stex" ]
+source_file="res://CAVEMAN.png"
+dest_files=[ "res://.import/CAVEMAN.png-f835e14bb7aec58c80b2f9b11c8b054e.stex" ]
 
 [params]
 

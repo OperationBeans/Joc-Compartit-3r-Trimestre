@@ -9,6 +9,7 @@ onready var selector_three = $CenterContainer/VBoxContainer/CenterContainer2/VBo
 
 var current_selection = 0
 
+var fons1 = preload('res://fondo.jpg')
 func _ready():
 	set_current_selection(0)
 
@@ -24,8 +25,9 @@ func _process(_delta):
 
 func handle_selection(_current_selection):
 	if _current_selection == 0:
-		get_parent().add_child(first_scene.instance())
-		queue_free()
+		get_tree().change_scene_to(first_scene)
+#		get_parent().add_child(first_scene.instance())
+#		queue_free()
 	elif _current_selection == 1:
 		get_tree().change_scene("res://Com jugar.tscn")
 	elif _current_selection == 2:
@@ -41,5 +43,8 @@ func set_current_selection(_current_selection):
 		selector_two.text = ">"
 	elif _current_selection == 2:
 		selector_three.text = ">"
+
+
+
 
 
