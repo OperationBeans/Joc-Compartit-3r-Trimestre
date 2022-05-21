@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=2]
+[gd_scene load_steps=146 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://Prova_pegar.gd" type="Script" id=2]
@@ -233,6 +233,9 @@ extents = Vector2( 514, 18.5 )
 
 [sub_resource type="RectangleShape2D" id=43]
 extents = Vector2( 5.5, 284.5 )
+
+[sub_resource type="RectangleShape2D" id=125]
+extents = Vector2( 522, 10 )
 
 [sub_resource type="RectangleShape2D" id=44]
 extents = Vector2( 57.3125, 14.5 )
@@ -718,6 +721,10 @@ shape = SubResource( 43 )
 position = Vector2( 1029, 275 )
 shape = SubResource( 43 )
 
+[node name="LIMITS3" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 512, 0 )
+shape = SubResource( 125 )
+
 [node name="TERRA" type="StaticBody2D" parent="."]
 position = Vector2( 1, 0 )
 
@@ -742,7 +749,7 @@ shape = SubResource( 46 )
 position = Vector2( 339, 292 )
 scale = Vector2( 0.461111, 0.605556 )
 frames = SubResource( 45 )
-frame = 2
+frame = 6
 playing = true
 centered = false
 
@@ -808,7 +815,7 @@ script = ExtResource( 18 )
 position = Vector2( 536.5, 99.75 )
 scale = Vector2( 0.789063, 0.855469 )
 frames = SubResource( 74 )
-frame = 2
+frame = 12
 playing = true
 
 [node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
@@ -854,7 +861,7 @@ shape = SubResource( 77 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal"]
 position = Vector2( 915, 99 )
 frames = SubResource( 83 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionPortal" type="CollisionShape2D" parent="Portal"]
