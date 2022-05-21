@@ -24,14 +24,15 @@ func _physics_process(delta):
 		$AreaEnemy/AnimatedSprite.flip_h = false
 		$AreaEnemy/AnimatedSprite.play("move")
 func _on_AttackArea_body_entered(body):
-	dead = true
-	$AreaEnemy/AnimatedSprite.play("dead")
-	var timer = Timer.new()
-	timer.set_one_shot(true)
-	timer.set_wait_time(2)
-	timer.connect("timeout", self, "on_timeout")
-	add_child(timer)
-	timer.start()
+	if body.name == "Enemy":
+		dead = true
+		$AreaEnemy/AnimatedSprite.play("dead")
+		var timer = Timer.new()
+		timer.set_one_shot(true)
+		timer.set_wait_time(1)
+		timer.connect("timeout", self, "on_timeout")
+		add_child(timer)
+		timer.start()
 		
 func on_timeout():
 	hide()
