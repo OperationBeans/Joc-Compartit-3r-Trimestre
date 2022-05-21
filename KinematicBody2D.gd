@@ -21,6 +21,10 @@ func _physics_process(delta):
 		velocitat += Vector2.LEFT * velocitat_base  
 		$AnimatedSprite.flip_h = true
 		$AnimatedSprite.play('move')
+	else:
+		velocitat.x = 0
+		if is_attacking == false and dead == false:
+			$AnimatedSprite.play("default")
 	velocitat += gravetat * delta
 	velocitat = move_and_slide(velocitat, Vector2.UP)
 	Global.pos = global_position
@@ -81,3 +85,4 @@ func _on_MORT_CINQUENA_PART_EGIPTE_body_entered(body):
 
 func _on_Stalactites_body_entered(body):
 	vida -= 50
+	print(vida)

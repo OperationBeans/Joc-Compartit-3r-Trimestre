@@ -20,7 +20,7 @@ height = 42.0
 extents = Vector2( 57.3125, 14.5 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 38.5, 19.75 )
+extents = Vector2( 41.5, 25.4375 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -72,18 +72,37 @@ shape = SubResource( 5 )
 [node name="Stalactites" type="Area2D" parent="TERRA3"]
 
 [node name="Stalactites2" type="Sprite" parent="TERRA3/Stalactites"]
-position = Vector2( 890.75, 287.875 )
-scale = Vector2( 0.477099, 0.51 )
+position = Vector2( 890.75, 292.5 )
+scale = Vector2( 0.477099, 0.649231 )
 texture = ExtResource( 8 )
 
 [node name="Stalactites" type="Sprite" parent="TERRA3/Stalactites"]
-position = Vector2( 852.75, 288.875 )
-scale = Vector2( 0.483778, 0.540769 )
+position = Vector2( 852.75, 292 )
+scale = Vector2( 0.483778, 0.633846 )
 texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA3/Stalactites"]
-position = Vector2( 872.25, 288.875 )
+position = Vector2( 872.25, 294.563 )
+shape = SubResource( 6 )
+
+[node name="Stalactites2" type="Area2D" parent="TERRA3"]
+position = Vector2( 0, 71 )
+rotation = 6.28319
+
+[node name="Stalactites2" type="Sprite" parent="TERRA3/Stalactites2"]
+position = Vector2( 896, 290 )
+scale = Vector2( -0.550218, -0.523335 )
+texture = ExtResource( 8 )
+
+[node name="Stalactites" type="Sprite" parent="TERRA3/Stalactites2"]
+position = Vector2( 854.542, 289 )
+scale = Vector2( -0.487419, -0.530401 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA3/Stalactites2"]
+position = Vector2( 875.5, 289 )
 shape = SubResource( 6 )
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="TERRA3/Stalactites" to="Paco" method="_on_Stalactites_body_entered"]
+[connection signal="body_entered" from="TERRA3/Stalactites2" to="Paco" method="_on_Stalactites_body_entered"]

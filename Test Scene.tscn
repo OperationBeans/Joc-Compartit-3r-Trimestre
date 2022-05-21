@@ -1,4 +1,4 @@
-[gd_scene load_steps=146 format=2]
+[gd_scene load_steps=145 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://Prova_pegar.gd" type="Script" id=2]
@@ -21,7 +21,6 @@
 [ext_resource path="res://portal.png" type="Texture" id=19]
 [ext_resource path="res://AreaMeat.gd" type="Script" id=20]
 [ext_resource path="res://ghost dying.png" type="Texture" id=21]
-[ext_resource path="res://TERRA.gd" type="Script" id=22]
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 4 )
@@ -662,7 +661,7 @@ script = ExtResource( 2 )
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 9 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter"]
@@ -721,7 +720,6 @@ shape = SubResource( 43 )
 
 [node name="TERRA" type="StaticBody2D" parent="."]
 position = Vector2( 1, 0 )
-script = ExtResource( 22 )
 
 [node name="GroundLevel1" type="Sprite" parent="TERRA"]
 position = Vector2( 338.25, 412 )
@@ -744,6 +742,7 @@ shape = SubResource( 46 )
 position = Vector2( 339, 292 )
 scale = Vector2( 0.461111, 0.605556 )
 frames = SubResource( 45 )
+frame = 2
 playing = true
 centered = false
 
@@ -809,7 +808,7 @@ script = ExtResource( 18 )
 position = Vector2( 536.5, 99.75 )
 scale = Vector2( 0.789063, 0.855469 )
 frames = SubResource( 74 )
-frame = 13
+frame = 2
 playing = true
 
 [node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
@@ -855,7 +854,7 @@ shape = SubResource( 77 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal"]
 position = Vector2( 915, 99 )
 frames = SubResource( 83 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionPortal" type="CollisionShape2D" parent="Portal"]
