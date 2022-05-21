@@ -7,6 +7,7 @@ var salt = Vector2.UP * 600
 
 var dead = false
 var is_attacking = false
+var vida  = 100
 
 func _physics_process(delta):
 	velocitat.x=0
@@ -76,3 +77,7 @@ func _on_MORT_QUARTA_PART_body_entered(body):
 func _on_MORT_CINQUENA_PART_EGIPTE_body_entered(body):
 	if body.name == "Paco":
 		get_tree().change_scene("res://Escena Mort.tscn")
+
+
+func _on_Stalactites_body_entered(body):
+	vida -= 50
