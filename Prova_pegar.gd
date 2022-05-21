@@ -48,3 +48,14 @@ func _on_AreaCollision_body_entered(body):
 	if body.name == "MainCharacter":
 		dead = true
 		$AnimatedSprite.play("dead")
+
+
+func _on_AreaEnemy_body_entered(body):
+	if body.name == "MainCharacter":
+		dead = true
+		$AnimatedSprite.play("dead")
+
+
+func _on_Portal_body_entered(body):
+	if body.name == "MainCharacter":
+		get_tree().change_scene("res://FONDOS/PARKOUR.tscn")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Health Bar.gd" type="Script" id=1]
+[ext_resource path="res://black_healthbar.png" type="Texture" id=2]
+[ext_resource path="res://black_square_healthbar.png" type="Texture" id=3]
+[ext_resource path="res://white_healthbar.png" type="Texture" id=4]
+
+[node name="Health Bar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="HealthBar" type="TextureProgress" parent="."]
+margin_right = 429.0
+margin_bottom = 185.0
+value = 50.0
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+tint_progress = Color( 0, 1, 0, 1 )
+
+[node name="UpdateTween" type="Tween" parent="."]
