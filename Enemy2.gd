@@ -4,11 +4,11 @@ var velocitat_base = 150
 var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
 var dead = false
-
 func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
+	Global.mort = dead
 	if (Global.pos.x)>position.x and dead == false:
 		velocitat.x = 0
 		velocitat += Vector2.RIGHT * velocitat_base 
@@ -35,7 +35,6 @@ func _on_AttackArea_body_entered(body):
 		timer.start()
 		
 func on_timeout():
+	Global.mort = true ###ARREGLAR LO DE GLOBAAAAAAL
 	hide()
 	queue_free()
-
-		

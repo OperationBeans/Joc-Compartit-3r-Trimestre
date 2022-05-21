@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=2]
+[gd_scene load_steps=146 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://Prova_pegar.gd" type="Script" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://portal.png" type="Texture" id=19]
 [ext_resource path="res://AreaMeat.gd" type="Script" id=20]
 [ext_resource path="res://ghost dying.png" type="Texture" id=21]
+[ext_resource path="res://TERRA.gd" type="Script" id=22]
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 4 )
@@ -594,7 +595,7 @@ animations = [ {
 "frames": [ SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ) ],
 "loop": false,
 "name": "dead_ghost",
-"speed": 7.0
+"speed": 6.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=75]
@@ -719,6 +720,8 @@ position = Vector2( 1029, 275 )
 shape = SubResource( 43 )
 
 [node name="TERRA" type="StaticBody2D" parent="."]
+position = Vector2( 1, 0 )
+script = ExtResource( 22 )
 
 [node name="GroundLevel1" type="Sprite" parent="TERRA"]
 position = Vector2( 338.25, 412 )
@@ -729,18 +732,18 @@ texture = ExtResource( 6 )
 position = Vector2( 341.75, 415 )
 shape = SubResource( 44 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="TERRA"]
+position = Vector2( -1, 0 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA/Area2D"]
 position = Vector2( 379.194, 376 )
 scale = Vector2( 0.461111, 0.605556 )
 shape = SubResource( 46 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="TERRA/Area2D"]
 position = Vector2( 339, 292 )
 scale = Vector2( 0.461111, 0.605556 )
 frames = SubResource( 45 )
-frame = 3
 playing = true
 centered = false
 
@@ -806,6 +809,7 @@ script = ExtResource( 18 )
 position = Vector2( 536.5, 99.75 )
 scale = Vector2( 0.789063, 0.855469 )
 frames = SubResource( 74 )
+frame = 13
 playing = true
 
 [node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
@@ -851,7 +855,7 @@ shape = SubResource( 77 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal"]
 position = Vector2( 915, 99 )
 frames = SubResource( 83 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionPortal" type="CollisionShape2D" parent="Portal"]
@@ -887,7 +891,7 @@ shape = SubResource( 44 )
 [connection signal="body_entered" from="MainCharacter/AttackArea" to="Congo" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="MainCharacter/AttackArea2" to="Enemy" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="Enemy/AreaEnemy" to="MainCharacter" method="_on_AreaEnemy_body_entered"]
-[connection signal="body_entered" from="Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="TERRA/Area2D" to="MainCharacter" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="AreaMeat" to="MainCharacter" method="_on_AreaMeat_body_entered"]
 [connection signal="body_entered" from="AreaMeat" to="AreaMeat" method="_on_AreaMeat_body_entered"]
 [connection signal="body_entered" from="Stalactites" to="MainCharacter" method="_on_Stalactites_body_entered"]

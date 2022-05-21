@@ -13,7 +13,7 @@ func _ready():
 
 func _physics_process(delta):
 	if ghost == true:
-		velocitat_base = 150
+		velocitat_base = 200
 	if esquerra == true and dead == false and ataca == true:
 		velocitat.x = 0
 		velocitat += Vector2.LEFT * velocitat_base 
