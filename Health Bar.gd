@@ -7,4 +7,4 @@ func _on_health_update(health, amount):
 	update_tween.start()
 	
 func _on_max_health_update(max_health):
-	health_bar.max_value = max_health
+	health_bar.max_value = 100

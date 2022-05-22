@@ -5,9 +5,10 @@ var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
 var salt = Vector2.UP * 600
 var already_ate = false
-var vida = 100
+var vida : int = 100
 var dead = false
 var is_attacking = false
+
 
 func _physics_process(delta):
 	velocitat.x=0
@@ -59,3 +60,17 @@ func _on_AreaEnemy_body_entered(body):
 func _on_Portal_body_entered(body):
 	if body.name == "MainCharacter":
 		get_tree().change_scene("res://FONDOS/PARKOUR.tscn")
+
+func _on_Area2D_body_entered(body):
+	vida -= 20
+	#print(vida)
+
+func _on_Stalactites_body_entered(body):
+	vida -= 50
+	#print(vida)
+
+
+func _on_AreaCongo_body_entered(body):
+	if body.name == "MainCharacter":
+		dead = true
+		$AnimatedSprite.play("dead")
