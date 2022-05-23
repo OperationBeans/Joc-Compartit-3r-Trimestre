@@ -1,9 +1,17 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=114 format=2]
 
 [ext_resource path="res://smok.png" type="Texture" id=1]
 [ext_resource path="res://rayo.png" type="Texture" id=2]
 [ext_resource path="res://mach.png" type="Texture" id=3]
 [ext_resource path="res://cinematica 1.jpg" type="Texture" id=4]
+[ext_resource path="res://paka.png" type="Texture" id=5]
+[ext_resource path="res://FINAL.gd" type="Script" id=6]
+[ext_resource path="res://maquina.gd" type="Script" id=7]
+[ext_resource path="res://PAKA2.gd" type="Script" id=8]
+[ext_resource path="res://Part Marc/Minotaur - Sprite Sheet.png" type="Texture" id=9]
+[ext_resource path="res://pako.gd" type="Script" id=10]
+[ext_resource path="res://Part Marc/Korred Sprite Sheet.png" type="Texture" id=11]
+[ext_resource path="res://change_to.gd" type="Script" id=12]
 
 [sub_resource type="Shader" id=75]
 code = "shader_type canvas_item;
@@ -407,6 +415,121 @@ animations = [ {
 "speed": 50.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=78]
+extents = Vector2( 47, 115.5 )
+
+[sub_resource type="RectangleShape2D" id=79]
+extents = Vector2( 35.5, 81.75 )
+
+[sub_resource type="AtlasTexture" id=80]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 1344, 93, 96 )
+
+[sub_resource type="AtlasTexture" id=81]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 93, 1344, 93, 96 )
+
+[sub_resource type="AtlasTexture" id=82]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 186, 1344, 93, 96 )
+
+[sub_resource type="AtlasTexture" id=83]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 279, 1344, 93, 96 )
+
+[sub_resource type="AtlasTexture" id=84]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 372, 1344, 93, 96 )
+
+[sub_resource type="AtlasTexture" id=88]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 465, 1440, 93, 96 )
+
+[sub_resource type="SpriteFrames" id=85]
+animations = [ {
+"frames": [ SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 88 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=86]
+extents = Vector2( 60.5, 72.75 )
+
+[sub_resource type="RectangleShape2D" id=87]
+extents = Vector2( 739.75, 22.25 )
+
+[sub_resource type="RectangleShape2D" id=89]
+extents = Vector2( 265.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=99]
+extents = Vector2( 61.5, 52 )
+
+[sub_resource type="AtlasTexture" id=90]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 0, 38, 32, 38 )
+
+[sub_resource type="AtlasTexture" id=91]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 32, 38, 32, 38 )
+
+[sub_resource type="AtlasTexture" id=92]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 64, 38, 32, 38 )
+
+[sub_resource type="AtlasTexture" id=93]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 96, 38, 32, 38 )
+
+[sub_resource type="AtlasTexture" id=94]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 128, 38, 32, 38 )
+
+[sub_resource type="AtlasTexture" id=95]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 160, 38, 32, 38 )
+
+[sub_resource type="AtlasTexture" id=96]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 192, 38, 32, 38 )
+
+[sub_resource type="AtlasTexture" id=97]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 224, 38, 32, 38 )
+
+[sub_resource type="SpriteFrames" id=98]
+animations = [ {
+"frames": [ SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=100]
+extents = Vector2( 17.25, 86.25 )
+
+[sub_resource type="RectangleShape2D" id=101]
+extents = Vector2( 62, 127.75 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -414,7 +537,11 @@ position = Vector2( 512, 299 )
 scale = Vector2( 1.6732, 2.20664 )
 texture = ExtResource( 4 )
 
-[node name="maquina" type="Node2D" parent="."]
+[node name="maquina" type="Area2D" parent="."]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite2" type="Sprite" parent="maquina"]
 position = Vector2( 256, 443 )
@@ -423,24 +550,135 @@ texture = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="maquina"]
 material = SubResource( 76 )
-position = Vector2( 216, 411 )
-scale = Vector2( 0.865079, 0.652 )
+position = Vector2( 225.625, 458.75 )
+rotation = -0.563174
+scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 3
+frame = 6
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="maquina"]
+material = SubResource( 76 )
+position = Vector2( 254, 528 )
+scale = Vector2( 0.559524, 0.27 )
+frames = SubResource( 9 )
+frame = 5
+playing = true
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="maquina"]
+material = SubResource( 76 )
+position = Vector2( 282, 377 )
+rotation = 0.578838
+scale = Vector2( 0.559524, 0.27 )
+frames = SubResource( 9 )
+frame = 5
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="maquina"]
 material = SubResource( 76 )
-position = Vector2( 271, 466 )
+position = Vector2( 265, 445 )
 scale = Vector2( 0.865079, 0.652 )
 frames = SubResource( 9 )
-frame = 3
+frame = 6
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="maquina"]
 material = SubResource( 77 )
-position = Vector2( 245, 439.219 )
+position = Vector2( 265, 431 )
 scale = Vector2( 2.523, 3.1715 )
 frames = SubResource( 74 )
-frame = 46
+frame = 13
 playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maquina"]
+position = Vector2( 257, 440.5 )
+shape = SubResource( 78 )
+
+[node name="Timer" type="Timer" parent="maquina"]
+wait_time = 10.0
+one_shot = true
+
+[node name="PAKA2" type="Area2D" parent="."]
+position = Vector2( -17, 13 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PAKA" type="Sprite" parent="PAKA2"]
+position = Vector2( 764, 464 )
+scale = Vector2( 0.130385, 0.141154 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PAKA2"]
+position = Vector2( 765, 461.75 )
+shape = SubResource( 79 )
+
+[node name="FINAL" type="Area2D" parent="."]
+position = Vector2( -51, 10 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="final_boss" type="AnimatedSprite" parent="FINAL"]
+position = Vector2( 914, 485 )
+scale = Vector2( 3.45968, 3.69792 )
+frames = SubResource( 85 )
+frame = 4
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FINAL"]
+position = Vector2( 946.5, 467.75 )
+shape = SubResource( 86 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 748.25, 576.75 )
+shape = SubResource( 87 )
+
+[node name="limit" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limit"]
+position = Vector2( 284, -333 )
+shape = SubResource( 89 )
+
+[node name="pako" type="Area2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pako"]
+position = Vector2( 1124, 500 )
+shape = SubResource( 99 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pako"]
+position = Vector2( 1113, 509 )
+scale = Vector2( 7.42187, 6.64474 )
+frames = SubResource( 98 )
+playing = true
+flip_h = true
+
+[node name="Timer" type="Timer" parent="pako"]
+wait_time = 5.0
+
+[node name="limpac" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limpac"]
+position = Vector2( 519.25, 468.25 )
+shape = SubResource( 100 )
+
+[node name="change_to" type="Area2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="change_to"]
+position = Vector2( 1314, 427.75 )
+shape = SubResource( 101 )
+
+[connection signal="area_entered" from="maquina" to="maquina" method="_on_maquina_area_entered"]
+[connection signal="timeout" from="maquina/Timer" to="maquina" method="_on_Timer_timeout"]
+[connection signal="area_entered" from="PAKA2" to="PAKA2" method="_on_PAKA2_area_entered"]
+[connection signal="area_entered" from="FINAL" to="FINAL" method="_on_FINAL_area_entered"]
+[connection signal="area_entered" from="limit" to="pako" method="_on_limit_area_entered"]
+[connection signal="timeout" from="pako/Timer" to="pako" method="_on_Timer_timeout"]
+[connection signal="area_entered" from="limpac" to="pako" method="_on_limpac_area_entered"]
+[connection signal="area_entered" from="change_to" to="change_to" method="_on_change_to_area_entered"]
