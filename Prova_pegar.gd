@@ -13,6 +13,7 @@ var value = 200
 
 func _physics_process(delta):
 	velocitat.x=0
+	print($TextureProgress.value)
 	if $TextureProgress.value <= 0:
 		dead = true
 	if dead == true:
@@ -54,7 +55,7 @@ func _on_AnimatedSprite_animation_finished():
 
 func _on_AreaEnemy_body_entered(body):
 	if body.name == "MainCharacter":
-		$TextureProgress.value -= 100
+		$TextureProgress.value -= 1000
 		dead = true
 		
 func _on_Portal_body_entered(body):
@@ -62,11 +63,12 @@ func _on_Portal_body_entered(body):
 		get_tree().change_scene("res://FONDOS/PRIMERA PART PARKOUR EGIPTE.tscn")
 
 func _on_Stalactites_body_entered(body):
-	$TextureProgress.value -= 50
+	if body.name == "MainCharacter":
+		$TextureProgress.value -= 50
 	
 func _on_AreaCongo_body_entered(body):
 	if body.name == "MainCharacter":
-		$TextureProgress.value -= 100
+		$TextureProgress.value -= 1000
 		dead = true
 		
 func on_timeout_mort():

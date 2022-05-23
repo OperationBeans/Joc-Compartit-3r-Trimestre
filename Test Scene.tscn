@@ -669,6 +669,8 @@ margin_left = -50.0
 margin_top = -20.0
 margin_right = 14.0
 margin_bottom = -9.0
+value = 100.0
+allow_greater = false
 nine_patch_stretch = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="MainCharacter"]
@@ -811,7 +813,7 @@ script = ExtResource( 18 )
 position = Vector2( 536.5, 99.75 )
 scale = Vector2( 0.789063, 0.855469 )
 frames = SubResource( 74 )
-frame = 17
+frame = 2
 playing = true
 
 [node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
@@ -862,7 +864,6 @@ shape = SubResource( 77 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal"]
 position = Vector2( 915, 99 )
 frames = SubResource( 83 )
-frame = 1
 playing = true
 
 [node name="CollisionPortal" type="CollisionShape2D" parent="Portal"]
@@ -915,12 +916,13 @@ shape = SubResource( 44 )
 position = Vector2( 158, 212 )
 scale = Vector2( 0.427778, 0.555556 )
 frames = SubResource( 126 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="Campfire" type="Area2D" parent="TERRA7"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA7/Campfire"]
+visible = false
 position = Vector2( 156.5, 235 )
 shape = SubResource( 127 )
 
