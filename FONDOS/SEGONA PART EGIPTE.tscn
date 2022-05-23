@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Part Arroyo/istockphoto-1384344942-170667a.jpg" type="Texture" id=1]
-[ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Part Arroyo/istockphoto-1384344942-170667a.jpg" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 171.063, 79.75 )
@@ -26,9 +26,9 @@ extents = Vector2( 20.5, 159.5 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 514.25, 297.5 )
 scale = Vector2( 1.66476, 2.12411 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
-[node name="Paco" parent="." instance=ExtResource( 2 )]
+[node name="Paco" parent="." instance=ExtResource( 1 )]
 position = Vector2( 40, 391 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
