@@ -129,7 +129,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 60, 97 )
+extents = Vector2( 31.5, 52.5 )
 
 [node name="FinalBoss" type="Node2D"]
 
@@ -137,10 +137,11 @@ extents = Vector2( 60, 97 )
 script = ExtResource( 1 )
 
 [node name="Orc" type="AnimatedSprite" parent="Orc"]
-scale = Vector2( 0.308889, 0.332222 )
+position = Vector2( 0, 3.8147e-06 )
+scale = Vector2( 0.178889, 0.193889 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="CollisionOrc" type="CollisionShape2D" parent="Orc"]
+position = Vector2( -3.5, 8.5 )
 shape = SubResource( 2 )

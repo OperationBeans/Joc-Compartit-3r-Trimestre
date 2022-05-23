@@ -1,0 +1,184 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://FinalBoss.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Part Marc/Korred Sprite Sheet.png" type="Texture" id=2]
+[ext_resource path="res://PacoFinalScene.gd" type="Script" id=3]
+[ext_resource path="res://barra de viad.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game_background_1/game_background_1.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 31.5, 45.5 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 160, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 224, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 64, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=23]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": false,
+"name": "dead",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": true,
+"name": "move",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
+"loop": false,
+"name": "attack",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 29.875, 34.125 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 30, 34 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 511.5, 34 )
+
+[node name="EscenaCombatFinal" type="Node2D"]
+position = Vector2( -20, -68 )
+
+[node name="FONDO" type="Sprite" parent="."]
+position = Vector2( 532, 368 )
+scale = Vector2( 0.266667, 0.277778 )
+texture = ExtResource( 5 )
+
+[node name="FinalBoss" parent="." instance=ExtResource( 1 )]
+position = Vector2( 98, 502 )
+
+[node name="PacoFinalScene" type="KinematicBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PacoFinalScene"]
+visible = false
+position = Vector2( 957.5, 552.5 )
+shape = SubResource( 24 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PacoFinalScene"]
+position = Vector2( 947, 514 )
+scale = Vector2( -5.17399, 5.24947 )
+frames = SubResource( 23 )
+frame = 3
+playing = true
+
+[node name="AttackingArea" type="Area2D" parent="PacoFinalScene"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PacoFinalScene/AttackingArea"]
+visible = false
+position = Vector2( 1021.88, 554.125 )
+shape = SubResource( 25 )
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PacoFinalScene/AttackingArea"]
+visible = false
+position = Vector2( 893, 554 )
+shape = SubResource( 26 )
+disabled = true
+
+[node name="TextureProgress" parent="PacoFinalScene" instance=ExtResource( 4 )]
+margin_left = 926.0
+margin_top = 486.0
+margin_right = 990.0
+margin_bottom = 497.0
+
+[node name="Terra" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra"]
+position = Vector2( 532.5, 634 )
+shape = SubResource( 27 )
+
+[connection signal="animation_finished" from="PacoFinalScene/AnimatedSprite" to="PacoFinalScene" method="_on_AnimatedSprite_animation_finished"]
