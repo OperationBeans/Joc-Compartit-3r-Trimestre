@@ -57,14 +57,9 @@ func _on_AreaEnemy_body_entered(body):
 		$TextureProgress.value -= 100
 		dead = true
 		
-
-
 func _on_Portal_body_entered(body):
 	if body.name == "MainCharacter":
 		get_tree().change_scene("res://FONDOS/PRIMERA PART PARKOUR EGIPTE.tscn")
-
-func _on_Area2D_body_entered(body):
-	$TextureProgress.value -= 20
 
 func _on_Stalactites_body_entered(body):
 	$TextureProgress.value -= 50
@@ -80,3 +75,7 @@ func on_timeout_mort():
 func _on_AreaMeat_body_entered(body):
 	if body.name == "MainCharacter":
 		$TextureProgress.value += 30
+
+func _on_Campfire_body_entered(body):
+	if body.name == "MainCharacter":
+		$TextureProgress.value -= 20
