@@ -5,14 +5,16 @@ var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
 var salt = Vector2.UP * 600
 var already_ate = false
-var vida : int = 100
 var dead = false
 var is_attacking = false
+var value = 200
+
 
 
 func _physics_process(delta):
 	velocitat.x=0
-	if vida <= 0 or dead == true:
+	if $TextureProgress.value <= 0 or dead == true:
+		$AnimatedSprite.play("dead")
 		var timer = Timer.new()
 		timer.set_one_shot(true)
 		timer.set_wait_time(1)
@@ -48,20 +50,11 @@ func _on_AnimatedSprite_animation_finished():
 		$AttackArea2/CollisionShape2D.disabled = true
 		is_attacking = false
 
-func _on_AttackArea_body_entered(body):
-	dead = true
-	$AnimatedSprite.play("dead")
-
-func _on_AreaCollision_body_entered(body):
-	if body.name == "MainCharacter":
-		dead = true
-		$AnimatedSprite.play("dead")
-
-
 func _on_AreaEnemy_body_entered(body):
 	if body.name == "MainCharacter":
+		$TextureProgress.value -= 100
 		dead = true
-		$AnimatedSprite.play("dead")
+		
 
 
 func _on_Portal_body_entered(body):
@@ -69,18 +62,15 @@ func _on_Portal_body_entered(body):
 		get_tree().change_scene("res://FONDOS/PRIMERA PART PARKOUR EGIPTE.tscn")
 
 func _on_Area2D_body_entered(body):
-	vida -= 20
-	#print(vida)
+	$TextureProgress.value -= 20
 
 func _on_Stalactites_body_entered(body):
-	vida -= 50
-	#print(vida)
-
-
+	$TextureProgress.value -= 50
+	
 func _on_AreaCongo_body_entered(body):
 	if body.name == "MainCharacter":
+		$TextureProgress.value -= 100
 		dead = true
-		$AnimatedSprite.play("dead")
 		
 func on_timeout_mort():
 	get_tree().change_scene("res://Escena Mort.tscn")
