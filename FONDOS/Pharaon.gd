@@ -23,6 +23,7 @@ func _physics_process(delta):
 		timer.connect("timeout", self, "on_timeout")
 		add_child(timer)
 		timer.start()
+	
 	elif attacking == true and dead == false:
 		var timer2 = Timer.new()
 		timer2.set_one_shot(true)
@@ -30,24 +31,8 @@ func _physics_process(delta):
 		timer2.connect("timeout", self, "on_timeout2")
 		add_child(timer2)
 		timer2.start()
+	
 	if (Global.pos.x)<position.x and dead == false:
-		velocitat.x = 0
-		velocitat += Vector2.RIGHT * velocitat_base 
-		velocitat += gravetat * delta
-		velocitat = move_and_slide(velocitat, Vector2.UP)
-		if attacking == false:
-			velocitat_base = 250
-			$AnimatedSprite.flip_h = false
-			$AnimatedSprite.play("move")
-			$AttackArea/AttackCollision1.disabled = true
-			$AttackArea/AttackCollision2.disabled = true
-		if attacking == true:
-			velocitat_base = 350
-			$AnimatedSprite.flip_h = false
-			$AnimatedSprite.play("attack")
-			$AttackArea/AttackCollision1.disabled = false
-			$AttackArea/AttackCollision2.disabled = false
-	elif (Global.pos.x)>position.x and dead == false:
 		velocitat.x = 0
 		velocitat += Vector2.LEFT * velocitat_base 
 		velocitat += gravetat * delta
@@ -64,10 +49,24 @@ func _physics_process(delta):
 			$AnimatedSprite.play("attack")
 			$AttackArea/AttackCollision1.disabled = false
 			$AttackArea/AttackCollision2.disabled = false
-	else:
+	elif (Global.pos.x)>position.x and dead == false:
 		velocitat.x = 0
-		$AnimatedSprite.play("default")
-
+		velocitat += Vector2.RIGHT * velocitat_base 
+		velocitat += gravetat * delta
+		velocitat = move_and_slide(velocitat, Vector2.UP)
+		if attacking == false:
+			velocitat_base = 250
+			$AnimatedSprite.flip_h = false
+			$AnimatedSprite.play("move")
+			$AttackArea/AttackCollision1.disabled = true
+			$AttackArea/AttackCollision2.disabled = true
+		if attacking == true:
+			velocitat_base = 350
+			$AnimatedSprite.flip_h = false
+			$AnimatedSprite.play("attack")
+			$AttackArea/AttackCollision1.disabled = false
+			$AttackArea/AttackCollision2.disabled = false
+	
 func on_timeout():
 	attacking = true
 
@@ -75,9 +74,17 @@ func on_timeout2():
 	attacking = false
 
 func _on_AttackArea_body_entered(body):
-	if hits == 1:
-		dead = true
-		$AnimatedSprite.play("dead")
-	else:
-		hits += 1
+	if body.name == "Pharaon":
+		if hits == 1:
+			dead = true
+			$AnimatedSprite.play("dead")
+		else:
+			hits += 1
 
+func _on_AttackArea2_body_entered(body):
+	if body.name == "Pharaon":
+		if hits == 1:
+			dead = true
+			$AnimatedSprite.play("dead")
+		else:
+			hits += 1
