@@ -318,7 +318,7 @@ script = ExtResource( 4 )
 position = Vector2( 167.25, 476.5 )
 scale = Vector2( 4.67188, 4.53125 )
 frames = SubResource( 29 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pharaon"]
@@ -351,7 +351,7 @@ script = ExtResource( 5 )
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 60 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter"]
