@@ -12,6 +12,13 @@ var is_attacking = false
 
 func _physics_process(delta):
 	velocitat.x=0
+	if vida <= 0 or dead == true:
+		var timer = Timer.new()
+		timer.set_one_shot(true)
+		timer.set_wait_time(1)
+		timer.connect("timeout", self, "on_timeout_mort")
+		add_child(timer)
+		timer.start()
 	if Input.is_action_just_pressed("W") and is_on_floor() and is_attacking == false and dead == false:
 		velocitat += salt 
 	elif Input.is_action_pressed("D") and is_attacking == false and dead == false:
@@ -74,3 +81,6 @@ func _on_AreaCongo_body_entered(body):
 	if body.name == "MainCharacter":
 		dead = true
 		$AnimatedSprite.play("dead")
+		
+func on_timeout_mort():
+	get_tree().change_scene("res://Escena Mort.tscn")
