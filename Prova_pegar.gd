@@ -13,7 +13,9 @@ var value = 200
 
 func _physics_process(delta):
 	velocitat.x=0
-	if $TextureProgress.value <= 0 or dead == true:
+	if $TextureProgress.value <= 0:
+		dead = true
+	if dead == true:
 		$AnimatedSprite.play("dead")
 		var timer = Timer.new()
 		timer.set_one_shot(true)
@@ -74,3 +76,7 @@ func _on_AreaCongo_body_entered(body):
 		
 func on_timeout_mort():
 	get_tree().change_scene("res://Escena Mort.tscn")
+
+func _on_AreaMeat_body_entered(body):
+	if body.name == "MainCharacter":
+		$TextureProgress.value += 30
