@@ -41,7 +41,7 @@ func _on_Area2D2_body_entered(body):
 
 func _on_Area2D3_body_entered(body):
 	if body.name == "Paco":
-		get_tree().change_scene("res://FONDOS/TERCERA PART EGIPTE.tscn")
+		get_tree().change_scene("res://SEGONA PART EGIPTE.tscn")
 
 func _on_Area2D6_body_entered(body):
 	if body.name == "Paco":
@@ -81,3 +81,8 @@ func _on_MORT_CINQUENA_PART_EGIPTE_body_entered(body):
 func _on_Stalactites_body_entered(body):
 	vida -= 50
 	print(vida)
+
+
+func _on_HOLAAA_body_entered(body):
+	if body.name == "Paco":
+		get_tree().change_scene("res://FONDOS/TERCERA PART EGIPTE.tscn")
