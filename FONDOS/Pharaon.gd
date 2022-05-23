@@ -4,7 +4,7 @@ extends KinematicBody2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var velocitat_base = 250
+var velocitat_base = 325
 var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
 var dead = false
@@ -30,7 +30,7 @@ func _physics_process(delta):
 		timer2.connect("timeout", self, "on_timeout2")
 		add_child(timer2)
 		timer2.start()
-	if (Global.pos.x)>position.x and dead == false:
+	if (Global.pos.x)<position.x and dead == false:
 		velocitat.x = 0
 		velocitat += Vector2.RIGHT * velocitat_base 
 		velocitat += gravetat * delta
@@ -47,7 +47,7 @@ func _physics_process(delta):
 			$AnimatedSprite.play("attack")
 			$AttackArea/AttackCollision1.disabled = false
 			$AttackArea/AttackCollision2.disabled = false
-	elif (Global.pos.x)<position.x and dead == false:
+	elif (Global.pos.x)>position.x and dead == false:
 		velocitat.x = 0
 		velocitat += Vector2.LEFT * velocitat_base 
 		velocitat += gravetat * delta

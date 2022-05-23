@@ -66,7 +66,7 @@ func _on_AreaEnemy_body_entered(body):
 
 func _on_Portal_body_entered(body):
 	if body.name == "MainCharacter":
-		get_tree().change_scene("res://FONDOS/PARKOUR.tscn")
+		get_tree().change_scene("res://FONDOS/PRIMERA PART PARKOUR EGIPTE.tscn")
 
 func _on_Area2D_body_entered(body):
 	vida -= 20
