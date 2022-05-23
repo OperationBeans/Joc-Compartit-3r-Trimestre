@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Part Arroyo/jsdfjsdjfjsdfsd.png" type="Texture" id=1]
+[ext_resource path="res://Part Arroyo/segona part parkour egipte.jpg" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -43,7 +43,7 @@ shape = SubResource( 2 )
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2( 601, 453 )
+position = Vector2( 595, 451 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
