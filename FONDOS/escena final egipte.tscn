@@ -285,14 +285,13 @@ scale = Vector2( 1.59764, 2.17647 )
 texture = ExtResource( 1 )
 
 [node name="MainCharacterEgypt" type="KinematicBody2D" parent="."]
-position = Vector2( 823, 257 )
+position = Vector2( 902, 513 )
 script = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="MainCharacterEgypt"]
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 60 )
-frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacterEgypt"]
@@ -339,7 +338,6 @@ script = ExtResource( 4 )
 position = Vector2( 22, -1.00001 )
 scale = Vector2( 5.4375, 4.875 )
 frames = SubResource( 29 )
-frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pharaon"]
@@ -365,4 +363,6 @@ position = Vector2( 20.5, 25.75 )
 shape = SubResource( 63 )
 
 [connection signal="animation_finished" from="MainCharacterEgypt/AnimatedSprite" to="MainCharacterEgypt" method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="MainCharacterEgypt/AttackArea" to="Pharaon" method="_on_AttackArea_body_entered"]
+[connection signal="body_entered" from="MainCharacterEgypt/AttackArea2" to="Pharaon" method="_on_AttackArea2_body_entered"]
 [connection signal="body_entered" from="Pharaon/AttackArea" to="MainCharacterEgypt" method="_on_AttackArea_body_entered"]
