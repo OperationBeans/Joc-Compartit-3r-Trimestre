@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=2]
+[gd_scene load_steps=141 format=2]
 
 [ext_resource path="res://Orc/PNG/PNG Sequences/Walking/0_Orc_Walking_004.png" type="Texture" id=1]
 [ext_resource path="res://Part Marc/Korred Sprite Sheet.png" type="Texture" id=2]
@@ -303,6 +303,9 @@ extents = Vector2( 23.5, 314.5 )
 [sub_resource type="RectangleShape2D" id=29]
 extents = Vector2( 56, 319.25 )
 
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 541.5, 41.5 )
+
 [node name="EscenaCombatFinal" type="Node2D"]
 position = Vector2( -20, -68 )
 script = ExtResource( 100 )
@@ -362,7 +365,7 @@ shape = SubResource( 24 )
 position = Vector2( 86.7839, 491.991 )
 scale = Vector2( -5.17399, 5.24947 )
 frames = SubResource( 23 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="AttackingArea" type="Area2D" parent="PacoFinalScene"]
@@ -396,6 +399,10 @@ shape = SubResource( 28 )
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Terra"]
 position = Vector2( 1085, 337.75 )
 shape = SubResource( 29 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Terra"]
+position = Vector2( 531.5, 31.5 )
+shape = SubResource( 40 )
 
 [connection signal="body_entered" from="FinalBoss/Orc/AreaBat" to="PacoFinalScene" method="_on_AreaBat_body_entered"]
 [connection signal="body_entered" from="FinalBoss/Orc/AreaOrc" to="PacoFinalScene" method="_on_AreaOrc_body_entered"]
