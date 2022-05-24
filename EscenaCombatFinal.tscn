@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=140 format=2]
 
 [ext_resource path="res://Orc/PNG/PNG Sequences/Walking/0_Orc_Walking_004.png" type="Texture" id=1]
 [ext_resource path="res://Part Marc/Korred Sprite Sheet.png" type="Texture" id=2]
@@ -99,42 +99,7 @@
 [ext_resource path="res://Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_007.png" type="Texture" id=97]
 [ext_resource path="res://Orc/PNG/PNG Sequences/Idle Blinking/0_Orc_Idle Blinking_004.png" type="Texture" id=98]
 [ext_resource path="res://flames.png" type="Texture" id=99]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 96 ), ExtResource( 95 ), ExtResource( 94 ), ExtResource( 20 ), ExtResource( 98 ), ExtResource( 21 ), ExtResource( 91 ), ExtResource( 97 ), ExtResource( 90 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 89 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 66 ) ],
-"loop": true,
-"name": "default",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 84 ), ExtResource( 38 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 12 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 11 ), ExtResource( 31 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "New Anim",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 25 ), ExtResource( 7 ), ExtResource( 36 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 24 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 39 ), ExtResource( 83 ), ExtResource( 79 ), ExtResource( 68 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 28 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "walking",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 81 ), ExtResource( 60 ), ExtResource( 76 ), ExtResource( 55 ), ExtResource( 77 ), ExtResource( 63 ), ExtResource( 65 ), ExtResource( 64 ), ExtResource( 48 ), ExtResource( 40 ), ExtResource( 51 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 49 ), ExtResource( 72 ) ],
-"loop": true,
-"name": "dying",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 71 ), ExtResource( 78 ), ExtResource( 62 ), ExtResource( 59 ), ExtResource( 73 ), ExtResource( 54 ), ExtResource( 86 ), ExtResource( 88 ), ExtResource( 85 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 56 ) ],
-"loop": true,
-"name": "move",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 50 ), ExtResource( 41 ), ExtResource( 47 ), ExtResource( 42 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 69 ), ExtResource( 61 ), ExtResource( 70 ), ExtResource( 87 ), ExtResource( 75 ) ],
-"loop": true,
-"name": "attack",
-"speed": 12.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 31.5, 52.5 )
+[ext_resource path="res://EscenaCombatFinal.gd" type="Script" id=100]
 
 [sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 18.5, 42.5 )
@@ -168,6 +133,45 @@ animations = [ {
 "loop": true,
 "name": "default",
 "speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 13.5, 19 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 31.5, 52.5 )
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 96 ), ExtResource( 95 ), ExtResource( 94 ), ExtResource( 20 ), ExtResource( 98 ), ExtResource( 21 ), ExtResource( 91 ), ExtResource( 97 ), ExtResource( 90 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 89 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 66 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 84 ), ExtResource( 38 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 12 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 11 ), ExtResource( 31 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 71 ), ExtResource( 78 ), ExtResource( 62 ), ExtResource( 59 ), ExtResource( 73 ), ExtResource( 54 ), ExtResource( 86 ), ExtResource( 88 ), ExtResource( 85 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 56 ) ],
+"loop": true,
+"name": "move",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 41 ), ExtResource( 47 ), ExtResource( 42 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 69 ), ExtResource( 61 ), ExtResource( 70 ), ExtResource( 87 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "attack",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 81 ), ExtResource( 60 ), ExtResource( 76 ), ExtResource( 55 ), ExtResource( 77 ), ExtResource( 63 ), ExtResource( 65 ), ExtResource( 64 ), ExtResource( 48 ), ExtResource( 40 ), ExtResource( 51 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 49 ), ExtResource( 72 ) ],
+"loop": true,
+"name": "dying",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 7 ), ExtResource( 36 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 24 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 39 ), ExtResource( 83 ), ExtResource( 79 ), ExtResource( 68 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 28 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "walking",
+"speed": 12.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=24]
@@ -301,6 +305,7 @@ extents = Vector2( 56, 319.25 )
 
 [node name="EscenaCombatFinal" type="Node2D"]
 position = Vector2( -20, -68 )
+script = ExtResource( 100 )
 
 [node name="FONDO" type="Sprite" parent="."]
 position = Vector2( 532, 368 )
@@ -308,19 +313,10 @@ scale = Vector2( 0.266667, 0.277778 )
 texture = ExtResource( 5 )
 
 [node name="FinalBoss" type="Node2D" parent="."]
-position = Vector2( 98, 510 )
+position = Vector2( 99, 538 )
 
 [node name="Orc" type="KinematicBody2D" parent="FinalBoss"]
 script = ExtResource( 53 )
-
-[node name="Orc" type="AnimatedSprite" parent="FinalBoss/Orc"]
-position = Vector2( 0, 3.8147e-06 )
-scale = Vector2( 0.178889, 0.193889 )
-frames = SubResource( 1 )
-
-[node name="CollisionOrc" type="CollisionShape2D" parent="FinalBoss/Orc"]
-position = Vector2( -3.5, 8.5 )
-shape = SubResource( 2 )
 
 [node name="AreaBat" type="Area2D" parent="FinalBoss/Orc"]
 
@@ -338,8 +334,22 @@ disabled = true
 position = Vector2( -3, 74.9998 )
 scale = Vector2( -0.243169, -0.14757 )
 frames = SubResource( 38 )
-frame = 2
 playing = true
+
+[node name="AreaOrc" type="Area2D" parent="FinalBoss/Orc"]
+position = Vector2( 3, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinalBoss/Orc/AreaOrc"]
+position = Vector2( -5, 82 )
+shape = SubResource( 39 )
+
+[node name="CollisionOrc" type="CollisionShape2D" parent="FinalBoss/Orc"]
+position = Vector2( -3.5, 8.5 )
+shape = SubResource( 2 )
+
+[node name="Orc" type="AnimatedSprite" parent="FinalBoss/Orc"]
+scale = Vector2( 0.178889, 0.193889 )
+frames = SubResource( 1 )
 
 [node name="PacoFinalScene" type="KinematicBody2D" parent="."]
 script = ExtResource( 3 )
@@ -352,6 +362,7 @@ shape = SubResource( 24 )
 position = Vector2( 86.7839, 491.991 )
 scale = Vector2( -5.17399, 5.24947 )
 frames = SubResource( 23 )
+frame = 3
 playing = true
 
 [node name="AttackingArea" type="Area2D" parent="PacoFinalScene"]
@@ -373,7 +384,6 @@ margin_right = 129.784
 margin_bottom = 474.992
 
 [node name="Terra" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terra"]
 position = Vector2( 532.5, 634 )
@@ -387,6 +397,7 @@ shape = SubResource( 28 )
 position = Vector2( 1085, 337.75 )
 shape = SubResource( 29 )
 
-[connection signal="animation_finished" from="FinalBoss/Orc/Orc" to="FinalBoss/Orc" method="_on_Orc_animation_finished"]
 [connection signal="body_entered" from="FinalBoss/Orc/AreaBat" to="PacoFinalScene" method="_on_AreaBat_body_entered"]
+[connection signal="body_entered" from="FinalBoss/Orc/AreaOrc" to="PacoFinalScene" method="_on_AreaOrc_body_entered"]
+[connection signal="animation_finished" from="FinalBoss/Orc/Orc" to="FinalBoss/Orc" method="_on_Orc_animation_finished"]
 [connection signal="animation_finished" from="PacoFinalScene/AnimatedSprite" to="PacoFinalScene" method="_on_AnimatedSprite_animation_finished"]

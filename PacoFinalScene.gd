@@ -33,6 +33,10 @@ func _physics_process(delta):
 		velocitat += Vector2.LEFT * velocitat_base  
 		$AnimatedSprite.flip_h = false
 		$AnimatedSprite.play('move')
+	elif Input.is_action_pressed("S") and is_attacking == false and dead == false and is_on_floor() == false:
+		velocitat += Vector2.DOWN * 100  
+		$AnimatedSprite.flip_h = false
+		$AnimatedSprite.play('move')
 	else:
 		velocitat.x = 0
 		if is_attacking == false and dead == false:
@@ -57,5 +61,10 @@ func on_timeout_mort():
 
 
 func _on_AreaBat_body_entered(body):
+	if body.name == "PacoFinalScene":
+		$TextureProgress.value -= 100
+
+
+func _on_AreaOrc_body_entered(body):
 	if body.name == "PacoFinalScene":
 		$TextureProgress.value -= 100
