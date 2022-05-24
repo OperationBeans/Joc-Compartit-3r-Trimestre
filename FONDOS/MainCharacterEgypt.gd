@@ -13,6 +13,7 @@ var value = 200
 
 func _physics_process(delta):
 	velocitat.x=0
+	print(position.x)
 	if $TextureProgress.value <= 0:
 		dead = true
 	if dead == true:
@@ -61,6 +62,3 @@ func _on_AttackArea_body_entered(body):
 	if body.name == "MainCharacterEgypt":
 		$TextureProgress.value -= 50
 
-func _on_AreaCollision_body_entered(body):
-	if body.name == "MainCharacterEgypt":
-		$TextureProgress.value -= 50

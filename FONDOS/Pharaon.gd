@@ -16,6 +16,8 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+	print("global", Global.pos.x)
+	print("orco" , position.x)
 	if attacking == false and dead == false:
 		var timer = Timer.new()
 		timer.set_one_shot(true)
@@ -32,41 +34,40 @@ func _physics_process(delta):
 		add_child(timer2)
 		timer2.start()
 	
-	if (Global.pos.x)<position.x and dead == false:
+	if ((Global.pos.x)-(position.x-40))< 0 and dead == false:
+		if attacking == false:
+			velocitat_base = 250
+			$AnimatedSprite.flip_h = true
+			$AnimatedSprite.play("move")
+			$AttackArea/AttackCollision1.disabled = true
+			$AttackArea/AttackCollision2.disabled = true
+		if attacking == true:
+			velocitat_base = 350
+			$AnimatedSprite.flip_h = true
+			$AnimatedSprite.play("attack")
+			$AttackArea/AttackCollision1.disabled = false
+			$AttackArea/AttackCollision2.disabled = false
 		velocitat.x = 0
 		velocitat += Vector2.LEFT * velocitat_base 
 		velocitat += gravetat * delta
 		velocitat = move_and_slide(velocitat, Vector2.UP)
+	elif ((Global.pos.x)-(position.x-30))>= 0 and dead == false:
 		if attacking == false:
 			velocitat_base = 250
-			$AnimatedSprite.flip_h = true
+			$AnimatedSprite.flip_h = false
 			$AnimatedSprite.play("move")
 			$AttackArea/AttackCollision1.disabled = true
 			$AttackArea/AttackCollision2.disabled = true
 		if attacking == true:
 			velocitat_base = 350
-			$AnimatedSprite.flip_h = true
+			$AnimatedSprite.flip_h = false
 			$AnimatedSprite.play("attack")
 			$AttackArea/AttackCollision1.disabled = false
 			$AttackArea/AttackCollision2.disabled = false
-	elif (Global.pos.x)>position.x and dead == false:
 		velocitat.x = 0
 		velocitat += Vector2.RIGHT * velocitat_base 
 		velocitat += gravetat * delta
 		velocitat = move_and_slide(velocitat, Vector2.UP)
-		if attacking == false:
-			velocitat_base = 250
-			$AnimatedSprite.flip_h = false
-			$AnimatedSprite.play("move")
-			$AttackArea/AttackCollision1.disabled = true
-			$AttackArea/AttackCollision2.disabled = true
-		if attacking == true:
-			velocitat_base = 350
-			$AnimatedSprite.flip_h = false
-			$AnimatedSprite.play("attack")
-			$AttackArea/AttackCollision1.disabled = false
-			$AttackArea/AttackCollision2.disabled = false
-	
 func on_timeout():
 	attacking = true
 

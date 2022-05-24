@@ -352,7 +352,6 @@ shape = SubResource( 24 )
 position = Vector2( 86.7839, 491.991 )
 scale = Vector2( -5.17399, 5.24947 )
 frames = SubResource( 23 )
-frame = 2
 playing = true
 
 [node name="AttackingArea" type="Area2D" parent="PacoFinalScene"]
