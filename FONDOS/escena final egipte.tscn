@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Part Arroyo/FONDO EGIPTE.png" type="Texture" id=1]
 [ext_resource path="res://Part Marc/Ghoul Sprite Sheet.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://FONDOS/Pharaon.gd" type="Script" id=4]
 [ext_resource path="res://FONDOS/MainCharacterEgypt.gd" type="Script" id=5]
 [ext_resource path="res://barra de viad.tscn" type="PackedScene" id=6]
+[ext_resource path="res://floor.png" type="Texture" id=7]
 
 [sub_resource type="AtlasTexture" id=43]
 atlas = ExtResource( 3 )
@@ -128,7 +129,16 @@ extents = Vector2( 22.2188, 22 )
 extents = Vector2( 520.25, 24 )
 
 [sub_resource type="RectangleShape2D" id=32]
-extents = Vector2( 576, 26.5 )
+extents = Vector2( 23, 288.5 )
+
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 526, 10 )
+
+[sub_resource type="RectangleShape2D" id=65]
+extents = Vector2( 45, 324.5 )
+
+[sub_resource type="RectangleShape2D" id=66]
+extents = Vector2( 68.5, 26 )
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -292,6 +302,7 @@ script = ExtResource( 5 )
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 60 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacterEgypt"]
@@ -319,16 +330,72 @@ margin_right = 22.0
 margin_bottom = -5.0
 
 [node name="Terra" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Terra"]
 position = Vector2( 507.75, 574 )
 shape = SubResource( 31 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Terra"]
-position = Vector2( 535, 359.5 )
+position = Vector2( -18, 271.5 )
 shape = SubResource( 32 )
-disabled = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Terra"]
+position = Vector2( 516, 0 )
+shape = SubResource( 64 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Terra"]
+position = Vector2( 1052, 274.5 )
+shape = SubResource( 65 )
+
+[node name="Peldanyo" type="StaticBody2D" parent="Terra"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Peldanyo"]
+position = Vector2( 676.5, 384 )
+shape = SubResource( 66 )
+
+[node name="Sprite2" type="Sprite" parent="Terra/Peldanyo"]
+position = Vector2( 642, 418 )
+scale = Vector2( 1.30252, 0.988 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="Terra/Peldanyo"]
+position = Vector2( 711, 418 )
+scale = Vector2( 1.30252, 0.988 )
+texture = ExtResource( 7 )
+
+[node name="Peldanyo2" type="StaticBody2D" parent="Terra"]
+position = Vector2( -298, -125 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Peldanyo2"]
+position = Vector2( 676.5, 384 )
+shape = SubResource( 66 )
+
+[node name="Sprite2" type="Sprite" parent="Terra/Peldanyo2"]
+position = Vector2( 642, 418 )
+scale = Vector2( 1.30252, 0.988 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="Terra/Peldanyo2"]
+position = Vector2( 711, 418 )
+scale = Vector2( 1.30252, 0.988 )
+texture = ExtResource( 7 )
+
+[node name="Peldanyo3" type="StaticBody2D" parent="Terra"]
+position = Vector2( -551, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Terra/Peldanyo3"]
+position = Vector2( 676.5, 384 )
+shape = SubResource( 66 )
+
+[node name="Sprite2" type="Sprite" parent="Terra/Peldanyo3"]
+position = Vector2( 642, 418 )
+scale = Vector2( 1.30252, 0.988 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="Terra/Peldanyo3"]
+position = Vector2( 711, 418 )
+scale = Vector2( 1.30252, 0.988 )
+texture = ExtResource( 7 )
 
 [node name="Pharaon" type="KinematicBody2D" parent="."]
 position = Vector2( 160, 470 )
@@ -338,6 +405,7 @@ script = ExtResource( 4 )
 position = Vector2( 22, -1.00001 )
 scale = Vector2( 5.4375, 4.875 )
 frames = SubResource( 29 )
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pharaon"]
@@ -366,3 +434,4 @@ shape = SubResource( 63 )
 [connection signal="body_entered" from="MainCharacterEgypt/AttackArea" to="Pharaon" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="MainCharacterEgypt/AttackArea2" to="Pharaon" method="_on_AttackArea2_body_entered"]
 [connection signal="body_entered" from="Pharaon/AttackArea" to="MainCharacterEgypt" method="_on_AttackArea_body_entered"]
+[connection signal="body_entered" from="Pharaon/AreaCollision" to="MainCharacterEgypt" method="_on_AreaCollision_body_entered"]

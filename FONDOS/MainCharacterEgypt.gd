@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var velocitat_base = 300
 var velocitat = Vector2.ZERO
-var gravetat = Vector2.DOWN * 980
+var gravetat = Vector2.DOWN * 900
 var salt = Vector2.UP * 600
 var already_ate = false
 var dead = false
@@ -62,3 +62,8 @@ func _on_AttackArea_body_entered(body):
 	if body.name == "MainCharacterEgypt":
 		$TextureProgress.value -= 50
 
+
+
+func _on_AreaCollision_body_entered(body):
+	if body.name == "MainCharacterEgypt":
+		$TextureProgress.value -= 20
