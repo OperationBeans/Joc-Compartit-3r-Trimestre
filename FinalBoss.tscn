@@ -140,6 +140,7 @@ script = ExtResource( 1 )
 position = Vector2( 0, 3.8147e-06 )
 scale = Vector2( 0.178889, 0.193889 )
 frames = SubResource( 1 )
+frame = 5
 playing = true
 
 [node name="CollisionOrc" type="CollisionShape2D" parent="Orc"]

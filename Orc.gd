@@ -3,9 +3,11 @@ extends KinematicBody2D
 
 var velocitat_base = 200
 var velocitat = Vector2.ZERO
-var gravetat = Vector2.DOWN * 980
+var gravetat = Vector2.DOWN * 1000
 var dead = false
 var attacking = false
+var is_attacking = false
+var start = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +15,17 @@ func _ready():
 
 
 func _physics_process(delta):
-	if attacking == false and dead == false:
+	var to_player = ($"../../PacoFinalScene".position-position).normalized()
+	print(to_player.x)
+	if start == false:
+		var start_timer = Timer.new()
+		start_timer.set_one_shot(true)
+		start_timer.set_wait_time(3)
+		start_timer.connect("timeout", self, "on_timeout_start")
+		add_child(start_timer)
+		start_timer.start()
+	
+	if attacking == false and dead == false and start == true:
 		var timer = Timer.new()
 		timer.set_one_shot(true)
 		timer.set_wait_time(5)
@@ -21,7 +33,7 @@ func _physics_process(delta):
 		add_child(timer)
 		timer.start()
 	
-	elif attacking == true and dead == false:
+	elif attacking == true and dead == false and start == true:
 		var timer2 = Timer.new()
 		timer2.set_one_shot(true)
 		timer2.set_wait_time(5)
@@ -29,26 +41,50 @@ func _physics_process(delta):
 		add_child(timer2)
 		timer2.start()
 	
-	if attacking == false:
-		velocitat_base = 250
-		$Orc.flip_h = false
-		$Orc.play("move")
-		#$AttackArea/AttackCollision1.disabled = true
-		#$AttackArea/AttackCollision2.disabled = true
-	if attacking == true:
-		velocitat_base = 350
-		$Orc.flip_h = false
-		$Orc.play("attack")
+	if to_player.x<0:
+		if attacking == false and start == true:
+			velocitat_base = 200
+			velocitat = to_player*velocitat_base
+			$Orc.flip_h = true
+			$Orc.play("default")
+			move_and_collide(velocitat*delta)
+			#$AttackArea/AttackCollision1.disabled = true
+			#$AttackArea/AttackCollision2.disabled = true
+		if attacking == true and start == true:
+			velocitat_base = 200
+			velocitat = to_player*velocitat_base
+			$Orc.flip_h = true
+			$Orc.play("attack")
+			move_and_collide(velocitat*delta)
+			$AreaBat/CollisionShape2D.disabled = false
 		#$AttackArea/AttackCollision1.disabled = false
 		#$AttackArea/AttackCollision2.disabled = false
-	
-	velocitat.x = 0
-	velocitat += Vector2.RIGHT * velocitat_base 
-	velocitat += gravetat * delta
-	#velocitat = move_and_slide(velocitat, Vector2.UP)
-	
+	if to_player.x>0:
+		if attacking == false and start == true:
+			velocitat_base = 200
+			velocitat = to_player*velocitat_base
+			$Orc.flip_h = false
+			$Orc.play("default")
+			move_and_collide(velocitat*delta)
+		if attacking == true and start == true:
+			velocitat_base = 200
+			velocitat = to_player*velocitat_base
+			$Orc.flip_h = false
+			$Orc.play("attack")
+			move_and_collide(velocitat*delta)
+			$AreaBat/CollisionShape2D2.disabled = false
+
 func on_timeout():
 	attacking = true
 
 func on_timeout2():
 	attacking = false
+
+func on_timeout_start():
+	start = true
+
+func _on_Orc_animation_finished():
+	if $Orc.animation == "attack":
+		$AreaBat/CollisionShape2D.disabled = true
+		$AreaBat/CollisionShape2D2.disabled = true
+		is_attacking = false

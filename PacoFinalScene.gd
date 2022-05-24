@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var velocitat_base = 300
 var velocitat = Vector2.ZERO
-var gravetat = Vector2.DOWN * 980
+var gravetat = Vector2.DOWN * 500
 var salt = Vector2.UP * 600
 var already_ate = false
 var dead = false
@@ -54,3 +54,8 @@ func _on_AnimatedSprite_animation_finished():
 		
 func on_timeout_mort():
 	get_tree().change_scene("res://Escena Mort.tscn")
+
+
+func _on_AreaBat_body_entered(body):
+	if body.name == "PacoFinalScene":
+		$TextureProgress.value -= 100
