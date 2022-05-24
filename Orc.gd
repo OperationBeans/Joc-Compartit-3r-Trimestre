@@ -41,9 +41,9 @@ func _physics_process(delta):
 		add_child(timer2)
 		timer2.start()
 	
-	if to_player.x<0:
+	if to_player.x<0 and dead == false:
 		if attacking == false and start == true:
-			velocitat_base = 200
+			velocitat_base = 300
 			velocitat = to_player*velocitat_base
 			$Orc.flip_h = true
 			$Orc.play("default")
@@ -51,7 +51,7 @@ func _physics_process(delta):
 			#$AttackArea/AttackCollision1.disabled = true
 			#$AttackArea/AttackCollision2.disabled = true
 		if attacking == true and start == true:
-			velocitat_base = 200
+			velocitat_base = 300
 			velocitat = to_player*velocitat_base
 			$Orc.flip_h = true
 			$Orc.play("attack")
@@ -59,7 +59,7 @@ func _physics_process(delta):
 			$AreaBat/CollisionShape2D.disabled = false
 		#$AttackArea/AttackCollision1.disabled = false
 		#$AttackArea/AttackCollision2.disabled = false
-	if to_player.x>0:
+	if to_player.x>0 and dead == false:
 		if attacking == false and start == true:
 			velocitat_base = 200
 			velocitat = to_player*velocitat_base
@@ -88,3 +88,9 @@ func _on_Orc_animation_finished():
 		$AreaBat/CollisionShape2D.disabled = true
 		$AreaBat/CollisionShape2D2.disabled = true
 		is_attacking = false
+
+
+func _on_AttackingArea_body_entered(body):
+	if body.name == "Orc":
+		$Orc.play("dying")
+		dead = true
