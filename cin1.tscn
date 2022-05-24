@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=2]
+[gd_scene load_steps=118 format=2]
 
 [ext_resource path="res://smok.png" type="Texture" id=1]
 [ext_resource path="res://rayo.png" type="Texture" id=2]
@@ -477,51 +477,64 @@ extents = Vector2( 265.5, 10 )
 extents = Vector2( 61.5, 52 )
 
 [sub_resource type="AtlasTexture" id=90]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 0, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=91]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 32, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=92]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 64, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=93]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 96, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=94]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 128, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=95]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 160, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=96]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 192, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=97]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 224, 38, 32, 38 )
+
+[sub_resource type="AtlasTexture" id=102]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=103]
+atlas = ExtResource( 11 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=104]
+atlas = ExtResource( 11 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=105]
+atlas = ExtResource( 11 )
+region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=98]
 animations = [ {
 "frames": [ SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 10.0
+}, {
+"frames": [ SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=100]
@@ -554,7 +567,7 @@ position = Vector2( 225.625, 458.75 )
 rotation = -0.563174
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="maquina"]
@@ -562,7 +575,7 @@ material = SubResource( 76 )
 position = Vector2( 254, 528 )
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="maquina"]
@@ -571,7 +584,7 @@ position = Vector2( 282, 377 )
 rotation = 0.578838
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="maquina"]
@@ -579,7 +592,7 @@ material = SubResource( 76 )
 position = Vector2( 265, 445 )
 scale = Vector2( 0.865079, 0.652 )
 frames = SubResource( 9 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="maquina"]
@@ -587,7 +600,7 @@ material = SubResource( 77 )
 position = Vector2( 265, 431 )
 scale = Vector2( 2.523, 3.1715 )
 frames = SubResource( 74 )
-frame = 13
+frame = 43
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="maquina"]
@@ -615,7 +628,7 @@ position = Vector2( 765, 461.75 )
 shape = SubResource( 79 )
 
 [node name="FINAL" type="Area2D" parent="."]
-position = Vector2( -51, 10 )
+position = Vector2( 6, 10 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
@@ -625,7 +638,7 @@ __meta__ = {
 position = Vector2( 914, 485 )
 scale = Vector2( 3.45968, 3.69792 )
 frames = SubResource( 85 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FINAL"]
@@ -652,9 +665,10 @@ position = Vector2( 1124, 500 )
 shape = SubResource( 99 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="pako"]
-position = Vector2( 1113, 509 )
+position = Vector2( 1120, 511 )
 scale = Vector2( 7.42187, 6.64474 )
 frames = SubResource( 98 )
+frame = 5
 playing = true
 flip_h = true
 
@@ -664,7 +678,7 @@ wait_time = 5.0
 [node name="limpac" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limpac"]
-position = Vector2( 519.25, 468.25 )
+position = Vector2( 392, 467 )
 shape = SubResource( 100 )
 
 [node name="change_to" type="Area2D" parent="."]
