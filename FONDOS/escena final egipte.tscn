@@ -141,142 +141,114 @@ extents = Vector2( 45, 324.5 )
 extents = Vector2( 68.5, 26 )
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=6]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 32, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=7]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=8]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 96, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=9]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 128, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=10]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 32, 128, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=11]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 128, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=12]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 96, 128, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=13]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 128, 128, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 160, 128, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=15]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=16]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 32, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=17]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=18]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 96, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=19]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 128, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=20]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 160, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=21]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 192, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=22]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 224, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=23]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=24]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 32, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=25]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=26]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 96, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=27]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 128, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=28]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 160, 64, 32, 32 )
 
@@ -330,7 +302,7 @@ script = ExtResource( 5 )
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 60 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacterEgypt"]
@@ -433,7 +405,7 @@ script = ExtResource( 4 )
 position = Vector2( 22, -1.00001 )
 scale = Vector2( 5.4375, 4.875 )
 frames = SubResource( 29 )
-frame = 7
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pharaon"]
@@ -457,6 +429,12 @@ disabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pharaon/AreaCollision"]
 position = Vector2( 20.5, 25.75 )
 shape = SubResource( 63 )
+
+[node name="TextureProgress" parent="Pharaon" instance=ExtResource( 6 )]
+margin_left = -10.0
+margin_top = -46.0
+margin_right = 54.0
+margin_bottom = -35.0
 
 [connection signal="animation_finished" from="MainCharacterEgypt/AnimatedSprite" to="MainCharacterEgypt" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="MainCharacterEgypt/AttackArea" to="Pharaon" method="_on_AttackArea_body_entered"]

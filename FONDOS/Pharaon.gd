@@ -16,8 +16,10 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	print("global", Global.pos.x)
-	print("orco" , position.x)
+	if $TextureProgress.value <= 0:
+		dead = true
+		$AnimatedSprite.play("dead")
+	
 	if attacking == false and dead == false:
 		var timer = Timer.new()
 		timer.set_one_shot(true)
@@ -51,6 +53,7 @@ func _physics_process(delta):
 		velocitat += Vector2.LEFT * velocitat_base 
 		velocitat += gravetat * delta
 		velocitat = move_and_slide(velocitat, Vector2.UP)
+	
 	elif ((Global.pos.x)-(position.x-30))>= 0 and dead == false:
 		if attacking == false:
 			velocitat_base = 250
@@ -68,6 +71,7 @@ func _physics_process(delta):
 		velocitat += Vector2.RIGHT * velocitat_base 
 		velocitat += gravetat * delta
 		velocitat = move_and_slide(velocitat, Vector2.UP)
+
 func on_timeout():
 	attacking = true
 
@@ -76,16 +80,8 @@ func on_timeout2():
 
 func _on_AttackArea_body_entered(body):
 	if body.name == "Pharaon":
-		if hits == 1:
-			dead = true
-			$AnimatedSprite.play("dead")
-		else:
-			hits += 1
+		$TextureProgress.value -= 33.33
 
 func _on_AttackArea2_body_entered(body):
 	if body.name == "Pharaon":
-		if hits == 1:
-			dead = true
-			$AnimatedSprite.play("dead")
-		else:
-			hits += 1
+		$TextureProgress.value -= 33.33
