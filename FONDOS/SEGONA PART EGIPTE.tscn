@@ -21,7 +21,7 @@ extents = Vector2( 67, 8 )
 extents = Vector2( 171.5, 13 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 2.75, 159.5 )
+extents = Vector2( 2.75, 157.25 )
 
 [sub_resource type="RectangleShape2D" id=36]
 extents = Vector2( 5.75, 58.875 )
@@ -237,7 +237,7 @@ shape = SubResource( 5 )
 [node name="HOLAAA" type="Area2D" parent="."]
 
 [node name="StaticBody2D" type="CollisionShape2D" parent="HOLAAA"]
-position = Vector2( 1021.75, 284 )
+position = Vector2( 1021.75, 281.75 )
 shape = SubResource( 6 )
 
 [node name="LimitDreta" type="Area2D" parent="."]
@@ -270,6 +270,7 @@ shape = SubResource( 29 )
 position = Vector2( -12, -18.5 )
 scale = Vector2( 2.75, 1.96875 )
 frames = SubResource( 27 )
+frame = 4
 playing = true
 flip_h = true
 

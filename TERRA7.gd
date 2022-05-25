@@ -11,4 +11,4 @@ func _physics_process(delta):
 	if Global.mort == true:
 		position.x = 224
 	elif Global.mort == false:
-		position.x = 1000
+		position.x = 10000
