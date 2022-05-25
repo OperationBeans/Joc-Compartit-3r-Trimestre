@@ -22,6 +22,12 @@ func _physics_process(delta):
 		dead = true
 	if dead == true:
 		$Orc.play("dying")
+		var timer_die = Timer.new()
+		timer_die.set_one_shot(true)
+		timer_die.set_wait_time(2)
+		timer_die.connect("timeout", self, "on_timeout_die")
+		add_child(timer_die)
+		timer_die.start()
 	
 	if start == false:
 		var start_timer = Timer.new()
@@ -34,7 +40,7 @@ func _physics_process(delta):
 	if attacking == false and dead == false and start == true:
 		var timer = Timer.new()
 		timer.set_one_shot(true)
-		timer.set_wait_time(3)
+		timer.set_wait_time(2.5)
 		timer.connect("timeout", self, "on_timeout")
 		add_child(timer)
 		timer.start()
@@ -95,7 +101,11 @@ func _on_Orc_animation_finished():
 		$AreaBat/CollisionShape2D2.disabled = true
 		is_attacking = false
 
-
 func _on_AttackingArea_body_entered(body):
 	if body.name == "Orc":
 		$TextureProgress.value -= 10
+
+func on_timeout_die():
+	Global.orc_mort = true
+	hide()
+	queue_free()

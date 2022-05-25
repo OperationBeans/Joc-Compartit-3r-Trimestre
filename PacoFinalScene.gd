@@ -78,3 +78,8 @@ func _on_AreaOrc_body_entered(body):
 
 func on_timeout_inici():
 	able_to_attack = true
+
+
+func _on_Clau_body_entered(body):
+	if body.name == "PacoFinalScene":
+		get_tree().change_scene("res://Menú.tscn")
