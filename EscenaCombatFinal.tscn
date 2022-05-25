@@ -148,11 +148,6 @@ animations = [ {
 "name": "default",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 84 ), ExtResource( 38 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 12 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 11 ), ExtResource( 31 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "New Anim",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 71 ), ExtResource( 78 ), ExtResource( 62 ), ExtResource( 59 ), ExtResource( 73 ), ExtResource( 54 ), ExtResource( 86 ), ExtResource( 88 ), ExtResource( 85 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 56 ) ],
 "loop": true,
 "name": "move",
@@ -161,6 +156,11 @@ animations = [ {
 "frames": [ ExtResource( 50 ), ExtResource( 41 ), ExtResource( 47 ), ExtResource( 42 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 69 ), ExtResource( 61 ), ExtResource( 70 ), ExtResource( 87 ), ExtResource( 75 ) ],
 "loop": true,
 "name": "attack",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 84 ), ExtResource( 38 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 12 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 11 ), ExtResource( 31 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "New Anim",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 81 ), ExtResource( 60 ), ExtResource( 76 ), ExtResource( 55 ), ExtResource( 77 ), ExtResource( 63 ), ExtResource( 65 ), ExtResource( 64 ), ExtResource( 48 ), ExtResource( 40 ), ExtResource( 51 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 49 ), ExtResource( 72 ) ],
@@ -337,6 +337,7 @@ disabled = true
 position = Vector2( -3, 74.9998 )
 scale = Vector2( -0.243169, -0.14757 )
 frames = SubResource( 38 )
+frame = 1
 playing = true
 
 [node name="AreaOrc" type="Area2D" parent="FinalBoss/Orc"]
@@ -365,6 +366,7 @@ shape = SubResource( 24 )
 position = Vector2( 86.7839, 491.991 )
 scale = Vector2( -5.17399, 5.24947 )
 frames = SubResource( 23 )
+frame = 2
 playing = true
 
 [node name="AttackingArea" type="Area2D" parent="PacoFinalScene"]

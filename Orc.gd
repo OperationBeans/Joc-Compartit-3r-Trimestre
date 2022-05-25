@@ -8,6 +8,7 @@ var dead = false
 var attacking = false
 var is_attacking = false
 var start = false
+var vida = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +17,11 @@ func _ready():
 
 func _physics_process(delta):
 	var to_player = ($"../../PacoFinalScene".position-position).normalized()
-	print(to_player.x)
+	
+	if vida <= 0:
+		dead = true
+		$Orc.play("dying")
+	
 	if start == false:
 		var start_timer = Timer.new()
 		start_timer.set_one_shot(true)
@@ -92,5 +97,4 @@ func _on_Orc_animation_finished():
 
 func _on_AttackingArea_body_entered(body):
 	if body.name == "Orc":
-		$Orc.play("dying")
-		dead = true
+		vida -= 10

@@ -1,4 +1,4 @@
-[gd_scene load_steps=148 format=2]
+[gd_scene load_steps=149 format=2]
 
 [ext_resource path="res://Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://Prova_pegar.gd" type="Script" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://AreaMeat.gd" type="Script" id=20]
 [ext_resource path="res://ghost dying.png" type="Texture" id=21]
 [ext_resource path="res://Menu pausa.tscn" type="PackedScene" id=22]
+[ext_resource path="res://TERRA7.gd" type="Script" id=23]
 [ext_resource path="res://barra de viad.tscn" type="PackedScene" id=24]
 
 [sub_resource type="AtlasTexture" id=11]
@@ -343,56 +344,6 @@ flags = 4
 atlas = ExtResource( 17 )
 region = Rect2( 1408, 1152, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=115]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 0, 0, 208, 139 )
-
-[sub_resource type="AtlasTexture" id=116]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 208, 0, 208, 139 )
-
-[sub_resource type="AtlasTexture" id=117]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 416, 0, 208, 139 )
-
-[sub_resource type="AtlasTexture" id=118]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 0, 139, 208, 139 )
-
-[sub_resource type="AtlasTexture" id=119]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 208, 139, 208, 139 )
-
-[sub_resource type="AtlasTexture" id=120]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 416, 139, 208, 139 )
-
-[sub_resource type="AtlasTexture" id=121]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 0, 278, 208, 139 )
-
-[sub_resource type="AtlasTexture" id=122]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 208, 278, 208, 139 )
-
-[sub_resource type="AtlasTexture" id=123]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 416, 278, 208, 139 )
-
-[sub_resource type="AtlasTexture" id=124]
-flags = 4
-atlas = ExtResource( 21 )
-region = Rect2( 156, 0, 78, 139 )
-
 [sub_resource type="AtlasTexture" id=99]
 flags = 4
 atlas = ExtResource( 17 )
@@ -472,6 +423,56 @@ region = Rect2( 1792, 1280, 128, 128 )
 flags = 4
 atlas = ExtResource( 17 )
 region = Rect2( 1920, 1280, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=115]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 208, 139 )
+
+[sub_resource type="AtlasTexture" id=116]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 208, 0, 208, 139 )
+
+[sub_resource type="AtlasTexture" id=117]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 416, 0, 208, 139 )
+
+[sub_resource type="AtlasTexture" id=118]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 0, 139, 208, 139 )
+
+[sub_resource type="AtlasTexture" id=119]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 208, 139, 208, 139 )
+
+[sub_resource type="AtlasTexture" id=120]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 416, 139, 208, 139 )
+
+[sub_resource type="AtlasTexture" id=121]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 0, 278, 208, 139 )
+
+[sub_resource type="AtlasTexture" id=122]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 208, 278, 208, 139 )
+
+[sub_resource type="AtlasTexture" id=123]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 416, 278, 208, 139 )
+
+[sub_resource type="AtlasTexture" id=124]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 156, 0, 78, 139 )
 
 [sub_resource type="AtlasTexture" id=87]
 flags = 4
@@ -570,15 +571,15 @@ animations = [ {
 "name": "default",
 "speed": 7.0
 }, {
-"frames": [ SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ) ],
-"loop": false,
-"name": "dead_ghost",
-"speed": 6.0
-}, {
 "frames": [ SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ) ],
 "loop": true,
 "name": "move_ghost",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ) ],
+"loop": false,
+"name": "dead_ghost",
+"speed": 6.0
 }, {
 "frames": [ SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ) ],
 "loop": false,
@@ -811,7 +812,7 @@ script = ExtResource( 18 )
 position = Vector2( 536.5, 99.75 )
 scale = Vector2( 0.789063, 0.855469 )
 frames = SubResource( 74 )
-frame = 17
+frame = 15
 playing = true
 
 [node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
@@ -862,7 +863,7 @@ shape = SubResource( 77 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal"]
 position = Vector2( 915, 99 )
 frames = SubResource( 83 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionPortal" type="CollisionShape2D" parent="Portal"]
@@ -900,6 +901,7 @@ shape = SubResource( 44 )
 
 [node name="TERRA7" type="StaticBody2D" parent="."]
 position = Vector2( 224, 151 )
+script = ExtResource( 23 )
 
 [node name="GroundLevel1" type="Sprite" parent="TERRA7"]
 position = Vector2( 119.25, 268.5 )
