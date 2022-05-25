@@ -15,26 +15,29 @@ func _physics_process(delta):
 	if ghost == true:
 		velocitat_base = 200
 	if esquerra == true and dead == false and ataca == true:
+		$AreaCongo/AnimatedSprite.flip_h = true
+		if ghost == false:
+			velocitat_base = 150
+			$AreaCongo/AnimatedSprite.play("move")
+		elif ghost == true:
+			velocitat_base = 400
+			$AreaCongo/AnimatedSprite.play("move_ghost")
 		velocitat.x = 0
 		velocitat += Vector2.LEFT * velocitat_base 
 		velocitat += gravetat * delta
 		velocitat = move_and_slide(velocitat, Vector2.UP)
-		$AreaCongo/AnimatedSprite.flip_h = true
+	elif dreta == true and dead == false and ataca == true:
+		$AreaCongo/AnimatedSprite.flip_h = false
 		if ghost == false:
+			velocitat_base = 150
 			$AreaCongo/AnimatedSprite.play("move")
 		elif ghost == true:
+			velocitat_base = 400
 			$AreaCongo/AnimatedSprite.play("move_ghost")
-	elif dreta == true and dead == false and ataca == true:
 		velocitat.x = 0
 		velocitat += Vector2.RIGHT * velocitat_base 
 		velocitat += gravetat * delta
 		velocitat = move_and_slide(velocitat, Vector2.UP)
-		$AreaCongo/AnimatedSprite.flip_h = false
-		if ghost == false:
-			$AreaCongo/AnimatedSprite.play("move")
-		elif ghost == true:
-			$AreaCongo/AnimatedSprite.play("move_ghost")
-
 func _on_AttackArea_body_entered(body):
 	if body.name == "Congo" and ghost == false:
 		dead = true

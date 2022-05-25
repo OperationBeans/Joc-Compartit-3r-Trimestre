@@ -355,6 +355,12 @@ shape = SubResource( 2 )
 scale = Vector2( 0.178889, 0.193889 )
 frames = SubResource( 1 )
 
+[node name="TextureProgress" parent="FinalBoss/Orc" instance=ExtResource( 4 )]
+margin_left = -34.0
+margin_top = -67.0
+margin_right = 30.0
+margin_bottom = -56.0
+
 [node name="PacoFinalScene" type="KinematicBody2D" parent="."]
 script = ExtResource( 3 )
 

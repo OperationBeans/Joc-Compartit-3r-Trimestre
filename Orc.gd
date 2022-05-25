@@ -18,8 +18,9 @@ func _ready():
 func _physics_process(delta):
 	var to_player = ($"../../PacoFinalScene".position-position).normalized()
 	
-	if vida <= 0:
+	if $TextureProgress.value <= 0:
 		dead = true
+	if dead == true:
 		$Orc.play("dying")
 	
 	if start == false:
@@ -97,4 +98,4 @@ func _on_Orc_animation_finished():
 
 func _on_AttackingArea_body_entered(body):
 	if body.name == "Orc":
-		vida -= 10
+		$TextureProgress.value -= 10

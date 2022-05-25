@@ -36,6 +36,6 @@ func _on_AttackArea_body_entered(body):
 		
 func on_timeout():
 	Global.mort = true ###ARREGLAR LO DE GLOBAAAAAAL
-	
+	print(Global.mort)
 	hide()
 	queue_free()
