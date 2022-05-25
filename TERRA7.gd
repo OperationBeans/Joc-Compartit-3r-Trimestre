@@ -6,7 +6,7 @@ extends StaticBody2D
 # var b = "text"
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _physics_process(delta):
 	print(Global.mort)
 	if Global.mort == true:
 		position.x = 224

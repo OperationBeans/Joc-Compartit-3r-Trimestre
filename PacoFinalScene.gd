@@ -69,7 +69,7 @@ func on_timeout_mort():
 
 func _on_AreaBat_body_entered(body):
 	if body.name == "PacoFinalScene":
-		$TextureProgress.value -= 100
+		$TextureProgress.value -= 20
 
 
 func _on_AreaOrc_body_entered(body):

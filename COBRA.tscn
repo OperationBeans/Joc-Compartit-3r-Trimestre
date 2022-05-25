@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 20.5, 14 )
 
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 19.5, 13.125 )
+
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 1 )
@@ -36,32 +39,32 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 160, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 32, 96, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 64, 96, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 96, 96, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 96, 128, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=34]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 128, 128, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=35]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 160, 128, 32, 32 )
@@ -141,26 +144,23 @@ animations = [ {
 "frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 8.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
-"loop": true,
+"frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"loop": false,
 "name": "dead",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": true,
 "name": "move",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
 "loop": true,
 "name": "attack",
-"speed": 5.0
+"speed": 8.0
 } ]
-
-[sub_resource type="RectangleShape2D" id=29]
-extents = Vector2( 19.5, 13.125 )
 
 [node name="Cobra" type="Node2D"]
 
@@ -170,17 +170,17 @@ script = ExtResource( 2 )
 [node name="AreaCobraAttack" type="Area2D" parent="KinematicBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/AreaCobraAttack"]
-position = Vector2( 217.5, 272 )
+position = Vector2( -0.5, -1.52588e-05 )
 shape = SubResource( 28 )
 
-[node name="COBRA" type="AnimatedSprite" parent="KinematicBody2D/AreaCobraAttack"]
-position = Vector2( 206, 253.5 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -0.5, 0.124985 )
+shape = SubResource( 29 )
+
+[node name="COBRA" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( -12, -18.5 )
 scale = Vector2( 2.75, 1.96875 )
 frames = SubResource( 27 )
 frame = 5
 playing = true
 flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 217.5, 272.125 )
-shape = SubResource( 29 )
