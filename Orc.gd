@@ -34,7 +34,7 @@ func _physics_process(delta):
 	if attacking == false and dead == false and start == true:
 		var timer = Timer.new()
 		timer.set_one_shot(true)
-		timer.set_wait_time(5)
+		timer.set_wait_time(3)
 		timer.connect("timeout", self, "on_timeout")
 		add_child(timer)
 		timer.start()
