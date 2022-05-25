@@ -337,7 +337,7 @@ disabled = true
 position = Vector2( -3, 74.9998 )
 scale = Vector2( -0.243169, -0.14757 )
 frames = SubResource( 38 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="AreaOrc" type="Area2D" parent="FinalBoss/Orc"]
