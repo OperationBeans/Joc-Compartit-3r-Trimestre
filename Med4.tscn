@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://CASTELL/5.jpg" type="Texture" id=1]
+[ext_resource path="res://cast5.png" type="Texture" id=1]
 [ext_resource path="res://fire.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -82,56 +82,57 @@ position = Vector2( 1031, 399 )
 shape = SubResource( 2 )
 
 [node name="fuego" type="AnimatedSprite" parent="."]
-position = Vector2( 900.656, 407.688 )
+position = Vector2( 901.656, 409.688 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="fuego4" type="AnimatedSprite" parent="."]
-position = Vector2( 877, 410 )
+position = Vector2( 879, 412 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="fuego5" type="AnimatedSprite" parent="."]
 position = Vector2( 989, 402 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="fuego6" type="AnimatedSprite" parent="."]
 position = Vector2( 1007, 398 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
+frame = 4
 playing = true
 
 [node name="fuego7" type="AnimatedSprite" parent="."]
 position = Vector2( 1025, 393 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="fuego8" type="AnimatedSprite" parent="."]
 position = Vector2( 1042, 405 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 7
+frame = 3
 playing = true
 
 [node name="fuego2" type="AnimatedSprite" parent="."]
 position = Vector2( 690.656, 407 )
 scale = Vector2( 0.0724018, 0.0625002 )
 frames = SubResource( 12 )
-frame = 1
+frame = 5
 playing = true
 
 [node name="fuego3" type="AnimatedSprite" parent="."]
 position = Vector2( 705, 408 )
 scale = Vector2( 0.0816822, 0.0620371 )
 frames = SubResource( 12 )
-frame = 1
+frame = 5
 playing = true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://CASTELL/4.jpg" type="Texture" id=1]
+[ext_resource path="res://cast3.png" type="Texture" id=1]
 [ext_resource path="res://fire.png" type="Texture" id=2]
 [ext_resource path="res://cavaller.tscn" type="PackedScene" id=3]
 
@@ -88,28 +88,28 @@ shape = SubResource( 2 )
 position = Vector2( 64, 327 )
 scale = Vector2( 0.15099, 0.150926 )
 frames = SubResource( 12 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="fuego2" type="AnimatedSprite" parent="fuego5"]
 position = Vector2( 401, 317.5 )
 scale = Vector2( 0.144802, 0.116667 )
 frames = SubResource( 12 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="fuego4" type="AnimatedSprite" parent="fuego5"]
 position = Vector2( 401, 317.5 )
 scale = Vector2( 0.144802, 0.116667 )
 frames = SubResource( 12 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="fuego3" type="AnimatedSprite" parent="fuego5"]
 position = Vector2( 686, 347 )
 scale = Vector2( 0.0476481, 0.0506946 )
 frames = SubResource( 12 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="cavaller" parent="." instance=ExtResource( 3 )]
