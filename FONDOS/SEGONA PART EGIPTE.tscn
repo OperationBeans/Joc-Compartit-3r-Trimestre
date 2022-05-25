@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Part Arroyo/istockphoto-1384344942-170667a.jpg" type="Texture" id=2]
+[ext_resource path="res://COBRA.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 171.063, 79.75 )
@@ -72,6 +73,9 @@ shape = SubResource( 5 )
 [node name="StaticBody2D" type="CollisionShape2D" parent="HOLAAA"]
 position = Vector2( 1004, 284 )
 shape = SubResource( 6 )
+
+[node name="Cobra" parent="." instance=ExtResource( 3 )]
+position = Vector2( 949, 419 )
 
 [connection signal="body_entered" from="MORT TERCERA PART" to="Paco" method="_on_MORT_TERCERA_PART_body_entered"]
 [connection signal="body_entered" from="HOLAAA" to="Paco" method="_on_HOLAAA_body_entered"]
