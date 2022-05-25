@@ -243,6 +243,9 @@ extents = Vector2( 522, 10 )
 [sub_resource type="RectangleShape2D" id=44]
 extents = Vector2( 57.3125, 14.5 )
 
+[sub_resource type="RectangleShape2D" id=127]
+extents = Vector2( 17.5, 25 )
+
 [sub_resource type="RectangleShape2D" id=47]
 extents = Vector2( 24.5313, 9.5 )
 
@@ -646,9 +649,6 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=127]
-extents = Vector2( 17.5, 25 )
-
 [node name="Test Scene" type="Node"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 291.0 ]
@@ -677,6 +677,7 @@ nine_patch_stretch = true
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 9 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacter"]
@@ -759,6 +760,13 @@ visible = false
 position = Vector2( 121, 272.5 )
 shape = SubResource( 44 )
 
+[node name="Campfire" type="Area2D" parent="TERRA2"]
+position = Vector2( 306, 420 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA2/Campfire"]
+position = Vector2( -154, -184 )
+shape = SubResource( 127 )
+
 [node name="AreaMeat" type="Area2D" parent="."]
 script = ExtResource( 20 )
 
@@ -812,7 +820,7 @@ script = ExtResource( 18 )
 position = Vector2( 536.5, 99.75 )
 scale = Vector2( 0.789063, 0.855469 )
 frames = SubResource( 74 )
-frame = 15
+frame = 14
 playing = true
 
 [node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
@@ -863,7 +871,7 @@ shape = SubResource( 77 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal"]
 position = Vector2( 915, 99 )
 frames = SubResource( 83 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionPortal" type="CollisionShape2D" parent="Portal"]
@@ -914,23 +922,18 @@ position = Vector2( 121, 272.5 )
 shape = SubResource( 44 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="TERRA7"]
-position = Vector2( 158, 212 )
+position = Vector2( -24, 58 )
 scale = Vector2( 0.427778, 0.555556 )
 frames = SubResource( 126 )
+frame = 5
 playing = true
-
-[node name="Campfire" type="Area2D" parent="TERRA7"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TERRA7/Campfire"]
-visible = false
-position = Vector2( 156.5, 235 )
-shape = SubResource( 127 )
 
 [connection signal="animation_finished" from="MainCharacter/AnimatedSprite" to="MainCharacter" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="MainCharacter/AttackArea" to="Enemy" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="MainCharacter/AttackArea" to="Congo" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="MainCharacter/AttackArea2" to="Enemy" method="_on_AttackArea_body_entered"]
 [connection signal="body_entered" from="Enemy/AreaEnemy" to="MainCharacter" method="_on_AreaEnemy_body_entered"]
+[connection signal="body_entered" from="TERRA2/Campfire" to="MainCharacter" method="_on_Campfire_body_entered"]
 [connection signal="body_entered" from="AreaMeat" to="MainCharacter" method="_on_AreaMeat_body_entered"]
 [connection signal="body_entered" from="AreaMeat" to="AreaMeat" method="_on_AreaMeat_body_entered"]
 [connection signal="body_entered" from="Stalactites" to="MainCharacter" method="_on_Stalactites_body_entered"]
@@ -939,4 +942,3 @@ shape = SubResource( 127 )
 [connection signal="body_entered" from="Portal" to="MainCharacter" method="_on_Portal_body_entered"]
 [connection signal="body_entered" from="LimitsCongoDreta" to="Congo" method="_on_LimitsCongoDreta_body_entered"]
 [connection signal="body_entered" from="LimitsCongoEsquerra" to="Congo" method="_on_LimitsCongoEsquerra_body_entered"]
-[connection signal="body_entered" from="TERRA7/Campfire" to="MainCharacter" method="_on_Campfire_body_entered"]
