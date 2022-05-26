@@ -19,6 +19,12 @@ func _physics_process(delta):
 	if $TextureProgress.value <= 0:
 		dead = true
 		$AnimatedSprite.play("dead")
+		var timer_dead = Timer.new()
+		timer_dead.set_one_shot(true)
+		timer_dead.set_wait_time(2)
+		timer_dead.connect("timeout", self, "on_timeout_mort")
+		add_child(timer_dead)
+		timer_dead.start()
 	
 	if attacking == false and dead == false:
 		var timer = Timer.new()
@@ -85,3 +91,6 @@ func _on_AttackArea_body_entered(body):
 func _on_AttackArea2_body_entered(body):
 	if body.name == "Pharaon":
 		$TextureProgress.value -= 33.33
+
+func on_timeout_mort():
+	get_tree().change_scene("res://CIUTAT.tscn")
