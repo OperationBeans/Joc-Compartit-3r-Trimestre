@@ -107,16 +107,6 @@ animations = [ {
 "name": "New Anim",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 69 ), ExtResource( 67 ), ExtResource( 54 ), ExtResource( 68 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 55 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 64 ), ExtResource( 56 ), ExtResource( 51 ), ExtResource( 62 ), ExtResource( 53 ), ExtResource( 57 ), ExtResource( 63 ), ExtResource( 66 ), ExtResource( 65 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 50 ) ],
-"loop": true,
-"name": "walking",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 36 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "dying",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 29 ), ExtResource( 24 ), ExtResource( 35 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 34 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 33 ), ExtResource( 23 ), ExtResource( 32 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "move",
@@ -125,6 +115,16 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "attack",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 69 ), ExtResource( 67 ), ExtResource( 54 ), ExtResource( 68 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 55 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 64 ), ExtResource( 56 ), ExtResource( 51 ), ExtResource( 62 ), ExtResource( 53 ), ExtResource( 57 ), ExtResource( 63 ), ExtResource( 66 ), ExtResource( 65 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "walking",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 36 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "dying",
 "speed": 12.0
 } ]
 
@@ -140,7 +140,7 @@ script = ExtResource( 1 )
 position = Vector2( 0, 3.8147e-06 )
 scale = Vector2( 0.178889, 0.193889 )
 frames = SubResource( 1 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="CollisionOrc" type="CollisionShape2D" parent="Orc"]

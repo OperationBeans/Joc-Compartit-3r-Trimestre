@@ -3,11 +3,6 @@
 [ext_resource path="res://wolfspritesheet.png" type="Texture" id=1]
 [ext_resource path="res://llop.gd" type="Script" id=2]
 
-[sub_resource type="AtlasTexture" id=32]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 512, 0, 64, 32 )
-
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 1 )
@@ -27,6 +22,11 @@ region = Rect2( 448, 192, 64, 32 )
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 512, 192, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 512, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
@@ -55,15 +55,15 @@ region = Rect2( 576, 128, 64, 32 )
 
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
-"frames": [ SubResource( 32 ) ],
-"loop": true,
-"name": "aixecarse",
-"speed": 7.0
-}, {
 "frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": true,
 "name": "mort",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 32 ) ],
+"loop": true,
+"name": "aixecarse",
+"speed": 7.0
 }, {
 "frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
 "loop": true,

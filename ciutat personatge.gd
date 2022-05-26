@@ -3,7 +3,7 @@ extends KinematicBody2D
 var velocitat_base = 200
 var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
-var salt = Vector2.UP * 500
+var salt = Vector2.UP * 350
 var atac = false
 
 func _physics_process(delta):

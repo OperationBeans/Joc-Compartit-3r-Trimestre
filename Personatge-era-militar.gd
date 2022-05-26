@@ -17,7 +17,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("W") and is_on_floor():
 		velocitat += salt  
-	if Input.is_action_just_pressed("click_esq"):
+	if Input.is_action_just_pressed("attack"):
 		colpeja()
 	
 	velocitat += gravetat * delta
@@ -59,4 +59,4 @@ func colpeja():
 
 func _on_portal_body_entered(body):
 	if body.name == "Personatge-era-militar":
-		print("Entered")
+		get_tree().change_scene("res://EscenaCombatFinal.tscn")

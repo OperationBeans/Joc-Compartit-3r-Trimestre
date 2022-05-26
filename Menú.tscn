@@ -15,7 +15,7 @@ extents = Vector2( 58, 129.75 )
 extents = Vector2( 53.5, 134.25 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 200.4, 10 )
+extents = Vector2( 1290.2, 21.5 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 55
@@ -61,7 +61,7 @@ position = Vector2( 510, 538 )
 scale = Vector2( 5, 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 31.4, 19.5 )
+position = Vector2( 77.3999, 31 )
 shape = SubResource( 2 )
 
 [node name="Paco" parent="." instance=ExtResource( 4 )]
