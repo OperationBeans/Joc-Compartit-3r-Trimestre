@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Part Arroyo/FONDO EGIPTE.png" type="Texture" id=1]
 [ext_resource path="res://Part Marc/Ghoul Sprite Sheet.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://FONDOS/MainCharacterEgypt.gd" type="Script" id=5]
 [ext_resource path="res://barra de viad.tscn" type="PackedScene" id=6]
 [ext_resource path="res://floor.png" type="Texture" id=7]
+[ext_resource path="res://Menu pausa.tscn" type="PackedScene" id=8]
 
 [sub_resource type="AtlasTexture" id=43]
 atlas = ExtResource( 3 )
@@ -302,7 +303,7 @@ script = ExtResource( 5 )
 position = Vector2( -10.4375, 10.3125 )
 scale = Vector2( 4.27734, 3.70703 )
 frames = SubResource( 60 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainCharacterEgypt"]
@@ -405,7 +406,7 @@ script = ExtResource( 4 )
 position = Vector2( 22, -1.00001 )
 scale = Vector2( 5.4375, 4.875 )
 frames = SubResource( 29 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pharaon"]
@@ -435,6 +436,8 @@ margin_left = -10.0
 margin_top = -46.0
 margin_right = 54.0
 margin_bottom = -35.0
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 8 )]
 
 [connection signal="animation_finished" from="MainCharacterEgypt/AnimatedSprite" to="MainCharacterEgypt" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="MainCharacterEgypt/AttackArea" to="Pharaon" method="_on_AttackArea_body_entered"]

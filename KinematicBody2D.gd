@@ -86,3 +86,10 @@ func _on_Stalactites_body_entered(body):
 func _on_HOLAAA_body_entered(body):
 	if body.name == "Paco":
 		get_tree().change_scene("res://FONDOS/TERCERA PART EGIPTE.tscn")
+
+
+func _on_AreaCobraAttack_body_entered(body):
+	if body.name == "Paco":
+		dead = true
+		$AnimatedSprite.play("dead")
+		get_tree().change_scene("res://Escena Mort.tscn")
