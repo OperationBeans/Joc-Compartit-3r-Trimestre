@@ -820,7 +820,7 @@ script = ExtResource( 18 )
 position = Vector2( 536.5, 99.75 )
 scale = Vector2( 0.789063, 0.855469 )
 frames = SubResource( 74 )
-frame = 7
+frame = 2
 playing = true
 
 [node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
@@ -871,6 +871,7 @@ shape = SubResource( 77 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Portal"]
 position = Vector2( 915, 99 )
 frames = SubResource( 83 )
+frame = 2
 playing = true
 
 [node name="CollisionPortal" type="CollisionShape2D" parent="Portal"]

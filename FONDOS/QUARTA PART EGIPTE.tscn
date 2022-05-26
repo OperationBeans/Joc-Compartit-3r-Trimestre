@@ -1,9 +1,10 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Part Arroyo/fodno.PNG" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cobra_Repetir.gd" type="Script" id=3]
 [ext_resource path="res://Part Marc/Cobra Sprite Sheet.png" type="Texture" id=4]
+[ext_resource path="res://Menu pausa.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 169, 79.25 )
@@ -257,8 +258,11 @@ shape = SubResource( 37 )
 position = Vector2( -12, -18.5 )
 scale = Vector2( 2.75, 1.96875 )
 frames = SubResource( 38 )
+frame = 4
 playing = true
 flip_h = true
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
 
 [connection signal="body_entered" from="MORT CINQUENA PART EGIPTE" to="Paco" method="_on_MORT_CINQUENA_PART_EGIPTE_body_entered"]
 [connection signal="body_entered" from="Area2D6" to="Paco" method="_on_Area2D6_body_entered"]
