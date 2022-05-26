@@ -21,3 +21,10 @@ func _physics_process(delta):
 	
 	velocitat += gravetat * delta
 	velocitat = move_and_slide(velocitat, Vector2.UP)
+	$AnimatedSprite.flip_h = true
+	$AnimatedSprite.play("move")
+
+
+func _on_zonamort_body_entered(body):
+	if body.name == "personatge ciutat":
+		get_tree().change_scene("res://CIUTAT.tscn")

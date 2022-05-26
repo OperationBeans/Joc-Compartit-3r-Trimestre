@@ -1,9 +1,8 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Part Marc/screenshot_example_03-original.webp" type="Texture" id=1]
 [ext_resource path="res://ciutat personatge.tscn" type="PackedScene" id=2]
 [ext_resource path="res://peldaño.png" type="Texture" id=3]
-[ext_resource path="res://zonamort.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 439, 10 )
@@ -198,7 +197,7 @@ position = Vector2( 775, 257 )
 shape = SubResource( 9 )
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 937, 282.75 )
+position = Vector2( 937, 260.75 )
 shape = SubResource( 9 )
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="StaticBody2D"]
@@ -209,7 +208,6 @@ shape = SubResource( 10 )
 position = Vector2( 37, 517 )
 
 [node name="zonamort" type="Area2D" parent="."]
-script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zonamort"]
 position = Vector2( 1213.5, 559 )
@@ -221,4 +219,4 @@ shape = SubResource( 11 )
 position = Vector2( 274, 179 )
 shape = SubResource( 12 )
 
-[connection signal="body_entered" from="zonamort" to="zonamort" method="_on_zonamort_body_entered"]
+[connection signal="body_entered" from="zonamort" to="personatge ciutat" method="_on_zonamort_body_entered"]
