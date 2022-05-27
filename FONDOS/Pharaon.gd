@@ -86,11 +86,11 @@ func on_timeout2():
 
 func _on_AttackArea_body_entered(body):
 	if body.name == "Pharaon":
-		$TextureProgress.value -= 33.33
+		$TextureProgress.value -= 35
 
 func _on_AttackArea2_body_entered(body):
 	if body.name == "Pharaon":
-		$TextureProgress.value -= 33.33
+		$TextureProgress.value -= 35
 
 func on_timeout_mort():
 	get_tree().change_scene("res://CIUTAT.tscn")

@@ -13,7 +13,6 @@ func _ready():
 func _physics_process(delta):
 	if esquerra == true and dreta == false:
 		velocitat.x = 0
-		print("hola")
 		velocitat += Vector2.LEFT * velocitat_base 
 		velocitat += gravetat * delta
 		velocitat = move_and_slide(velocitat, Vector2.UP)
@@ -31,11 +30,9 @@ func _physics_process(delta):
 func _on_LimitDreta_body_entered(body):
 	if body.name == "Cobra":
 		esquerra = true
-		print("vesesquerra")
 		dreta = false
 
 func _on_LimitEsquerra_body_entered(body):
 	if body.name == "Cobra":
 		dreta = true
-		print("vesdreta")
 		esquerra = false

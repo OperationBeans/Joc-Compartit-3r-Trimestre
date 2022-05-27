@@ -258,6 +258,7 @@ shape = SubResource( 37 )
 position = Vector2( -12, -18.5 )
 scale = Vector2( 2.75, 1.96875 )
 frames = SubResource( 38 )
+frame = 5
 playing = true
 flip_h = true
 
@@ -281,7 +282,7 @@ shape = SubResource( 37 )
 position = Vector2( -12, -18.5 )
 scale = Vector2( 2.75, 1.96875 )
 frames = SubResource( 38 )
-frame = 4
+frame = 3
 playing = true
 flip_h = true
 

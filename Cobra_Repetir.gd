@@ -19,7 +19,6 @@ func _physics_process(delta):
 		add_child(timer_o)
 		timer_o.start()
 		velocitat.x = 0
-		print("hola")
 		velocitat += Vector2.LEFT * velocitat_base 
 		velocitat += gravetat * delta
 		velocitat = move_and_slide(velocitat, Vector2.UP)

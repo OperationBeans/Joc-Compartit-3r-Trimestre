@@ -7,7 +7,6 @@ extends StaticBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
-	print(Global.mort)
 	if Global.mort == true:
 		position.x = 224
 	elif Global.mort == false:

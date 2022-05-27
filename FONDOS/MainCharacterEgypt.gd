@@ -13,7 +13,6 @@ var value = 200
 
 func _physics_process(delta):
 	velocitat.x=0
-	print(position.x)
 	if $TextureProgress.value <= 0:
 		dead = true
 	if dead == true:
