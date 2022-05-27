@@ -37,7 +37,7 @@ animations = [ {
 "frames": [ ExtResource( 27 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 28 ), ExtResource( 25 ), ExtResource( 5 ), ExtResource( 26 ), ExtResource( 29 ) ],
 "loop": true,
 "name": "default",
-"speed": 15.0
+"speed": 8.0
 } ]
 
 [sub_resource type="AtlasTexture" id=11]
@@ -673,7 +673,7 @@ __meta__ = {
 position = Vector2( 511.5, 300.5 )
 scale = Vector2( 1.83036, 2.19485 )
 frames = SubResource( 128 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 22 )]
@@ -837,7 +837,7 @@ script = ExtResource( 18 )
 position = Vector2( 536.5, 99.75 )
 scale = Vector2( 0.789063, 0.855469 )
 frames = SubResource( 74 )
-frame = 12
+frame = 8
 playing = true
 
 [node name="CollisionAtack" type="CollisionShape2D" parent="Congo/AreaCongo"]
