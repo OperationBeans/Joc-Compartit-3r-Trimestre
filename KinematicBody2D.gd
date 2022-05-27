@@ -93,3 +93,9 @@ func _on_AreaCobraAttack_body_entered(body):
 		dead = true
 		$AnimatedSprite.play("dead")
 		get_tree().change_scene("res://Escena Mort.tscn")
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "KinematicBody2D":
+		hide()
+		queue_free()

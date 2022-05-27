@@ -82,4 +82,4 @@ func on_timeout_inici():
 
 func _on_Clau_body_entered(body):
 	if body.name == "PacoFinalScene":
-		get_tree().change_scene("res://Menú.tscn")
+		get_tree().change_scene("res://cinematica final.tscn")

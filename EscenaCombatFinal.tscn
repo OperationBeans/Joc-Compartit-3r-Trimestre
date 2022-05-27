@@ -196,26 +196,6 @@ region = Rect2( 64, 0, 32, 32 )
 atlas = ExtResource( 2 )
 region = Rect2( 96, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 2 )
-region = Rect2( 32, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 2 )
-region = Rect2( 64, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 2 )
-region = Rect2( 96, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 2 )
-region = Rect2( 128, 160, 32, 32 )
-
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 32, 32, 32 )
@@ -268,17 +248,32 @@ region = Rect2( 96, 64, 32, 32 )
 atlas = ExtResource( 2 )
 region = Rect2( 128, 64, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 160, 32, 32 )
+
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {
 "frames": [ SubResource( 30 ), SubResource( 31 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 12.0
-}, {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
-"loop": false,
-"name": "dead",
-"speed": 10.0
 }, {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
@@ -288,6 +283,11 @@ animations = [ {
 "frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": false,
 "name": "attack",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": false,
+"name": "dead",
 "speed": 10.0
 } ]
 
@@ -343,7 +343,7 @@ disabled = true
 position = Vector2( -3, 74.9998 )
 scale = Vector2( -0.243169, -0.14757 )
 frames = SubResource( 38 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="AreaOrc" type="Area2D" parent="FinalBoss/Orc"]
@@ -378,7 +378,7 @@ shape = SubResource( 24 )
 position = Vector2( 86.7839, 491.991 )
 scale = Vector2( -5.17399, 5.24947 )
 frames = SubResource( 23 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="AttackingArea" type="Area2D" parent="PacoFinalScene"]

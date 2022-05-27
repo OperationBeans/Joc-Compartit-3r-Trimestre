@@ -36,7 +36,7 @@
 [ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_004.png" type="Texture" id=34]
 [ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_006.png" type="Texture" id=35]
 
-[sub_resource type="Shader" id=75]
+[sub_resource type="Shader" id=106]
 code = "shader_type canvas_item;
 
 uniform vec4 color : hint_color;
@@ -56,7 +56,7 @@ void fragment(){
 }"
 
 [sub_resource type="ShaderMaterial" id=76]
-shader = SubResource( 75 )
+shader = SubResource( 106 )
 shader_param/color = Color( 0, 0.501961, 0, 1 )
 shader_param/epsilon = 0.2
 
@@ -470,62 +470,50 @@ extents = Vector2( 265.5, 10 )
 extents = Vector2( 61.5, 52 )
 
 [sub_resource type="AtlasTexture" id=90]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 0, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=91]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 32, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=92]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 64, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=93]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 96, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=94]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 128, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=95]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 160, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=96]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 192, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=97]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 224, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=102]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 0, 0, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=103]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 32, 0, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=104]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 64, 0, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=105]
-flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 96, 0, 32, 38 )
 
@@ -572,7 +560,7 @@ position = Vector2( 225.625, 458.75 )
 rotation = -0.563174
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="maquina"]
@@ -580,7 +568,7 @@ material = SubResource( 76 )
 position = Vector2( 254, 528 )
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="maquina"]
@@ -589,7 +577,7 @@ position = Vector2( 282, 377 )
 rotation = 0.578838
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="maquina"]
@@ -597,7 +585,7 @@ material = SubResource( 76 )
 position = Vector2( 265, 445 )
 scale = Vector2( 0.865079, 0.652 )
 frames = SubResource( 9 )
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="maquina"]
@@ -605,7 +593,7 @@ material = SubResource( 77 )
 position = Vector2( 265, 431 )
 scale = Vector2( 2.523, 3.1715 )
 frames = SubResource( 74 )
-frame = 60
+frame = 39
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="maquina"]
@@ -640,7 +628,7 @@ script = ExtResource( 6 )
 position = Vector2( 2313, 2026 )
 scale = Vector2( 0.252062, 0.251182 )
 frames = SubResource( 85 )
-frame = 10
+frame = 13
 playing = true
 flip_h = true
 
@@ -671,7 +659,7 @@ shape = SubResource( 99 )
 position = Vector2( 1115, 512 )
 scale = Vector2( 7.42187, 6.64474 )
 frames = SubResource( 98 )
-frame = 2
+frame = 4
 playing = true
 flip_h = true
 
