@@ -151,16 +151,6 @@ animations = [ {
 "name": "default",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 7 ), ExtResource( 36 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 24 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 39 ), ExtResource( 83 ), ExtResource( 79 ), ExtResource( 68 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 28 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "walking",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 81 ), ExtResource( 60 ), ExtResource( 76 ), ExtResource( 55 ), ExtResource( 77 ), ExtResource( 63 ), ExtResource( 65 ), ExtResource( 64 ), ExtResource( 48 ), ExtResource( 40 ), ExtResource( 51 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 49 ), ExtResource( 72 ) ],
-"loop": false,
-"name": "dying",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 71 ), ExtResource( 78 ), ExtResource( 62 ), ExtResource( 59 ), ExtResource( 73 ), ExtResource( 54 ), ExtResource( 86 ), ExtResource( 88 ), ExtResource( 85 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 56 ) ],
 "loop": true,
 "name": "move",
@@ -174,6 +164,16 @@ animations = [ {
 "frames": [ ExtResource( 84 ), ExtResource( 38 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 12 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 11 ), ExtResource( 31 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "New Anim",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 7 ), ExtResource( 36 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 24 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 39 ), ExtResource( 83 ), ExtResource( 79 ), ExtResource( 68 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 6 ), ExtResource( 28 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "walking",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 81 ), ExtResource( 60 ), ExtResource( 76 ), ExtResource( 55 ), ExtResource( 77 ), ExtResource( 63 ), ExtResource( 65 ), ExtResource( 64 ), ExtResource( 48 ), ExtResource( 40 ), ExtResource( 51 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 49 ), ExtResource( 72 ) ],
+"loop": false,
+"name": "dying",
 "speed": 12.0
 } ]
 
@@ -343,6 +343,7 @@ disabled = true
 position = Vector2( -3, 74.9998 )
 scale = Vector2( -0.243169, -0.14757 )
 frames = SubResource( 38 )
+frame = 2
 playing = true
 
 [node name="AreaOrc" type="Area2D" parent="FinalBoss/Orc"]
@@ -377,7 +378,7 @@ shape = SubResource( 24 )
 position = Vector2( 86.7839, 491.991 )
 scale = Vector2( -5.17399, 5.24947 )
 frames = SubResource( 23 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="AttackingArea" type="Area2D" parent="PacoFinalScene"]
