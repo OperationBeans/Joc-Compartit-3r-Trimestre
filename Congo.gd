@@ -12,8 +12,6 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	if ghost == true:
-		velocitat_base = 200
 	if esquerra == true and dead == false and ataca == true:
 		$AreaCongo/AnimatedSprite.flip_h = true
 		if ghost == false:

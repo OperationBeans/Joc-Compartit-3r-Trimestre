@@ -451,7 +451,7 @@ position = Vector2( 225.625, 458.75 )
 rotation = -0.563174
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 77 )
-frame = 7
+frame = 4
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="Nau"]
@@ -459,7 +459,7 @@ material = SubResource( 76 )
 position = Vector2( 254, 528 )
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 77 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="Nau"]
@@ -468,7 +468,7 @@ position = Vector2( 282, 377 )
 rotation = 0.578838
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 77 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Nau"]
@@ -476,7 +476,7 @@ material = SubResource( 76 )
 position = Vector2( 265, 445 )
 scale = Vector2( 0.865079, 0.652 )
 frames = SubResource( 77 )
-frame = 7
+frame = 4
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="Nau"]
@@ -484,7 +484,7 @@ material = SubResource( 78 )
 position = Vector2( 265, 431 )
 scale = Vector2( 2.523, 3.1715 )
 frames = SubResource( 79 )
-frame = 17
+frame = 2
 playing = true
 
 [node name="Area2D" type="Area2D" parent="Nau"]
