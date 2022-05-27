@@ -18,7 +18,7 @@ func _on_limit_area_entered(area):
 func _on_limpac_area_entered(area):
 	if area.name == "pako":
 		start = false
-		$AnimatedSprite.frame = 0
+		$AnimatedSprite.play("New Anim")
 		$Timer.start()
 		$AnimatedSprite.flip_h = false
 		
@@ -26,3 +26,4 @@ func _on_limpac_area_entered(area):
 
 func _on_Timer_timeout():
 	start_2 = true
+	$AnimatedSprite.play("default")

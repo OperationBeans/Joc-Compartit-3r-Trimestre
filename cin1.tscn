@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=135 format=2]
 
 [ext_resource path="res://smok.png" type="Texture" id=1]
 [ext_resource path="res://rayo.png" type="Texture" id=2]
@@ -8,10 +8,33 @@
 [ext_resource path="res://FINAL.gd" type="Script" id=6]
 [ext_resource path="res://maquina.gd" type="Script" id=7]
 [ext_resource path="res://PAKA2.gd" type="Script" id=8]
-[ext_resource path="res://Part Marc/Minotaur - Sprite Sheet.png" type="Texture" id=9]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_023.png" type="Texture" id=9]
 [ext_resource path="res://pako.gd" type="Script" id=10]
 [ext_resource path="res://Part Marc/Korred Sprite Sheet.png" type="Texture" id=11]
 [ext_resource path="res://change_to.gd" type="Script" id=12]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_022.png" type="Texture" id=13]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_021.png" type="Texture" id=14]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_015.png" type="Texture" id=15]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_016.png" type="Texture" id=16]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_018.png" type="Texture" id=17]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_017.png" type="Texture" id=18]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_020.png" type="Texture" id=19]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_019.png" type="Texture" id=20]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_002.png" type="Texture" id=21]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_007.png" type="Texture" id=22]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_008.png" type="Texture" id=23]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_009.png" type="Texture" id=24]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_010.png" type="Texture" id=25]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_011.png" type="Texture" id=26]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_012.png" type="Texture" id=27]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_013.png" type="Texture" id=28]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_014.png" type="Texture" id=29]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_000.png" type="Texture" id=30]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_001.png" type="Texture" id=31]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_003.png" type="Texture" id=32]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_005.png" type="Texture" id=33]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_004.png" type="Texture" id=34]
+[ext_resource path="res://Ogre/PNG/PNG Sequences/Walking/0_Ogre_Walking_006.png" type="Texture" id=35]
 
 [sub_resource type="Shader" id=75]
 code = "shader_type canvas_item;
@@ -421,51 +444,21 @@ extents = Vector2( 47, 115.5 )
 [sub_resource type="RectangleShape2D" id=79]
 extents = Vector2( 35.5, 81.75 )
 
-[sub_resource type="AtlasTexture" id=80]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 0, 1344, 93, 96 )
-
-[sub_resource type="AtlasTexture" id=81]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 93, 1344, 93, 96 )
-
-[sub_resource type="AtlasTexture" id=82]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 186, 1344, 93, 96 )
-
-[sub_resource type="AtlasTexture" id=83]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 279, 1344, 93, 96 )
-
-[sub_resource type="AtlasTexture" id=84]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 372, 1344, 93, 96 )
-
-[sub_resource type="AtlasTexture" id=88]
-flags = 4
-atlas = ExtResource( 9 )
-region = Rect2( 465, 1440, 93, 96 )
-
 [sub_resource type="SpriteFrames" id=85]
 animations = [ {
-"frames": [ SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ) ],
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 15.0
 }, {
-"frames": [ SubResource( 88 ) ],
+"frames": [  ],
 "loop": true,
 "name": "New Anim",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=86]
-extents = Vector2( 60.5, 72.75 )
+extents = Vector2( 45.25, 66.875 )
 
 [sub_resource type="RectangleShape2D" id=87]
 extents = Vector2( 739.75, 22.25 )
@@ -477,52 +470,64 @@ extents = Vector2( 265.5, 10 )
 extents = Vector2( 61.5, 52 )
 
 [sub_resource type="AtlasTexture" id=90]
+flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 0, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=91]
+flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 32, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=92]
+flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 64, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=93]
+flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 96, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=94]
+flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 128, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=95]
+flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 160, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=96]
+flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 192, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=97]
+flags = 4
 atlas = ExtResource( 11 )
 region = Rect2( 224, 38, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=102]
+flags = 4
 atlas = ExtResource( 11 )
-region = Rect2( 0, 0, 32, 32 )
+region = Rect2( 0, 0, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=103]
+flags = 4
 atlas = ExtResource( 11 )
-region = Rect2( 32, 0, 32, 32 )
+region = Rect2( 32, 0, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=104]
+flags = 4
 atlas = ExtResource( 11 )
-region = Rect2( 64, 0, 32, 32 )
+region = Rect2( 64, 0, 32, 38 )
 
 [sub_resource type="AtlasTexture" id=105]
+flags = 4
 atlas = ExtResource( 11 )
-region = Rect2( 96, 0, 32, 32 )
+region = Rect2( 96, 0, 32, 38 )
 
 [sub_resource type="SpriteFrames" id=98]
 animations = [ {
@@ -534,7 +539,7 @@ animations = [ {
 "frames": [ SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ) ],
 "loop": true,
 "name": "New Anim",
-"speed": 10.0
+"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=100]
@@ -567,7 +572,7 @@ position = Vector2( 225.625, 458.75 )
 rotation = -0.563174
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 7
+frame = 2
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="maquina"]
@@ -575,7 +580,7 @@ material = SubResource( 76 )
 position = Vector2( 254, 528 )
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="maquina"]
@@ -584,7 +589,7 @@ position = Vector2( 282, 377 )
 rotation = 0.578838
 scale = Vector2( 0.559524, 0.27 )
 frames = SubResource( 9 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="maquina"]
@@ -592,7 +597,7 @@ material = SubResource( 76 )
 position = Vector2( 265, 445 )
 scale = Vector2( 0.865079, 0.652 )
 frames = SubResource( 9 )
-frame = 7
+frame = 2
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="maquina"]
@@ -600,7 +605,7 @@ material = SubResource( 77 )
 position = Vector2( 265, 431 )
 scale = Vector2( 2.523, 3.1715 )
 frames = SubResource( 74 )
-frame = 43
+frame = 60
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="maquina"]
@@ -628,21 +633,19 @@ position = Vector2( 765, 461.75 )
 shape = SubResource( 79 )
 
 [node name="FINAL" type="Area2D" parent="."]
-position = Vector2( 6, 10 )
+position = Vector2( -1401, -1548 )
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="final_boss" type="AnimatedSprite" parent="FINAL"]
-position = Vector2( 914, 485 )
-scale = Vector2( 3.45968, 3.69792 )
+position = Vector2( 2313, 2026 )
+scale = Vector2( 0.252062, 0.251182 )
 frames = SubResource( 85 )
-frame = 1
+frame = 10
 playing = true
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FINAL"]
-position = Vector2( 946.5, 467.75 )
+position = Vector2( 2308.75, 2034.88 )
 shape = SubResource( 86 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -665,10 +668,10 @@ position = Vector2( 1124, 500 )
 shape = SubResource( 99 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="pako"]
-position = Vector2( 1120, 511 )
+position = Vector2( 1115, 512 )
 scale = Vector2( 7.42187, 6.64474 )
 frames = SubResource( 98 )
-frame = 5
+frame = 2
 playing = true
 flip_h = true
 

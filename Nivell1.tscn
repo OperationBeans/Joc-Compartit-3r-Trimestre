@@ -41,7 +41,7 @@ shape = SubResource( 3 )
 position = Vector2( 511.5, 300.5 )
 scale = Vector2( 1.83036, 2.19485 )
 frames = SubResource( 7 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="Cabanya" type="Sprite" parent="."]
