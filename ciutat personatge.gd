@@ -11,11 +11,11 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed("D"):
 		velocitat += Vector2.RIGHT * velocitat_base
-		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.flip_h = false
 		$AnimatedSprite.play("move")
 	if Input.is_action_pressed("A"):
 		velocitat += Vector2.LEFT * velocitat_base  
-		$AnimatedSprite.flip_h = false
+		$AnimatedSprite.flip_h = true
 		$AnimatedSprite.play("move")
 	if Input.is_action_just_pressed("W") and is_on_floor():
 		velocitat += salt  
