@@ -13,3 +13,8 @@ func _physics_process(delta):
 	velocitat += Vector2.RIGHT * velocitat_base 
 	velocitat += gravetat * delta
 	velocitat = move_and_slide(velocitat, Vector2.UP)
+
+
+func _on_AreaCastellNau_body_entered(body):
+	if body.name == "Nau_cinem_pr-eg":
+		queue_free()

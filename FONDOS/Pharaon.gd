@@ -93,4 +93,4 @@ func _on_AttackArea2_body_entered(body):
 		$TextureProgress.value -= 35
 
 func on_timeout_mort():
-	get_tree().change_scene("res://CIUTAT.tscn")
+	get_tree().change_scene("res://cinematica-egipte-medieval.tscn")

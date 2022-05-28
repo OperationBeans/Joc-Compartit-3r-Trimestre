@@ -21,6 +21,26 @@ region = Rect2( 64, 0, 32, 32 )
 atlas = ExtResource( 4 )
 region = Rect2( 96, 0, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 160, 32, 32 )
+
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 32, 32, 32 )
@@ -73,32 +93,17 @@ region = Rect2( 96, 64, 32, 32 )
 atlas = ExtResource( 4 )
 region = Rect2( 128, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 4 )
-region = Rect2( 32, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 4 )
-region = Rect2( 64, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 160, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 4 )
-region = Rect2( 128, 160, 32, 32 )
-
 [sub_resource type="SpriteFrames" id=28]
 animations = [ {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
 "name": "default",
 "speed": 7.0
+}, {
+"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": false,
+"name": "dead",
+"speed": 12.0
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": true,
@@ -108,11 +113,6 @@ animations = [ {
 "frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": false,
 "name": "attack",
-"speed": 12.0
-}, {
-"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
-"loop": false,
-"name": "dead",
 "speed": 12.0
 } ]
 

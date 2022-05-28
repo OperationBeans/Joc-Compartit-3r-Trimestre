@@ -26,3 +26,14 @@ func _on_Area2Dcanvicinematica_body_entered(body):
 func _on_Area2Dcinematicaegipte_body_entered(body):
 	if body.name == "PacoCinematica":
 		get_tree().change_scene("res://FONDOS/PRIMERA PART PARKOUR EGIPTE.tscn")
+
+
+
+func _on_Area_canvi_cinematica_ultima_edat_medieval_body_entered(body):
+	if body.name == "PacoCinematica":
+		get_tree().change_scene("res://ultima cinematica - emedieval.tscn")
+
+
+func _on_AreaCinematicaCastellPaco_body_entered(body):
+	if body.name == "PacoCinematica":
+		get_tree().change_scene("res://Med1.tscn")
