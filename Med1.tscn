@@ -92,20 +92,21 @@ shape = SubResource( 2 )
 position = Vector2( 65, 312 )
 scale = Vector2( 0.15099, 0.150926 )
 frames = SubResource( 12 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="fuego2" type="AnimatedSprite" parent="."]
 position = Vector2( 411, 293 )
 scale = Vector2( 0.105198, 0.140278 )
 frames = SubResource( 12 )
+frame = 2
 playing = true
 
 [node name="fuego3" type="AnimatedSprite" parent="."]
 position = Vector2( 638, 291 )
 scale = Vector2( 0.15099, 0.150926 )
 frames = SubResource( 12 )
-frame = 7
+frame = 1
 playing = true
 
 [node name="cavaller" parent="." instance=ExtResource( 3 )]

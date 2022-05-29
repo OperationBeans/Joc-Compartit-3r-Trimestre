@@ -1,8 +1,11 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://cast2.png" type="Texture" id=1]
 [ext_resource path="res://fire.png" type="Texture" id=2]
 [ext_resource path="res://cavaller.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cavaller_enemic1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Limit dreta.gd" type="Script" id=5]
+[ext_resource path="res://Limit esquerra.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 570, 44.25 )
@@ -58,6 +61,12 @@ animations = [ {
 "speed": 15.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 12.5, 45 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 12, 45 )
+
 [node name="Med2" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -86,16 +95,94 @@ shape = SubResource( 2 )
 position = Vector2( 290.625, 344.75 )
 scale = Vector2( 0.15099, 0.150926 )
 frames = SubResource( 12 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="fuego3" type="AnimatedSprite" parent="."]
 position = Vector2( 771, 345 )
 scale = Vector2( 0.125, 0.138426 )
 frames = SubResource( 12 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="cavaller" parent="." instance=ExtResource( 3 )]
 position = Vector2( 41, 479 )
 scale = Vector2( 2.5, 2.5 )
+
+[node name="Cavaller Enemic" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Cavaller_enemic1" parent="Cavaller Enemic" instance=ExtResource( 4 )]
+position = Vector2( 516, 479 )
+scale = Vector2( 3.5, 3.5 )
+
+[node name="Limit dreta" type="Area2D" parent="Cavaller Enemic"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cavaller Enemic/Limit dreta"]
+position = Vector2( 345, 481 )
+shape = SubResource( 13 )
+
+[node name="Limit esquerra" type="Area2D" parent="Cavaller Enemic"]
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cavaller Enemic/Limit esquerra"]
+position = Vector2( 693, 481 )
+shape = SubResource( 14 )
+
+[node name="Cavaller Enemic2" type="Node2D" parent="."]
+position = Vector2( 146, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Cavaller_enemic1" parent="Cavaller Enemic2" instance=ExtResource( 4 )]
+position = Vector2( 516, 479 )
+scale = Vector2( 3.5, 3.5 )
+
+[node name="Limit dreta" type="Area2D" parent="Cavaller Enemic2"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cavaller Enemic2/Limit dreta"]
+position = Vector2( 345, 481 )
+shape = SubResource( 13 )
+
+[node name="Limit esquerra" type="Area2D" parent="Cavaller Enemic2"]
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cavaller Enemic2/Limit esquerra"]
+position = Vector2( 693, 481 )
+shape = SubResource( 14 )
+
+[node name="Cavaller Enemic3" type="Node2D" parent="."]
+position = Vector2( -133, -2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Cavaller_enemic1" parent="Cavaller Enemic3" instance=ExtResource( 4 )]
+position = Vector2( 516, 479 )
+scale = Vector2( 3.5, 3.5 )
+
+[node name="Limit dreta" type="Area2D" parent="Cavaller Enemic3"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cavaller Enemic3/Limit dreta"]
+position = Vector2( 345, 481 )
+shape = SubResource( 13 )
+
+[node name="Limit esquerra" type="Area2D" parent="Cavaller Enemic3"]
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cavaller Enemic3/Limit esquerra"]
+position = Vector2( 693, 481 )
+shape = SubResource( 14 )
+
+[connection signal="body_entered" from="Cavaller Enemic/Limit dreta" to="Cavaller Enemic/Limit dreta" method="_on_Limit_dreta_body_entered"]
+[connection signal="body_entered" from="Cavaller Enemic/Limit esquerra" to="Cavaller Enemic/Limit esquerra" method="_on_Limit_esquerra_body_entered"]
+[connection signal="body_entered" from="Cavaller Enemic2/Limit dreta" to="Cavaller Enemic2/Limit dreta" method="_on_Limit_dreta_body_entered"]
+[connection signal="body_entered" from="Cavaller Enemic2/Limit esquerra" to="Cavaller Enemic2/Limit esquerra" method="_on_Limit_esquerra_body_entered"]
+[connection signal="body_entered" from="Cavaller Enemic3/Limit dreta" to="Cavaller Enemic3/Limit dreta" method="_on_Limit_dreta_body_entered"]
+[connection signal="body_entered" from="Cavaller Enemic3/Limit esquerra" to="Cavaller Enemic3/Limit esquerra" method="_on_Limit_esquerra_body_entered"]

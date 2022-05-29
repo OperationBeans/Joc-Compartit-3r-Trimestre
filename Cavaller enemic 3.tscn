@@ -315,5 +315,5 @@ material = SubResource( 40 )
 position = Vector2( 0, -1 )
 frames = SubResource( 55 )
 animation = "attack"
-frame = 2
+frame = 10
 playing = true
