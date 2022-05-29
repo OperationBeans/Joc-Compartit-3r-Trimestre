@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Nau_cinem_pr-eg.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PacoCinematica.tscn" type="PackedScene" id=2]
+[ext_resource path="res://pyramids.webp" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 34.5, 303 )
+
+[node name="cinematica-egipte-medieval" type="Node2D"]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 299.5 )
+scale = Vector2( 1.51704, 1.57632 )
+texture = ExtResource( 3 )
+
+[node name="Nau_cinem_pr-eg" parent="Sprite" instance=ExtResource( 1 )]
+position = Vector2( -429.785, -170.968 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="PacoCinematica" parent="." instance=ExtResource( 2 )]
+
+[node name="Area_canvi_cinematica_ultima_edat_medieval" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_canvi_cinematica_ultima_edat_medieval"]
+position = Vector2( 1043.5, 293 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Area_canvi_cinematica_ultima_edat_medieval" to="PacoCinematica" method="_on_Area_canvi_cinematica_ultima_edat_medieval_body_entered"]

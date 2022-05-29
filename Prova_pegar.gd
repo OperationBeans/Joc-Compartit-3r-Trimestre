@@ -59,7 +59,7 @@ func _on_AreaEnemy_body_entered(body):
 		
 func _on_Portal_body_entered(body):
 	if body.name == "MainCharacter":
-		get_tree().change_scene("res://FONDOS/PRIMERA PART PARKOUR EGIPTE.tscn")
+		get_tree().change_scene("res://cinematica preh-esgipte.tscn")
 
 func _on_Stalactites_body_entered(body):
 	if body.name == "MainCharacter":

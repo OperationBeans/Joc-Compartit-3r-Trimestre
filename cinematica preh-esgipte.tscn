@@ -1,0 +1,186 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://fondo bo/right ones/frame_5_delay-0.1s.png" type="Texture" id=1]
+[ext_resource path="res://fondo bo/right ones/frame_3_delay-0.1s.png" type="Texture" id=2]
+[ext_resource path="res://fondo bo/right ones/frame_7_delay-0.1s.png" type="Texture" id=3]
+[ext_resource path="res://fondo bo/right ones/frame_6_delay-0.1s.png" type="Texture" id=4]
+[ext_resource path="res://fondo bo/right ones/frame_1_delay-0.1s.png" type="Texture" id=5]
+[ext_resource path="res://fondo bo/right ones/frame_2_delay-0.1s.png" type="Texture" id=6]
+[ext_resource path="res://fondo bo/right ones/frame_4_delay-0.1s.png" type="Texture" id=7]
+[ext_resource path="res://fondo bo/right ones/frame_0_delay-0.1s.png" type="Texture" id=8]
+[ext_resource path="res://Nau_cinem_pr-eg.tscn" type="PackedScene" id=9]
+[ext_resource path="res://PacoCinematica.gd" type="Script" id=10]
+[ext_resource path="res://Part Marc/Korred Sprite Sheet.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 537, 46.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 9.5, 308.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 14.5, 315.5 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 11 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 11 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 11 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 11 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 11 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 11 )
+region = Rect2( 96, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 11 )
+region = Rect2( 160, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 11 )
+region = Rect2( 192, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 11 )
+region = Rect2( 224, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 11 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 11 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 11 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 11 )
+region = Rect2( 32, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 11 )
+region = Rect2( 64, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 11 )
+region = Rect2( 96, 160, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 11 )
+region = Rect2( 128, 160, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=28]
+animations = [ {
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "move",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": false,
+"name": "attack",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": false,
+"name": "dead",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 28.5, 31.5 )
+
+[node name="cinematica preh-esgipte" type="Node2D"]
+
+[node name="Fondo" type="AnimatedSprite" parent="."]
+position = Vector2( 511.5, 300.5 )
+scale = Vector2( 1.83036, 2.19485 )
+frames = SubResource( 1 )
+frame = 4
+playing = true
+
+[node name="Nau_cinem_pr-eg" parent="." instance=ExtResource( 9 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 527, 609.5 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -0.5, 298.5 )
+shape = SubResource( 2 )
+
+[node name="Area2Dcanvicinematica" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2Dcanvicinematica"]
+position = Vector2( 1025.5, 305.5 )
+shape = SubResource( 4 )
+
+[node name="PacoCinematica" type="KinematicBody2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PacoCinematica"]
+position = Vector2( 74, 492 )
+scale = Vector2( 4.15625, 4.34375 )
+frames = SubResource( 28 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PacoCinematica"]
+position = Vector2( 73, 528.5 )
+shape = SubResource( 22 )
+
+[connection signal="body_entered" from="Area2Dcanvicinematica" to="PacoCinematica" method="_on_Area2Dcanvicinematica_body_entered"]
