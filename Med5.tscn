@@ -97,14 +97,14 @@ shape = SubResource( 2 )
 position = Vector2( 284, 306 )
 scale = Vector2( 0.441832, 0.311111 )
 frames = SubResource( 12 )
-frame = 3
+frame = 5
 playing = true
 
 [node name="fuego2" type="AnimatedSprite" parent="."]
 position = Vector2( 798, 313.5 )
 scale = Vector2( 0.376238, 0.264815 )
 frames = SubResource( 12 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="cav3" type="Node2D" parent="."]
@@ -129,7 +129,7 @@ position = Vector2( 4, 638 )
 shape = SubResource( 14 )
 
 [node name="cav4" type="Node2D" parent="."]
-position = Vector2( 318, 4 )
+position = Vector2( 315, 3 )
 __meta__ = {
 "_edit_group_": true
 }

@@ -114,7 +114,7 @@ shape = SubResource( 64 )
 position = Vector2( 179, 411 )
 scale = Vector2( 3.08984, 2.79687 )
 frames = SubResource( 65 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Area2D"]
@@ -126,7 +126,7 @@ position = Vector2( 0, 56 )
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="change"]
-position = Vector2( 2171, 337 )
+position = Vector2( 963, 371 )
 shape = SubResource( 66 )
 
 [node name="Nau_cinem_pr-eg" parent="." instance=ExtResource( 12 )]
@@ -137,13 +137,15 @@ rotation = 1.57181
 position = Vector2( 6, 76 )
 scale = Vector2( 1.93077, 1.39375 )
 frames = SubResource( 83 )
+frame = 2
 playing = true
 offset = Vector2( 6.21514, 42.3318 )
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
-position = Vector2( 2182, 48 )
+position = Vector2( 962, 78 )
 scale = Vector2( 1.93077, 1.39375 )
 frames = SubResource( 83 )
+frame = 2
 playing = true
 offset = Vector2( 6.21514, 42.3318 )
 
