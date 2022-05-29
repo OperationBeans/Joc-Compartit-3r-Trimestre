@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://car.png" type="Texture" id=1]
+[ext_resource path="res://street cin.jpg" type="Texture" id=2]
+[ext_resource path="res://coche.gd" type="Script" id=3]
+[ext_resource path="res://chg.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 102, 26.75 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24.5, 72.25 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 799, 320.5 )
+scale = Vector2( 1.604, 1.09615 )
+texture = ExtResource( 2 )
+
+[node name="coche" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coche"]
+position = Vector2( 148, 547.75 )
+shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="coche"]
+position = Vector2( 144, 543 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="canvi" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="canvi"]
+position = Vector2( 1559, 514.25 )
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="canvi" to="canvi" method="_on_canvi_area_entered"]

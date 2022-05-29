@@ -1,7 +1,7 @@
 extends KinematicBody2D
 var vel = 1
 var ant_vel = 0
-
+var vida = 100
 func _ready():
 	$Atac.start()
 	$AnimatedSprite.play("move")
@@ -10,7 +10,11 @@ func _process(delta):
 		$AnimatedSprite.flip_h = true
 	else:
 		$AnimatedSprite.flip_h = false
-	position.x += vel
+		
+	if vida == 0:
+		queue_free()
+	else:
+		position.x += vel
 	
 func _on_Atac_timeout():
 	ant_vel = vel
@@ -30,7 +34,5 @@ func _on_AnimatedSprite_animation_finished():
 		vel = ant_vel
 		$AnimatedSprite.play("move")
 		print(vel)
-
-
 
 
