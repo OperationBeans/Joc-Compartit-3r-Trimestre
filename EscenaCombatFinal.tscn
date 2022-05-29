@@ -343,6 +343,7 @@ disabled = true
 position = Vector2( -3, 74.9998 )
 scale = Vector2( -0.243169, -0.14757 )
 frames = SubResource( 38 )
+frame = 3
 playing = true
 
 [node name="AreaOrc" type="Area2D" parent="FinalBoss/Orc"]
@@ -377,7 +378,7 @@ shape = SubResource( 24 )
 position = Vector2( 86.7839, 491.991 )
 scale = Vector2( -5.17399, 5.24947 )
 frames = SubResource( 23 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="AttackingArea" type="Area2D" parent="PacoFinalScene"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://cast5.png" type="Texture" id=1]
 [ext_resource path="res://fire.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://limd.gd" type="Script" id=12]
 [ext_resource path="res://Cavaller enemic 3.tscn" type="PackedScene" id=13]
 [ext_resource path="res://canvi.gd" type="Script" id=14]
+[ext_resource path="res://Menu pausa.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 524, 42.5 )
@@ -163,55 +164,55 @@ shape = SubResource( 2 )
 position = Vector2( 901.656, 409.688 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 2
 playing = true
 
 [node name="fuego4" type="AnimatedSprite" parent="faias"]
 position = Vector2( 879, 412 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="fuego5" type="AnimatedSprite" parent="faias"]
 position = Vector2( 989, 402 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="fuego6" type="AnimatedSprite" parent="faias"]
 position = Vector2( 1007, 398 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
+frame = 6
 playing = true
 
 [node name="fuego7" type="AnimatedSprite" parent="faias"]
 position = Vector2( 1025, 393 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="fuego8" type="AnimatedSprite" parent="faias"]
 position = Vector2( 1042, 405 )
 scale = Vector2( 0.0724, 0.0729168 )
 frames = SubResource( 12 )
-frame = 7
+frame = 5
 playing = true
 
 [node name="fuego2" type="AnimatedSprite" parent="faias"]
 position = Vector2( 690.656, 407 )
 scale = Vector2( 0.0724018, 0.0625002 )
 frames = SubResource( 12 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="fuego3" type="AnimatedSprite" parent="faias"]
 position = Vector2( 705, 408 )
 scale = Vector2( 0.0816822, 0.0620371 )
 frames = SubResource( 12 )
-frame = 1
+frame = 7
 playing = true
 
 [node name="cavaller" parent="." instance=ExtResource( 7 )]
@@ -298,6 +299,8 @@ script = ExtResource( 11 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cav3/lime"]
 position = Vector2( 522, 307 )
 shape = SubResource( 21 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 15 )]
 
 [connection signal="body_entered" from="canvi" to="canvi" method="_on_canvi_body_entered"]
 [connection signal="body_entered" from="Node2D/Limit dreta" to="Node2D/Limit dreta" method="_on_Limit_dreta_body_entered"]

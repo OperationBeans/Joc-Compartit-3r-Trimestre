@@ -305,7 +305,7 @@ position = Vector2( 169, 459 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 55 )
 animation = "Camina"
-frame = 5
+frame = 1
 playing = true
 
 [node name="port" type="Area2D" parent="."]
