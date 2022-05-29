@@ -10,17 +10,17 @@ extents = Vector2( 32, 26.5 )
 animations = [ {
 "frames": [  ],
 "loop": true,
-"name": "trote",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
 "name": "galope",
 "speed": 5.0
 }, {
 "frames": [  ],
 "loop": true,
 "name": "static",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "trote",
 "speed": 5.0
 } ]
 

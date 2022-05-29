@@ -1,14 +1,43 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://PacoCinematica.tscn" type="PackedScene" id=1]
 [ext_resource path="res://castle_cinematic.png" type="Texture" id=2]
 [ext_resource path="res://Nau_cinem_pr-eg.tscn" type="PackedScene" id=3]
+[ext_resource path="res://portal.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 92.5, 112 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 44, 47 )
+
+[sub_resource type="AtlasTexture" id=79]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 65, 160 )
+
+[sub_resource type="AtlasTexture" id=80]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 65, 0, 65, 160 )
+
+[sub_resource type="AtlasTexture" id=81]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 130, 0, 65, 160 )
+
+[sub_resource type="AtlasTexture" id=82]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 195, 0, 65, 160 )
+
+[sub_resource type="SpriteFrames" id=83]
+animations = [ {
+"frames": [ SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
 
 [node name="ultima cinematica - emedieval" type="Node2D"]
 
@@ -18,9 +47,11 @@ scale = Vector2( 1.32692, 1.36591 )
 texture = ExtResource( 2 )
 
 [node name="PacoCinematica" parent="." instance=ExtResource( 1 )]
+position = Vector2( 5, 7 )
 
 [node name="Nau_cinem_pr-eg" parent="." instance=ExtResource( 3 )]
-position = Vector2( 21, 117 )
+position = Vector2( 1, 37 )
+rotation = 1.56571
 
 [node name="AreaCastellNau" type="Area2D" parent="."]
 
@@ -31,8 +62,22 @@ shape = SubResource( 1 )
 [node name="AreaCinematicaCastellPaco" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCinematicaCastellPaco"]
-position = Vector2( 530, 498 )
+position = Vector2( 530, 490 )
 shape = SubResource( 2 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( -6, 259 )
+scale = Vector2( 1.93077, 1.39375 )
+frames = SubResource( 83 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 572, 254 )
+scale = Vector2( 1.93077, 1.39375 )
+frames = SubResource( 83 )
+frame = 1
+playing = true
 
 [connection signal="body_entered" from="AreaCastellNau" to="Nau_cinem_pr-eg" method="_on_AreaCastellNau_body_entered"]
 [connection signal="body_entered" from="AreaCinematicaCastellPaco" to="PacoCinematica" method="_on_AreaCinematicaCastellPaco_body_entered"]

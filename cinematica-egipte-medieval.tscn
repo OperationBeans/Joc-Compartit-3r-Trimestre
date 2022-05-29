@@ -1,11 +1,40 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Nau_cinem_pr-eg.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PacoCinematica.tscn" type="PackedScene" id=2]
 [ext_resource path="res://pyramids.webp" type="Texture" id=3]
+[ext_resource path="res://portal.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 34.5, 303 )
+
+[sub_resource type="AtlasTexture" id=79]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 65, 160 )
+
+[sub_resource type="AtlasTexture" id=80]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 65, 0, 65, 160 )
+
+[sub_resource type="AtlasTexture" id=81]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 130, 0, 65, 160 )
+
+[sub_resource type="AtlasTexture" id=82]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 195, 0, 65, 160 )
+
+[sub_resource type="SpriteFrames" id=83]
+animations = [ {
+"frames": [ SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
 
 [node name="cinematica-egipte-medieval" type="Node2D"]
 __meta__ = {
@@ -18,7 +47,8 @@ scale = Vector2( 1.51704, 1.57632 )
 texture = ExtResource( 3 )
 
 [node name="Nau_cinem_pr-eg" parent="Sprite" instance=ExtResource( 1 )]
-position = Vector2( -429.785, -170.968 )
+position = Vector2( -337.166, -243.474 )
+rotation = 1.57162
 scale = Vector2( 0.8, 0.8 )
 
 [node name="PacoCinematica" parent="." instance=ExtResource( 2 )]
@@ -28,5 +58,19 @@ scale = Vector2( 0.8, 0.8 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area_canvi_cinematica_ultima_edat_medieval"]
 position = Vector2( 1043.5, 293 )
 shape = SubResource( 1 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( -22, 136 )
+scale = Vector2( 1.93077, 1.39375 )
+frames = SubResource( 83 )
+playing = true
+offset = Vector2( 6.21514, 42.3318 )
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 1000, 136 )
+scale = Vector2( 1.93077, 1.39375 )
+frames = SubResource( 83 )
+playing = true
+offset = Vector2( 6.21514, 42.3318 )
 
 [connection signal="body_entered" from="Area_canvi_cinematica_ultima_edat_medieval" to="PacoCinematica" method="_on_Area_canvi_cinematica_ultima_edat_medieval_body_entered"]
