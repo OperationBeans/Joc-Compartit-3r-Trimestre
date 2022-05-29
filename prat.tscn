@@ -114,7 +114,7 @@ shape = SubResource( 64 )
 position = Vector2( 179, 411 )
 scale = Vector2( 3.08984, 2.79687 )
 frames = SubResource( 65 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Area2D"]

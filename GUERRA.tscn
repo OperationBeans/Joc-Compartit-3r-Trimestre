@@ -60,7 +60,7 @@ scale = Vector2( 1.237, 1.279 )
 position = Vector2( 885, 117 )
 
 [node name="Personatge-era-militar" parent="." instance=ExtResource( 4 )]
-position = Vector2( 195, 411 )
+position = Vector2( 199, 407 )
 
 [node name="Bales" type="Node2D" parent="."]
 script = ExtResource( 6 )
